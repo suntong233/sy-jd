@@ -3,11 +3,13 @@ import App from "./App.vue";
 import router from "./router";
 import store from "./store";
 import { Button } from "element-ui";
-import axios from "axios"
-Vue.use(Button);
-Vue.prototype.axios = axios;
-Vue.config.productionTip = false;
+import axios from "axios";
 
+Vue.use(Button);
+
+Vue.prototype.axios = axios;
+
+Vue.config.productionTip = false;
 new Vue({
   router,
   store,
