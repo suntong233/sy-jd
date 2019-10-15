@@ -14,11 +14,13 @@
     text-decoration: none;
   }
   html,body{
+    margin: 0 auto;
     width: 100%;
     height: 100%;
+    max-width: 400px;
   }
   #app{
-    widows: 100%;
+    width: 100%;
     height: 100%;
   }
 </style>

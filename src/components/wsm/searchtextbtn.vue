@@ -35,6 +35,7 @@ export default {
 .container{
     width: 100%;
     height: 42px;
+    max-width: 400px;
     background-color: #fff;
 }
 .searchtext {
@@ -47,7 +48,10 @@ export default {
   justify-content: space-evenly;
   align-items: center;
   z-index: 20000;
+    max-width: 400px;
   border-bottom: #e5e5e5 1px solid;
+  border-left: #e5e5e5 1px solid;
+  border-right: #e5e5e5 1px solid;
 }
 .searchtext > .el-icon-arrow-left {
   font-size: 20px;

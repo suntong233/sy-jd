@@ -66,7 +66,8 @@ export default {
   position: absolute;
   top: 53px;
   z-index: 1000;
-  right: 10px
+  right: 10px;
+  max-width: 400px;
 }
 
 

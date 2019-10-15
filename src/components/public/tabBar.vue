@@ -79,7 +79,7 @@ export default {
   background-color: #fff;
   box-shadow: 0 1px 5px rgb(150, 150, 150);
   z-index: 10000;
-  /* border-top: 0.5px solid rgb(201, 201, 201); */
+  max-width: 400px;
 }
 .tabBar-item {
   width: 51px;
