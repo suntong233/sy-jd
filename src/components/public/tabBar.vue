@@ -1,7 +1,7 @@
 <template>
   <div class="tabBarContainer">
     <div @click="routerChange(item)" class="tabBar-item" v-for="item in renderList" :key="item.id">
-      <img :src=" item.isChange? (item.path == $route.path ? item.showUrl : item.url) : item.url" />
+      <img :src="item.path == $route.path ? item.showUrl : item.url"/>
     </div>
   </div>
 </template>
