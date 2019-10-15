@@ -7,7 +7,18 @@
 <script>
 
 export default {
-  name: "lz"
+  name: "lz",
+  mounted () {
+    this.axios.get('/data/test.json')
+  .then(function (response) {
+    
+    console.log(response.data.arrdata);
+  })
+  .catch(function (error) {
+    
+    console.log(error);
+  })
+  }
 };
 </script>
 
