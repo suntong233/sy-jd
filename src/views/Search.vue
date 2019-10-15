@@ -1,13 +1,13 @@
 <template>
   <div class="home">
-    home
+    search
   </div>
 </template>
 
 <script>
-
+// 搜素
 export default {
-  name: "home"
+  name: "search"
 };
 </script>
 

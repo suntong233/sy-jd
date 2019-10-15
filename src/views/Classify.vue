@@ -1,13 +1,13 @@
 <template>
   <div class="home">
-    home
+    classify
   </div>
 </template>
 
 <script>
-
+// 分类
 export default {
-  name: "home"
+  name: "classify"
 };
 </script>
 

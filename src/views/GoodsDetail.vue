@@ -1,13 +1,13 @@
 <template>
   <div class="home">
-    home
+    goodsdetail
   </div>
 </template>
 
 <script>
-
+// 商品详情
 export default {
-  name: "home"
+  name: "goodsdetail"
 };
 </script>
 

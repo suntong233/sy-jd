@@ -1,13 +1,13 @@
 <template>
   <div class="home">
-    home
+    searchres
   </div>
 </template>
 
 <script>
-
+// 搜索结果
 export default {
-  name: "home"
+  name: "searchres"
 };
 </script>
 
