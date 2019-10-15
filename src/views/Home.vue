@@ -1,7 +1,9 @@
 <template>
   <div class="home">
     <HomeHeader></HomeHeader>
+    <!-- 这里是滑块1 -->
     <div class="Home-silderBox"></div>
+    <!-- 这里是滑块2 -->
     <div class="Home-silderBox2">
       <img class="Home-silderBox2-bg" src="//m.360buyimg.com/mobilecms/s750x324_jfs/t1/67559/20/13157/30052/5da454c5E68ed4059/b5de41a3b378d476.jpg.dpg">
     </div>
@@ -11,7 +13,9 @@
       <img src="//m.360buyimg.com/mobilecms/s250x200_jfs/t1/45013/35/13596/66092/5da49692Ee2aea7e5/8c30539fa5e90ac2.jpg!q70.jpg.dpg">
     </div>
     <div class="temp">
-      temp
+      <!-- 京东秒杀 -->
+      <!-- 新人广告 东家小院 每日逛 -->
+      <!-- 为你推荐 -->
     </div>
     <Tabbar></Tabbar>
   </div>
@@ -76,7 +80,8 @@ export default {
     flex-grow: 1;
   }
   .temp{
+    width: 100%;
     height: 500px;
-    background-color: #ccc;
+    background-color: rgb(246,246,246);
   }
 </style>

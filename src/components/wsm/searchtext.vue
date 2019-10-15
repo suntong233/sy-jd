@@ -5,6 +5,7 @@
     <div class="textborder">
       <div class="el-icon-search"></div>
       <input
+        @click="$router.push('/search')"
         type="text"
         placeholder="笔记本电脑"
         class="textborder-input"
