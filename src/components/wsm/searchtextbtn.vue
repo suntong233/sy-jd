@@ -7,12 +7,10 @@
       <input
         type="text"
         placeholder="笔记本电脑"
-        class="textborder-input"
-        style="font-size: 12px;border:0;background:none;position: relative;left:20px;width:80%;height:20px"
+        style="outline:none;font-size: 12px;border:0;background:none;position: relative;left:20px;width:80%;height:20px"
       />
     </div>
-    <div @click="show = !show" style="font-size:24px;letter-spacing:2px;">···</div>
-    <showMenu v-if="show"></showMenu>
+    <div class="searchbutton" @click="tiaozhuan()">搜索</div>
   </div>
   <div>
 
@@ -21,20 +19,14 @@
 </template>
 
 <script>
-import showMenu from "../public/showMenu.vue";   // 显示隐藏菜单
-
 export default {
   name: "topsearch",
-  data () {
-    return {
-      show: false  
-    }
-  },
   methods: {
-    
-  },
-  components: {
-    showMenu
+    tiaozhuan() {
+      window.open(
+        "https://so.m.jd.com/ware/search.action?keyword=%E7%AC%94%E8%AE%B0%E6%9C%AC%E7%A1%AC%E7%9B%98&searchFrom=home&sf=11&as=1"
+      );
+    }
   }
 };
 </script>
@@ -72,10 +64,6 @@ export default {
   position: relative;
   left: 10px;
   color: #b7b7b7;
-}
-.textborder-input{
-  appearance: none;
-  outline: none;
 }
 .searchbutton {
   background: #e93b3d;

@@ -65,6 +65,7 @@ export default {
   box-sizing: border-box;
   position: absolute;
   top: 53px;
+  z-index: 1000;
   right: 10px
 }
 

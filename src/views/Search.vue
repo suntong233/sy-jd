@@ -1,13 +1,19 @@
 <template>
   <div class="home">
-    search
+    <searchtextBtn></searchtextBtn>
   </div>
 </template>
 
 <script>
+import searchtextBtn from "../components/wsm/searchtextbtn.vue";
+
+const components = {
+  searchtextBtn
+}
 // 搜素
 export default {
-  name: "search"
+  name: "search",
+  components
 };
 </script>
 
