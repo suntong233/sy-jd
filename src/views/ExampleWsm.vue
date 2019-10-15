@@ -1,18 +1,18 @@
 <template>
   <div>
-    <h2>wsm</h2>
+    <searchtext></searchtext>
   </div>
 </template>
 
 <script>
-import axios from "axios";
+
+import searchtext from "../components/wsm/searchtext"
+const components = {
+  searchtext
+};
 export default {
   name: "wsm",
-  created(){
-    this.axios.get("/data/test.json").then(res=>{
-      console.log(res.data)
-    })
-  }
+ components
 };
 </script>
 
