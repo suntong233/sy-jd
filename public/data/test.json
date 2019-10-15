@@ -1,0 +1,13 @@
+{
+    "test": "test",
+    "person": {
+        "person1": "lalala",
+        "person2": "hahaha",
+        "person3": "vxxx"
+    },
+    "arrdata": [
+        1,
+        2,
+        3
+    ]
+}
