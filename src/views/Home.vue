@@ -14,6 +14,7 @@
     </div>
     <div class="temp">
       <!-- 京东秒杀 -->
+      <FlashSale></FlashSale>
       <!-- 新人广告 东家小院 每日逛 -->
       <!-- 为你推荐 -->
     </div>
@@ -24,9 +25,11 @@
 <script>
 import Tabbar from "../components/public/tabBar.vue";   // 底部导航组件
 import HomeHeader from "../components/st/HomeHeader.vue";  // home页面顶部组件
+import FlashSale from "../components/lz/FlashSale.vue"
 const components = {
   Tabbar,
-  HomeHeader
+  HomeHeader,
+  FlashSale
 };
 export default {
   name: "home",
