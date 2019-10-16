@@ -12,7 +12,7 @@
       <img src="//m.360buyimg.com/mobilecms/s250x200_jfs/t1/62371/19/13047/94440/5da48eacE4240670c/1460f8279b205e48.jpg!q70.jpg.dpg">
       <img src="//m.360buyimg.com/mobilecms/s250x200_jfs/t1/45013/35/13596/66092/5da49692Ee2aea7e5/8c30539fa5e90ac2.jpg!q70.jpg.dpg">
     </div>
-    <div class="temp">
+    <div class="main-container">
       <!-- 京东秒杀 -->
       <FlashSale></FlashSale>
       <!-- 新人广告 东家小院 每日逛 -->
@@ -82,9 +82,7 @@ export default {
     width: 30%;
     flex-grow: 1;
   }
-  .temp{
+  .main-container{
     width: 100%;
-    height: 500px;
-    background-color: rgb(246,246,246);
   }
 </style>
