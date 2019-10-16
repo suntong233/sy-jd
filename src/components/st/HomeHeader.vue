@@ -1,5 +1,5 @@
 <template>
-  <div class="boxContainer" v-bind:style="{ background: bgc[0] }">
+  <div v-fun class="boxContainer">
     <div @click="routerTo('/classify')" class="boxContainer-left"></div>
     <div class="boxContainer-center">
       <div class="jdicon"></div>
@@ -12,11 +12,11 @@
 </template>
 
 <script>
+
 export default {
   name: "homeHeader",
   data() {
     return {
-      bgc: ["rgb(90,0,10)", "rgb(228,49,48)"],
       placeholder: "storge的数据决定"
     };
   },
@@ -27,7 +27,24 @@ export default {
       routerTo(path){
           this.$router.push(path);
       }
+  },
+  directives: {
+    fun: {
+      inserted: function (el) {
+        window.addEventListener("scroll",()=>{
+          funn(document.documentElement.scrollTop - el.offsetTop)
+        });
+        funn(document.documentElement.scrollTop - el.offsetTop)
+        function funn(n){
+          if(n!==0){
+            el.style.background = "rgb(228,49,48)"
+          }else{
+            el.style.background = "rgb(90,0,10)"
+          }
+        }
+      }
   }
+}
 };
 </script>
 
