@@ -15,18 +15,34 @@
     <div class="main-container">
       <!-- 京东秒杀 -->
       <!-- 新人广告 东家小院 每日逛 -->
+      <NewPerson></NewPerson>
+      <DjxyMrg type="djxy"></DjxyMrg>
+      <DjxyMrg type="mrg"></DjxyMrg>
       <!-- 为你推荐 -->
+      <Recommend></Recommend>
     </div>
     <Tabbar></Tabbar>
+    <!-- 回到顶部 -->
+    <BackTop></BackTop>
+    <div class="Home-footer">footer</div>
   </div>
 </template>
 
 <script>
 import Tabbar from "../components/public/tabBar.vue";   // 底部导航组件
 import HomeHeader from "../components/st/HomeHeader.vue";  // home页面顶部组件
+import NewPerson from "../components/st//Advertisement/BannerNewPeople.vue";  // home页面新人专享
+import DjxyMrg from "../components/st/Advertisement/DjxyMrg.vue";  // 东家小院 每日逛
+import BackTop from "../components/st/BackTop/NormalBack.vue"; // 回到顶部
+import Recommend from "../components/public/Recommend.vue"; // 为你推荐
+
 const components = {
   Tabbar,
-  HomeHeader
+  HomeHeader,
+  NewPerson,
+  DjxyMrg,
+  BackTop,
+  Recommend
 };
 export default {
   name: "home",
@@ -42,8 +58,8 @@ export default {
 <style scoped>
   .home{
     width: 100%;
+    background-color: rgb(246,246,246);
     height: 100%;
-    background-color: #ccc;
     position: relative;
   }
   .Home-silderBox{
@@ -75,11 +91,25 @@ export default {
     overflow: hidden;
     justify-content: space-between;
   }
+  .Home-banner1>img:nth-child(2){
+    flex-grow: 1.2;
+  }
   .Home-banner1>img{
-    width: 30%;
+    height: 100%;
     flex-grow: 1;
   }
   .main-container{
     width: 100%;
+    background-color: rgb(246,246,246);
+    position: relative;
+  }
+  .Home-footer{
+    width: 100%;
+    height: 100px;
+    text-align: center;
+    line-height: 100px;
+    color: #ccc;
+    background-color: rgb(255, 255, 255);
+    position: relative;
   }
 </style>
