@@ -4,7 +4,10 @@ import router from "./router";
 import store from "./store";
 import { Button, Input } from "element-ui";
 import axios from "axios";
+import Swiper from "swiper";
+import "swiper/css/swiper.min.css";
 
+window.Swiper = Swiper;
 Vue.use(Button);
 Vue.use(Input);
 
