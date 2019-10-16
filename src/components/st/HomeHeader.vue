@@ -32,9 +32,9 @@ export default {
     fun: {
       inserted: function (el) {
         window.addEventListener("scroll",()=>{
-          funn(document.documentElement.scrollTop - el.offsetTop)
+          funn(document.documentElement.scrollTop)
         });
-        funn(document.documentElement.scrollTop - el.offsetTop)
+        funn(document.documentElement.scrollTop)
         function funn(n){
           if(n!==0){
             el.style.background = "rgb(228,49,48)"
