@@ -1,6 +1,6 @@
 <template>
     <div>   
-        <el-backtop :right="10" :bottom="80">
+        <el-backtop style="right: 5%" :bottom="80">
             <div class="normal"></div>
         </el-backtop>
     </div>

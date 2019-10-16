@@ -1,10 +1,21 @@
 <template>
   <div class="home">
     <HomeHeader></HomeHeader>
-    <!-- 这里是滑块1 -->
-    <div class="Home-silderBox"></div>
+    <div class="Home-silderBox">
+      <!-- 这里是滑块1 -->
+      <indexbanner></indexbanner>
+    </div>
     <!-- 这里是滑块2 -->
     <div class="Home-silderBox2">
+      <advertui @changeShowbtn="changeShowbtn" :showBtn="showBtn"></advertui>
+      <div class="showBtn">
+        <div v-if="showBtn">
+            <img style="width:20px" src="/images/st/1.png">
+        </div>
+        <div v-else>
+            <img style="width:20px" src="/images/st/2.png">
+        </div>
+      </div>
       <img class="Home-silderBox2-bg" src="//m.360buyimg.com/mobilecms/s750x324_jfs/t1/67559/20/13157/30052/5da454c5E68ed4059/b5de41a3b378d476.jpg.dpg">
     </div>
     <div @click="openUrl('https://pro.m.jd.com/mall/active/4HGAy3SHDZPyRJ3XQENnud4HD62V/index.html','_self')" class="Home-banner1">
@@ -14,6 +25,7 @@
     </div>
     <div class="main-container">
       <!-- 京东秒杀 -->
+      <FlashSale></FlashSale>
       <!-- 新人广告 东家小院 每日逛 -->
       <NewPerson></NewPerson>
       <DjxyMrg type="djxy"></DjxyMrg>
@@ -35,20 +47,35 @@ import NewPerson from "../components/st//Advertisement/BannerNewPeople.vue";  //
 import DjxyMrg from "../components/st/Advertisement/DjxyMrg.vue";  // 东家小院 每日逛
 import BackTop from "../components/st/BackTop/NormalBack.vue"; // 回到顶部
 import Recommend from "../components/public/Recommend.vue"; // 为你推荐
-
+import FlashSale from "../components/lz/FlashSale.vue";  // 京东秒杀
+import indexbanner from "../components/wsm/indexbanner";  // 首页滑块1
+import advertui from "../components/wsm/advertui";  // 首页滑块2
 const components = {
   Tabbar,
   HomeHeader,
   NewPerson,
   DjxyMrg,
   BackTop,
-  Recommend
+  Recommend,
+  Tabbar,
+  HomeHeader,
+  FlashSale,
+  indexbanner,
+  advertui
 };
 export default {
   name: "home",
+  data () {
+    return {
+      showBtn: true  
+    }
+  },
   methods: {
       openUrl(url, type){
         window.open(url, type);
+      },
+      changeShowbtn(){
+        this.showBtn = !this.showBtn;
       }
   },
   components
@@ -65,12 +92,10 @@ export default {
   .Home-silderBox{
     width: 100%;
     padding-top: 42px;
-    height: 180px;
     /* 这是滑块 ============================================= */
     background: url(https://m.360buyimg.com/mobilecms/s1125x939_jfs/t1/68092/23/12838/57655/5da453b6Ec8d9b69d/b641dccc10e7c91a.jpg) no-repeat;
     background-position: center center;
     background-size: cover;
-    overflow: hidden;
   }
   .Home-silderBox2{
     width: 100%;
@@ -78,7 +103,6 @@ export default {
     height: 155px;
     overflow: hidden;
     /* 这是滑块2 ============================================= */
-    background-color: rgb(104, 202, 117); 
   }
   .Home-silderBox2-bg{
     width: 100%;
@@ -111,5 +135,11 @@ export default {
     color: #ccc;
     background-color: rgb(255, 255, 255);
     position: relative;
+  }
+  .showBtn{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
   }
 </style>
