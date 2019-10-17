@@ -53,7 +53,7 @@ export default {
   position: fixed;
   top: 0;
   width: 100%;
-  max-width: 400px;
+  /* max-width: 400px; */
   z-index: 1000;
   height: 42px;
   display: flex;
