@@ -171,7 +171,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 .flashsale {
   width: 100%;
   height: 165px;
@@ -183,7 +183,9 @@ export default {
   height: 37px;
   display: flex;
   align-items: center;
-  background-color: #fff
+  border-radius: 8px 8px 0 0;
+  overflow: hidden;
+  background-color: #fff;
 }
 
 .flashsale_up_ms {
@@ -243,6 +245,7 @@ export default {
 .flashsale_down {
   height: 126px;
   overflow-x: scroll;
+  border-radius: 0 0 8px 8px;
 }
 
 .flashsale_down_container {

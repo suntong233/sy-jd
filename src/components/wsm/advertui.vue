@@ -221,6 +221,7 @@ export default {
 
 <style>
 .advertui {
+  position: absolute;
   width: 100%;
   height: 180px;
   padding: 0 8px;
