@@ -1,6 +1,7 @@
 <template>
   <div class="home">
-    searchres
+    搜索结果： 
+    <!-- {{ this.$store.state.searchRes }} -->
   </div>
 </template>
 

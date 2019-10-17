@@ -38,7 +38,7 @@
 
     <!-- 回到顶部 -->
     <BackTop></BackTop>
-      <bottomstyle></bottomstyle>
+    <bottomstyle></bottomstyle>
   </div>
 </template>
 
@@ -53,7 +53,7 @@ import FlashSale from "../components/lz/FlashSale.vue";  // 京东秒杀
 import indexbanner from "../components/wsm/indexbanner";  // 首页滑块1
 import advertui from "../components/wsm/advertui";  // 首页滑块2
 import JdFastNews from "../components/lz/JdFastNews.vue"; // 京东快报
-import bottomstyle from "../components/wsm/bottomstyle"// 首页底部
+import bottomstyle from "../components/wsm/bottomstyle.vue"; // 首页底部
 
 const components = {
   Tabbar,

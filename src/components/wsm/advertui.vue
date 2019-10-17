@@ -219,7 +219,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 .advertui {
   position: absolute;
   width: 100%;

@@ -5,7 +5,7 @@
                 <img src="//img11.360buyimg.com/jdphoto/jfs/t1/31601/22/15554/14040/5cc2a86fEbdb1098b/88174b36f85283b6.png">
             </div>
             <div class="recommendBox-main">
-                <div v-for="item in renderData" :key="item.id" class="recommednBox-item">
+                <div @click="toGoodsInfoRouter(item)" v-for="item in renderData" :key="item.id" class="recommednBox-item">
                     <div class="recommednBox-itemImg">
                         <img v-lazy="item.imgUrl">
                     </div>
@@ -17,7 +17,7 @@
                     </div>
                     <div class="recommednBox-itemprice">
                         <div style="font-size:16px;color: #f23030;">￥{{ typeof item.price == "number"? item.price : item.price[0] }}</div>
-                        <div style="font-size:14px;color: #686868;border:1px solid #ccc;padding:2px 4px;margin-right:5px">看相似</div>
+                        <div @click.stop="toSearchRouter(item.type)" style="font-size:14px;color: #686868;border:1px solid #ccc;padding:2px 4px;margin-right:5px">看相似</div>
                     </div>
                 </div>
             </div>
@@ -46,6 +46,16 @@ export default {
             } else {
                 return "//img11.360buyimg.com/jdphoto/s100x28_jfs/t15376/77/2643750731/2688/443ac7d3/5aadf9daNc1b92ee6.png"
             }
+        },
+        // 跳转到搜索成功页面 调用vuex的搜索模块的 goSearchPage 并传入type
+        toSearchRouter(type) {
+            this.$store.commit("goSearchPage",type);
+            this.$router.push("/searchres");
+        },
+        // 跳转到商品详情页面 调用vuex的商品模块的 goGoodsPage 并传入item
+        toGoodsInfoRouter(item) {
+            this.$store.commit("goGoodsPage",item);
+            this.$router.push("/goods");
         }
     }
 }
@@ -77,8 +87,8 @@ export default {
         align-items: center;
     }
     .recommednBox-itemImg{
-        width: 100%;
-        height: 160px;
+        width: 168px;
+        height: 168px;
         background-color: #fff;
         overflow: hidden;
         position: relative;

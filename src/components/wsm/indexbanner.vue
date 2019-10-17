@@ -76,7 +76,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 .indexbanner {
   width: 100%;
   height: 155px;

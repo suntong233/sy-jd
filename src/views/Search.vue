@@ -1,6 +1,11 @@
 <template>
   <div class="home">
     <searchtextBtn></searchtextBtn>
+    搜索页面：所有tab 
+    <br>
+    <div style="width:100%;overflow: hidden;">
+      {{ this.$store.state.searchPageData }}
+    </div>
   </div>
 </template>
 

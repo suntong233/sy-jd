@@ -1,6 +1,9 @@
 <template>
-  <div class="home">
-    goodsdetail
+  <div class="goodsdetail">
+    商品详情： <br>
+    <div style="width:100%;overflow: hidden;">
+      {{ this.$store.state.goodDetails }}
+    </div>
   </div>
 </template>
 
@@ -12,5 +15,7 @@ export default {
 </script>
 
 <style scoped>
-
+  .goodsdetail{
+    width: 100%;
+  }
 </style>
