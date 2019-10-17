@@ -10,8 +10,8 @@
                         <div class="st-djxymrg-item-title">{{ item.renderData.title }}</div>
                         <div class="st-djxymrg-item-info">{{ item.renderData.info }}</div>
                         <div class="st-djxymrg-item-img">
-                            <img :src="item.renderData.imgurl1">
-                            <img :src="item.renderData.imgurl2">
+                            <img v-lazy="item.renderData.imgurl1">
+                            <img v-lazy="item.renderData.imgurl2">
                         </div>
                     </div>
                     <div class="st-djxymrg-mainboxinset-item2" v-else>
@@ -19,14 +19,14 @@
                             <div :style="item.renderData[0].titlestyle" class="st-djxymrg-item-title2">{{ item.renderData[0].title }}</div>
                             <div class="st-djxymrg-item-info2">{{ item.renderData[0].info }}</div>
                             <div class="st-djxymrg-item-img2">
-                                <img :src="item.renderData[0].url">
+                                <img v-lazy="item.renderData[0].url">
                             </div>
                         </div>
                         <div @click="toMrg(item.renderData[1])">
                             <div :style="item.renderData[1].titlestyle" class="st-djxymrg-item-title2">{{ item.renderData[1].title }}</div>
                             <div class="st-djxymrg-item-info2">{{ item.renderData[1].info }}</div>
                             <div class="st-djxymrg-item-img2">
-                                <img :src="item.renderData[1].url">
+                                <img v-lazy="item.renderData[1].url">
                             </div>
                         </div>
                     </div>
