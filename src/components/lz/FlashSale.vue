@@ -222,7 +222,7 @@ export default {
     height: 16px;
     border: 1px solid rgb(239, 239, 239);
     display: flex;
-    /* justify-content: center; */
+    justify-content: center;
     align-items: center;
 }
 
