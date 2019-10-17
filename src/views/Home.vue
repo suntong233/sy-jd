@@ -30,6 +30,7 @@
       <NewPerson></NewPerson>
       <DjxyMrg type="djxy"></DjxyMrg>
       <DjxyMrg type="mrg"></DjxyMrg>
+      <JdFastNews></JdFastNews>
       <!-- 为你推荐 -->
       <Recommend></Recommend>
     </div>
@@ -52,6 +53,7 @@ import FlashSale from "../components/lz/FlashSale.vue";  // 京东秒杀
 import indexbanner from "../components/wsm/indexbanner";  // 首页滑块1
 import advertui from "../components/wsm/advertui";  // 首页滑块2
 import bottomstyle from "../components/wsm/bottomstyle"//首页底部
+import JdFastNews from "../components/lz/JdFastNews.vue"
 const components = {
   Tabbar,
   HomeHeader,
@@ -64,7 +66,8 @@ const components = {
   FlashSale,
   indexbanner,
   advertui,
-  bottomstyle
+  bottomstyle,
+  JdFastNews
 };
 export default {
   name: "home",
