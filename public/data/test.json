@@ -1163,5 +1163,728 @@
             "//m.360buyimg.com/mobilecms/s843x843_jfs/t1/40466/20/6730/87810/5cd3949cEf7cd2b57/15385f1e5b9619b4.jpg!q70.dpg.webp", 
             "//m.360buyimg.com/mobilecms/s843x843_jfs/t1/52056/37/196/98552/5cd3949cEd65b154d/407c55988051560d.jpg!q70.dpg.webp"
         ]
+    },
+    {
+        "groupL": "电脑办公", 
+        "groupM": "热门分类", 
+        "type": "轻薄本", 
+        "id": "轻薄本1", 
+        "name": "华硕笔记本电脑 顽石畅玩版超薄本15.6英寸高清大屏家用商务本学生游戏轻薄便携独显上网手提电脑超级本 冰钻金-2G独显 4G内存128G固态", 
+        "price": 2899.00, 
+        "tab": [
+        ], 
+        "imgUrl": "//img12.360buyimg.com/mobilecms/s455x455_jfs/t1/64326/2/9195/125435/5d70e2bbE07d0293d/c44626fe684aaaed.jpg!q70.dpg.webp", 
+        "imgUrls": [
+            "//m.360buyimg.com/mobilecms/s750x750_jfs/t1/64326/2/9195/125435/5d70e2bbE07d0293d/c44626fe684aaaed.jpg!q80.dpg.webp", 
+            "//m.360buyimg.com/mobilecms/s1265x1265_jfs/t1/61239/30/9404/137895/5d70e285Ed494f5bb/189c57df9f207cf9.jpg!q70.dpg.webp", 
+            "//m.360buyimg.com/mobilecms/s1265x1265_jfs/t1/50463/8/9797/169645/5d70e285E70681010/6610614d3936545d.jpg!q70.dpg.webp"
+        ]
+    }, 
+    {
+        "groupL": "电脑办公", 
+        "groupM": "热门分类", 
+        "type": "轻薄本", 
+        "id": "轻薄本2", 
+        "name": "荣耀MagicBook 2019 第三方Linux版 14英寸轻薄窄边框笔记本电脑（AMD锐龙5 3500U 8G 512G FHD IPS ）冰河银  ", 
+        "price": 3999.00, 
+        "tab": [
+            "自营"
+        ], 
+        "imgUrl": "//img13.360buyimg.com/mobilecms/s455x455_jfs/t1/94450/22/26/277538/5da5a578Ed25355e5/ac735afe41f470e2.jpg!q70.dpg.webp", 
+        "imgUrls": [
+            "//m.360buyimg.com/mobilecms/s750x750_jfs/t1/94450/22/26/277538/5da5a578Ed25355e5/ac735afe41f470e2.jpg!q80.dpg.webp", 
+            "//m.360buyimg.com/mobilecms/s1265x1265_jfs/t1/54757/34/11430/51129/5d847105E046ad638/f8a64f9ddf3e59bc.jpg!q70.dpg.webp", 
+            "//m.360buyimg.com/mobilecms/s1265x1265_jfs/t1/47003/1/11332/113756/5d847105E76dbf102/01b59b9ceff03e16.jpg!q70.dpg.webp"
+        ]
+    }, 
+    {
+        "groupL": "电脑办公", 
+        "groupM": "热门分类", 
+        "type": "轻薄本", 
+        "id": "轻薄本3", 
+        "name": " 联想(Lenovo)小新Air14英寸 AMD锐龙版(全新12nm)轻薄笔记本电脑(R5-3500U 12G 512G PCIE IPS)轻奢灰  ", 
+        "price": 4299.00, 
+        "tab": [
+        ], 
+        "imgUrl": "//img14.360buyimg.com/mobilecms/s455x455_jfs/t1/76479/5/10865/71531/5d831e66E2e2ebc53/d65c20d4a7fdff94.jpg!q70.dpg.webp", 
+        "imgUrls": [
+            "//m.360buyimg.com/mobilecms/s750x750_jfs/t1/76479/5/10865/71531/5d831e66E2e2ebc53/d65c20d4a7fdff94.jpg!q80.dpg.webp", 
+            "//m.360buyimg.com/mobilecms/s1265x1265_jfs/t1/71966/16/7083/76762/5d525ca5E448e4871/95a65ed41f6dd592.jpg!q70.dpg.webp", 
+            "//m.360buyimg.com/mobilecms/s1265x1265_jfs/t1/65376/30/6988/78903/5d50e414E7d8e2e93/8098c49ca0f8a489.jpg!q70.dpg.webp"
+        ]
+    }, 
+    {
+        "groupL": "电脑办公", 
+        "groupM": "热门分类", 
+        "type": "轻薄本", 
+        "id": "轻薄本4", 
+        "name": "机械革命(MECHREVO)S1 Pro 英特尔酷睿i5 14英寸全金属窄边框轻薄笔记本电脑(i5-8265U 8G 512G MX250 背光键盘 摄像头全接口 Type-C 银)  ", 
+        "price": 4099.00, 
+        "tab": [
+        ], 
+        "imgUrl": "//img14.360buyimg.com/mobilecms/s455x455_jfs/t1/55775/24/4404/258672/5d22ac54Eb9c813d3/3647150d10a60a97.jpg!q70.dpg.webp", 
+        "imgUrls": [
+            "//m.360buyimg.com/mobilecms/s750x750_jfs/t1/55775/24/4404/258672/5d22ac54Eb9c813d3/3647150d10a60a97.jpg!q80.dpg.webp", 
+            "//m.360buyimg.com/mobilecms/s1265x1265_jfs/t1/76182/10/3972/138572/5d22ac61Ed9b7d7be/9879f62137962273.jpg!q70.dpg.webp", 
+            "//m.360buyimg.com/mobilecms/s1265x1265_jfs/t1/53454/19/4123/66486/5d1da43eE59eb2b8f/c83fd9436a8efc4e.jpg!q70.dpg.webp"
+        ]
+    }, 
+    {
+        "groupL": "电脑办公", 
+        "groupM": "热门分类", 
+        "type": "轻薄本", 
+        "id": "轻薄本5", 
+        "name": "华硕笔记本电脑 顽石畅玩版超薄本15.6英寸高清大屏家用商务本学生游戏轻薄便携独显上网手提电脑超级本 冰钻金-2G独显 4G内存128G固态", 
+        "price": 2899.00, 
+        "tab": [
+        ], 
+        "imgUrl": "//img12.360buyimg.com/mobilecms/s455x455_jfs/t1/64326/2/9195/125435/5d70e2bbE07d0293d/c44626fe684aaaed.jpg!q70.dpg.webp", 
+        "imgUrls": [
+            "//m.360buyimg.com/mobilecms/s750x750_jfs/t1/64326/2/9195/125435/5d70e2bbE07d0293d/c44626fe684aaaed.jpg!q80.dpg.webp", 
+            "//m.360buyimg.com/mobilecms/s1265x1265_jfs/t1/61239/30/9404/137895/5d70e285Ed494f5bb/189c57df9f207cf9.jpg!q70.dpg.webp", 
+            "//m.360buyimg.com/mobilecms/s1265x1265_jfs/t1/50463/8/9797/169645/5d70e285E70681010/6610614d3936545d.jpg!q70.dpg.webp"
+        ]
+    }, 
+    
+    
+    {
+        "groupL": "电脑办公", 
+        "groupM": "热门分类", 
+        "type": "游戏本", 
+        "id": "游戏本1", 
+        "name": " 戴尔(DELL) Latitude 3500领航15.6英寸超轻薄商用移动笔记本Cel-4205U/4G/128G SSD固态盘", 
+        "price": 2499.00, 
+        "tab": ["自营"
+        ], 
+        "imgUrl": "//img10.360buyimg.com/n2/s240x240_jfs/t1/82026/22/662/171862/5cee365fEf588abeb/37050b697a36893d.jpg!q70.jpg", 
+        "imgUrls": [
+            "//m.360buyimg.com/mobilecms/s750x750_jfs/t1/82026/22/662/171862/5cee365fEf588abeb/37050b697a36893d.jpg!q80.dpg.webp", 
+            "//m.360buyimg.com/mobilecms/s1265x1265_jfs/t1/57433/26/1121/113122/5cee365fE5fea035e/98e23e889bb5d9de.jpg!q70.dpg.webp", 
+            "//m.360buyimg.com/mobilecms/s1265x1265_jfs/t1/45792/6/1072/116372/5cee365fE5cb6c621/6cb8d35b21981f5a.jpg!q70.dpg.webp"
+        ]
+    }, 
+    
+    
+    
+    {
+        "groupL": "电脑办公", 
+        "groupM": "热门分类", 
+        "type": "键盘", 
+        "id": "键盘1", 
+        "name": "现代翼蛇（HYesir）HY-MA75键鼠套装 有线键鼠套装 办公键盘鼠标 usb通用 防水泼 经典爆款 特惠版 自营", 
+        "price": 28.90, 
+        "tab": ["自营"
+        ], 
+        "imgUrl": "//img10.360buyimg.com/n2/s240x240_jfs/t1/52159/29/13575/82646/5da59b63E28cfd64f/e6d751b55987b313.jpg!q70.jpg", 
+        "imgUrls": [
+            "//m.360buyimg.com/mobilecms/s750x750_jfs/t1/52159/29/13575/82646/5da59b63E28cfd64f/e6d751b55987b313.jpg!q80.dpg.webp", 
+            "//m.360buyimg.com/mobilecms/s1265x1265_jfs/t1/67579/29/3459/308031/5d1b0041E6e7852b1/7c3419ac54788531.jpg!q70.dpg.webp", 
+            "//m.360buyimg.com/mobilecms/s1265x1265_jfs/t1/71722/13/3458/239965/5d1b00f2E604bd63f/e7b01719f7a8750c.jpg!q70.dpg.webp"
+        ]
+    }, 
+    
+    
+    {
+        "groupL": "电脑办公", 
+        "groupM": "热门分类", 
+        "type": "组装电脑", 
+        "id": "组装电脑1", 
+        "name": "宏华 INTEL高端四核六核/4G独显/16G内存吃鸡游戏办公台式组装电脑主机/DIY兼容机整机全套 标配（主机+显示器） 配置一", 
+        "price": 1098.00, 
+        "tab": [
+        ], 
+        "imgUrl": "//img10.360buyimg.com/n2/s240x240_jfs/t1/70505/3/10660/174117/5d832430E635158ac/324e7f3e4a953a50.jpg!q70.jpg", 
+        "imgUrls": [
+            "//m.360buyimg.com/mobilecms/s750x750_jfs/t1/70505/3/10660/174117/5d832430E635158ac/324e7f3e4a953a50.jpg!q80.dpg.webp", 
+            "//m.360buyimg.com/mobilecms/s1265x1265_jfs/t1/46815/21/11169/192577/5d83200fE1acf54fa/8ff6f912d3249ead.jpg!q70.dpg.webp", 
+            "//m.360buyimg.com/mobilecms/s1265x1265_jfs/t1/64664/20/2018/135998/5d04a6bcE5dd92d95/62d1ed98b3c308de.jpg!q70.dpg.webp"
+        ]
+    }, 
+    
+    
+    {
+        "groupL": "电脑办公", 
+        "groupM": "热门分类", 
+        "type": "移动硬盘", 
+        "id": "移动硬盘1", 
+        "name": "纽曼（Newsmy）500GB USB3.0 移动硬盘 星云 2.5英寸 星空黑 数据备份存储 稳定耐用", 
+        "price": 199.00, 
+        "tab": [
+            "自营"
+        ], 
+        "imgUrl": "//img10.360buyimg.com/n2/s240x240_jfs/t1/7884/14/1974/31907/5bd07390E4b5268e1/9f3925a955d121d9.jpg!q70.jpg", 
+        "imgUrls": [
+            "//m.360buyimg.com/mobilecms/s750x750_jfs/t1/7884/14/1974/31907/5bd07390E4b5268e1/9f3925a955d121d9.jpg!q80.dpg.webp", 
+            "//m.360buyimg.com/mobilecms/s1265x1265_jfs/t1159/302/221313698/36669/1cdfaba9/550a73a0N144e0e11.jpg!q70.dpg.webp", 
+            "//m.360buyimg.com/mobilecms/s1265x1265_jfs/t799/55/193705761/37351/62ae5e61/550a73a1N8c8c425a.jpg!q70.dpg.webp"
+        ]
+    }, 
+    
+    {
+        "groupL": "电脑办公", 
+        "groupM": "热门分类", 
+        "type": "显卡", 
+        "id": "显卡1", 
+        "name": "蓝宝石（Sapphire）RX580 2048SP 8G D5 白金版 OC 1306MHz/8000MHz 8GB/256bit GDDR5 DX12 吃鸡显卡", 
+        "price": 1099.00, 
+        "tab": [
+            "自营"
+        ], 
+        "imgUrl": "//img10.360buyimg.com/n2/s240x240_jfs/t1/35239/27/9637/245289/5cd0ebafE7efd7369/80c8db9ae63fa77e.jpg!q70.jpg", 
+        "imgUrls": [
+            "//m.360buyimg.com/mobilecms/s750x750_jfs/t1/35239/27/9637/245289/5cd0ebafE7efd7369/80c8db9ae63fa77e.jpg!q80.dpg.webp", 
+            "//m.360buyimg.com/mobilecms/s1265x1265_jfs/t1/39791/26/6345/152191/5cd0ebaeE879823cc/f008c8b5d541d451.jpg!q70.dpg.webp", 
+            "//m.360buyimg.com/mobilecms/s1265x1265_jfs/t1/40082/15/6245/193972/5cd0ebafEb336b207/a8e373908fb0ed97.jpg!q70.dpg.webp"
+        ]
+    }, 
+    
+    
+    {
+        "groupL": "电脑办公", 
+        "groupM": "热门分类", 
+        "type": "游戏台式机", 
+        "id": "游戏台式机1", 
+        "name": "宏华 E5八核十六线程/8GB独显/360G/16G内存 吃鸡逆水寒游戏台式办公组装电脑主机整机全套 显示器+主机 配置一", 
+        "price": 1899.00, 
+        "tab": [
+        ], 
+        "imgUrl": "//img10.360buyimg.com/n2/s240x240_jfs/t1/41948/19/11805/185039/5d541cf8Eb8f6ee15/44cc0d344dc08b40.jpg!q70.jpg", 
+        "imgUrls": [
+            "//m.360buyimg.com/mobilecms/s750x750_jfs/t1/41948/19/11805/185039/5d541cf8Eb8f6ee15/44cc0d344dc08b40.jpg!q80.dpg.webp", 
+            "//m.360buyimg.com/mobilecms/s1265x1265_jfs/t1/81248/5/4309/772596/5d2852f5E066482d5/62321e15abbea55e.png.webp", 
+            "//m.360buyimg.com/mobilecms/s1265x1265_jfs/t1/52080/33/4851/827640/5d2852f5E1b7740e5/3165946ef2b45abf.png.webp"
+        ]
+    }, 
+    
+    {
+        "groupL": "电脑办公", 
+        "groupM": "热门分类", 
+        "type": "家用打印机", 
+        "id": "家用打印机1", 
+        "name": "惠普（HP）DeskJet 2622 无线家用喷墨打印一体机 (学生作业/手机/彩色打印，扫描，复印，两年保修)", 
+        "price": 399.00, 
+        "tab": [
+            "自营"
+        ], 
+        "imgUrl": "//img10.360buyimg.com/n2/s240x240_jfs/t1/79213/28/3476/202272/5d19a7e9E5b106fbb/a13aada8285bf763.jpg!q70.jpg", 
+        "imgUrls": [
+            "//m.360buyimg.com/mobilecms/s750x750_jfs/t1/79213/28/3476/202272/5d19a7e9E5b106fbb/a13aada8285bf763.jpg!q80.dpg.webp", 
+            "//m.360buyimg.com/mobilecms/s1265x1265_jfs/t24364/29/2108079754/213723/3267a1d2/5b752c3eN543756c0.jpg!q70.dpg.webp", 
+            "//m.360buyimg.com/mobilecms/s1265x1265_jfs/t11809/222/2563987517/156692/6c7702f3/5a1d3f7aN90e50c31.jpg!q70.dpg.webp"
+        ]
+    }, 
+    
+    
+    {
+        "groupL": "电脑办公", 
+        "groupM": "热门分类", 
+        "type": "吃鸡装备", 
+        "id": "吃鸡装备1", 
+        "name": "华硕（ASUS）TUF B360M-PLUS GAMING S 游戏主板支持9100F/9400F/9500/9700F（Intel B360/LGA 1151）", 
+        "price": 699.00, 
+        "tab": [
+            "自营"
+        ], 
+        "imgUrl": "//m.360buyimg.com/n7/s205x205_jfs/t1/1112/31/2284/740177/5b962e6dE04d26986/b73f0b4d6c32a824.jpg!q70.webp", 
+        "imgUrls": [
+            "//m.360buyimg.com/mobilecms/s750x750_jfs/t1/1112/31/2284/740177/5b962e6dE04d26986/b73f0b4d6c32a824.jpg!q80.dpg.webp", 
+            "//m.360buyimg.com/mobilecms/s1265x1265_jfs/t27439/80/2337126299/482823/835b7dd1/5bfd01daN89fcb05c.jpg!q70.dpg.webp", 
+            "//m.360buyimg.com/mobilecms/s1265x1265_jfs/t24535/49/1077494560/593271/8903eabd/5b4f581fN776a86c6.jpg!q70.dpg.webp"
+        ]
+    }, 
+    
+    
+    {
+        "groupL": "电脑办公", 
+        "groupM": "热门分类", 
+        "type": "曲屏显示器", 
+        "id": "曲屏显示器1", 
+        "name": "宏碁（Acer）商用系列CB242Y 23.8英寸 IPS窄边框全高清旋转升降底座广视角爱眼不闪屏显示器(VGA+HDMI)", 
+        "price": 899.00, 
+        "tab": [
+            "自营"
+        ], 
+        "imgUrl": "//img10.360buyimg.com/n2/s240x240_jfs/t1/64500/11/3591/532807/5d1c677fE7a855ef4/1feb38ea877c2131.jpg!q70.jpg", 
+        "imgUrls": [
+            "//m.360buyimg.com/mobilecms/s750x750_jfs/t1/64500/11/3591/532807/5d1c677fE7a855ef4/1feb38ea877c2131.jpg!q80.dpg.webp", 
+            "//m.360buyimg.com/mobilecms/s1265x1265_jfs/t1/34930/37/13936/531954/5d1c677dE689f9213/0d958a240bc9dc17.jpg!q70.dpg.webp", 
+            "//m.360buyimg.com/mobilecms/s1265x1265_jfs/t1/37357/23/13278/433589/5d1c6781Ef74e9c8d/640f0430ee7515bf.jpg!q70.dpg.webp"
+        ]
+    }, 
+    
+    
+    
+    {
+        "groupL": "电脑办公", 
+        "groupM": "热门分类", 
+        "type": "投影机", 
+        "id": "投影机1", 
+        "name": "E家乐Q9 投影仪家用 办公投影机 （物理分辨率1920*1080P 办公教学 白天直投）基础版", 
+        "price": 1299.00, 
+        "tab": [
+            "自营"
+        ], 
+        "imgUrl": "//img10.360buyimg.com/n2/s240x240_jfs/t1/46222/32/13152/115915/5d9ef6b8E9ac85e83/4c2439a9fe465124.jpg!q70.jpg", 
+        "imgUrls": [
+            "//m.360buyimg.com/mobilecms/s750x750_jfs/t1/46222/32/13152/115915/5d9ef6b8E9ac85e83/4c2439a9fe465124.jpg!q80.dpg.webp", 
+            "//m.360buyimg.com/mobilecms/s1265x1265_jfs/t1/71813/7/9782/127311/5d75e619Eb1bf5744/18df552e6beaab62.jpg!q70.dpg.webp", 
+            "//m.360buyimg.com/mobilecms/s1265x1265_jfs/t1/83017/24/6329/298673/5d47d0f9E74abf1e4/25846e62391f224b.jpg!q70.dpg.webp"
+        ]
+    }, 
+    
+    {
+        "groupL": "电脑办公", 
+        "groupM": "热门分类", 
+        "type": "日本文具", 
+        "id": "日本文具1", 
+        "name": "齐心(Comix)12支0.5mm黑色装经济实用商务中性笔/水笔/签字笔 办公文具 GP306", 
+        "price": 8.80, 
+        "tab": [
+            "自营"
+        ], 
+        "imgUrl": "//img10.360buyimg.com/n2/s240x240_jfs/t1/82949/37/12965/329013/5da51835E2d81e0d0/6d423076b81777ac.jpg!q70.jpg", 
+        "imgUrls": [
+            "//m.360buyimg.com/mobilecms/s750x750_jfs/t1/82949/37/12965/329013/5da51835E2d81e0d0/6d423076b81777ac.jpg!q80.dpg.webp", 
+            "//m.360buyimg.com/mobilecms/s1265x1265_jfs/t1684/161/861955147/36439/784249f4/55baccdfNa244b84d.jpg!q70.dpg.webp", 
+            "//m.360buyimg.com/mobilecms/s1265x1265_jfs/t1375/313/1071908600/49437/6f5c363/55baccdfN2bad3d03.jpg!q70.dpg.webp"
+        ]
+    }, 
+    
+    
+    {
+        "groupL": "电脑办公", 
+        "groupM": "电脑整机", 
+        "type": "笔记本", 
+        "id": "笔记本1", 
+        "name": "荣耀MagicBook 2019 第三方Linux版 14英寸轻薄窄边框笔记本电脑（AMD锐龙5 3500U 8G 512G FHD IPS ）冰河银", 
+        "price": 3999.00, 
+        "tab": [
+            "自营"
+        ], 
+        "imgUrl": "//img10.360buyimg.com/n2/s240x240_jfs/t1/94450/22/26/277538/5da5a578Ed25355e5/ac735afe41f470e2.jpg!q70.jpg", 
+        "imgUrls": [
+            "//m.360buyimg.com/mobilecms/s750x750_jfs/t1/94450/22/26/277538/5da5a578Ed25355e5/ac735afe41f470e2.jpg!q80.dpg.webp", 
+            "//m.360buyimg.com/mobilecms/s1265x1265_jfs/t1/54757/34/11430/51129/5d847105E046ad638/f8a64f9ddf3e59bc.jpg!q70.dpg.webp", 
+            "//m.360buyimg.com/mobilecms/s1265x1265_jfs/t1/47003/1/11332/113756/5d847105E76dbf102/01b59b9ceff03e16.jpg!q70.dpg.webp"
+        ]
+    }, 
+    
+    
+    {
+        "groupL": "电脑办公", 
+        "groupM": "电脑整机", 
+        "type": "平板电脑", 
+        "id": "平板电脑1", 
+        "name": "荣耀平板5 麒麟8核芯片  GT游戏加速 4G+64G 10.1英寸全高清屏影音平板电脑 WiFi版 冰川蓝", 
+        "price": 1299.00, 
+        "tab": [
+            "自营"
+        ], 
+        "imgUrl": "//img10.360buyimg.com/n2/s240x240_jfs/t1/22618/35/9197/67119/5c7d1e05E15c820a3/a36a49d693db0d8e.jpg!q70.jpg", 
+        "imgUrls": [
+            "//m.360buyimg.com/mobilecms/s750x750_jfs/t1/22618/35/9197/67119/5c7d1e05E15c820a3/a36a49d693db0d8e.jpg!q80.dpg.webp", 
+            "//m.360buyimg.com/mobilecms/s1265x1265_jfs/t1/82647/13/4655/134569/5d2bf838E70b4c8df/a6cc280337c111fc.jpg!q70.dpg.webp", 
+            "//m.360buyimg.com/mobilecms/s1265x1265_jfs/t1/27001/22/13661/68652/5ca1d8d6Ea4e5e3fc/c12ad6ac3f2df69d.jpg!q70.dpg.webp"
+        ]
+    }, 
+    
+    
+    {
+        "groupL": "电脑办公", 
+        "groupM": "电脑整机", 
+        "type": "一体机", 
+        "id": "一体机1", 
+        "name": "汇蓝 HL32C 19英寸壁挂广告机高清液晶显示屏横竖无线网络一体机A20双核1+8G（智能单机-非触摸）", 
+        "price": 899.00, 
+        "tab": [
+            "自营"
+        ], 
+        "imgUrl": "//img10.360buyimg.com/n2/s240x240_jfs/t1/50104/32/11128/482174/5d81c598E9898696c/f44622abc4ec3bb6.jpg!q70.jpg", 
+        "imgUrls": [
+            "//m.360buyimg.com/mobilecms/s750x750_jfs/t1/50104/32/11128/482174/5d81c598E9898696c/f44622abc4ec3bb6.jpg!q80.dpg.webp", 
+            "//m.360buyimg.com/mobilecms/s1265x1265_jfs/t1/55505/31/11181/430525/5d81c598E4be8274b/3f6fa16a3119476f.jpg!q70.dpg.webp", 
+            "//m.360buyimg.com/mobilecms/s1265x1265_jfs/t1/57918/28/10847/419733/5d81c599Efe733ac1/32e62b455c51a33d.jpg!q70.dpg.webp"
+        ]
+    }, 
+    
+    
+    {
+        "groupL": "电脑办公", 
+        "groupM": "电脑整机", 
+        "type": "台式机", 
+        "id": "台式机1", 
+        "name": "宏华 E5八核十六线程/8GB独显/360G/16G内存 吃鸡逆水寒游戏台式办公组装电脑主机整机全套 显示器+主机 配置一", 
+        "price": 1899.00, 
+        "tab": [
+            
+        ], 
+        "imgUrl": "//img10.360buyimg.com/n2/s240x240_jfs/t1/41948/19/11805/185039/5d541cf8Eb8f6ee15/44cc0d344dc08b40.jpg!q70.jpg", 
+        "imgUrls": [
+            "//m.360buyimg.com/mobilecms/s750x750_jfs/t1/41948/19/11805/185039/5d541cf8Eb8f6ee15/44cc0d344dc08b40.jpg!q80.dpg.webp", 
+            "//m.360buyimg.com/mobilecms/s1265x1265_jfs/t1/81248/5/4309/772596/5d2852f5E066482d5/62321e15abbea55e.png.webp", 
+            "//m.360buyimg.com/mobilecms/s1265x1265_jfs/t1/52080/33/4851/827640/5d2852f5E1b7740e5/3165946ef2b45abf.png.webp"
+        ]
+    }, 
+    
+    {
+        "groupL": "电脑办公", 
+        "groupM": "电脑整机", 
+        "type": "笔记本配件", 
+        "id": "笔记本配件1", 
+        "name": "越来越酷 笔记本散热器游戏本底座架手提电脑散热风扇静音非水冷排风扇17支架14板15.6垫17.3寸 黑色【吃鸡专用版】—客户推荐爆款", 
+        "price": 79.00, 
+        "tab": [
+            "京东物流"
+        ], 
+        "imgUrl": "//img13.360buyimg.com/mobilecms/s455x455_jfs/t1/49829/18/143/163953/5cd2c382Eb27f6803/5763ebfad36b5a52.jpg!q70.dpg.webp", 
+        "imgUrls": [
+            "//m.360buyimg.com/mobilecms/s750x750_jfs/t1/49829/18/143/163953/5cd2c382Eb27f6803/5763ebfad36b5a52.jpg!q80.dpg.webp", 
+            "//m.360buyimg.com/mobilecms/s1265x1265_jfs/t5686/114/3765831202/335080/524ee29d/5942722bN28aa4a70.jpg!q70.dpg.webp", 
+            "//m.360buyimg.com/mobilecms/s1265x1265_jfs/t22696/218/1250173438/139974/5a300511/5b56f95bNd76216fa.jpg!q70.dpg.webp"
+        ]
+    }, 
+    
+    
+    {
+        "groupL": "电脑办公", 
+        "groupM": "电脑整机", 
+        "type": "游戏台式机", 
+        "id": "游戏台式机1", 
+        "name": "宏碁（Acer）商祺SQX4270 666N商用办公台式电脑整机(九代i5-9400 8G 1T GT730 2G Wifi 三年上门)21.5英寸", 
+        "price": 3899.00, 
+        "tab": [
+            "自营"
+        ], 
+        "imgUrl": "//img10.360buyimg.com/n2/s240x240_jfs/t1/59836/19/9317/170688/5d6f7ef1Ec2fa095d/6edf748e56beb616.jpg!q70.jpg", 
+        "imgUrls": [
+            "//m.360buyimg.com/mobilecms/s750x750_jfs/t1/59836/19/9317/170688/5d6f7ef1Ec2fa095d/6edf748e56beb616.jpg!q80.dpg.webp", 
+            "//m.360buyimg.com/mobilecms/s1265x1265_jfs/t1/63199/33/9160/223095/5d6f7f88Ea458804e/056aced87a1cf502.jpg!q70.dpg.webp", 
+            "//m.360buyimg.com/mobilecms/s1265x1265_jfs/t1/46566/30/9613/82362/5d6f7f8eEf08b8766/9749985494dac078.jpg!q70.dpg.webp"
+        ]
+    }, 
+    
+    {
+        "groupL": "电脑办公", 
+        "groupM": "电脑整机", 
+        "type": "商用台式机", 
+        "id": "商用台式机1", 
+        "name": "清华同方(THTF)超扬A8500商用办公台式电脑整机(i5-9400 8G 1T 五年质保 内置WIFI office)23.8英寸", 
+        "price": 3699.00, 
+        "tab": [
+            "自营"
+        ], 
+        "imgUrl": "//img10.360buyimg.com/n2/s240x240_jfs/t1/38576/35/14174/283706/5d5224ceE608bc0a8/b67fe81091d76143.jpg!q70.jpg", 
+        "imgUrls": [
+            "//m.360buyimg.com/mobilecms/s750x750_jfs/t1/38576/35/14174/283706/5d5224ceE608bc0a8/b67fe81091d76143.jpg!q80.dpg.webp", 
+            "//m.360buyimg.com/mobilecms/s1265x1265_jfs/t1/63929/7/7050/279658/5d5224ceE6791c317/ff6968ffc1256f4f.jpg!q70.dpg.webp", 
+            "//m.360buyimg.com/mobilecms/s1265x1265_jfs/t1/67812/31/7175/244026/5d5224cfE359b9bf9/0bb832381bfc2a39.jpg!q70.dpg.webp"
+        ]
+    }, 
+    
+    
+    {
+        "groupL": "电脑办公", 
+        "groupM": "电脑整机", 
+        "type": "游戏本", 
+        "id": "游戏本1", 
+        "name": "荣耀MagicBook 2019 第三方Linux版 14英寸轻薄窄边框笔记本电脑（AMD R5 3500U 8G 256G  FHD IPS ）冰河银", 
+        "price": 3699.00, 
+        "tab": [
+            "自营"
+        ], 
+        "imgUrl": "//img10.360buyimg.com/mobilecms/s455x455_jfs/t1/58810/7/13035/277538/5da5a598E55c8c970/e7ca24a2a02f5cfc.jpg!q70.dpg.webp", 
+        "imgUrls": [
+            "//m.360buyimg.com/mobilecms/s750x750_jfs/t1/58810/7/13035/277538/5da5a598E55c8c970/e7ca24a2a02f5cfc.jpg!q80.dpg.webp", 
+            "//m.360buyimg.com/mobilecms/s1265x1265_jfs/t1/56822/32/11408/51129/5d847239Ed4023f9b/c9859546db266e3d.jpg!q70.dpg.webp", 
+            "//m.360buyimg.com/mobilecms/s1265x1265_jfs/t1/49110/18/11220/113756/5d84723aE441c830d/a691d72b54a51040.jpg!q70.dpg.webp"
+        ]
+    }, 
+    
+    
+    {
+        "groupL": "电脑办公", 
+        "groupM": "电脑整机", 
+        "type": "平板电脑配件", 
+        "id": "平板电脑配件1", 
+        "name": "华为手写笔原装电容笔M Pen lite触控笔适用于MateBook E2019款/M6平板10.8 【现货速发】手写笔【灰色】", 
+        "price": 282.00, 
+        "tab": [
+            "京东物流"
+        ], 
+        "imgUrl": "//img11.360buyimg.com/n2/s240x240_jfs/t1/54436/2/8854/67966/5d64de38Eedaddf91/65e3b18582d22856.jpg!q70.jpg", 
+        "imgUrls": [
+            "//m.360buyimg.com/mobilecms/s750x750_jfs/t1/54436/2/8854/67966/5d64de38Eedaddf91/65e3b18582d22856.jpg!q80.dpg.webp", 
+            "//m.360buyimg.com/mobilecms/s1265x1265_jfs/t1/62872/3/7746/75338/5d5cf9c9E797532c1/19f248f278a09b2e.jpg!q70.dpg.webp", 
+            "//m.360buyimg.com/mobilecms/s1265x1265_jfs/t1/36254/25/9326/205767/5ccfdaf7Ec63c5d06/3c0aa7f5bfc22d26.jpg!q70.dpg.webp"
+        ]
+    }, 
+    
+    {
+        "groupL": "电脑办公", 
+        "groupM": "电脑整机", 
+        "type": "轻薄笔记本", 
+        "id": "轻薄笔记本1", 
+        "name": "AVITA轻薄笔本电脑13.3英寸女生超薄本多彩手提电脑上网本学生办公家用娱乐固态便携本 13.3” i5/8G/256G固态 丁香紫色", 
+        "price": 4999.00, 
+        "tab": [
+        ], 
+        "imgUrl": "//img10.360buyimg.com/n2/s240x240_jfs/t1/74946/5/12435/101162/5d9bd093Ef9412f9a/8f723f9a72e85869.jpg!q70.jpg", 
+        "imgUrls": [
+            "//m.360buyimg.com/mobilecms/s750x750_jfs/t1/74946/5/12435/101162/5d9bd093Ef9412f9a/8f723f9a72e85869.jpg!q80.dpg.webp", 
+            "//m.360buyimg.com/mobilecms/s1265x1265_jfs/t1/42068/20/12563/45064/5d5e30d9Eefb87140/8d6f007682e41433.jpg!q70.dpg.webp", 
+            "//m.360buyimg.com/mobilecms/s1265x1265_jfs/t1/63750/4/7814/30899/5d5e30d9E805f7068/8224a87f1b77e803.jpg!q70.dpg.webp"
+        ]
+    }, 
+    
+    {
+        "groupL": "电脑办公", 
+        "groupM": "电脑整机", 
+        "type": "二合一平板", 
+        "id": "二合一平板1", 
+        "name": "酷比魔方KNote GO(nuvision) 11.6英寸win10办公平板电脑二合一windows 标准版【4G+64G,带键盘】", 
+        "price": 1399.00, 
+        "tab": [
+        ], 
+        "imgUrl": "//img10.360buyimg.com/n2/s240x240_jfs/t1/103649/24/120/111808/5da7ee86E4ee5ae8f/d9d607ea6b1d97a1.jpg!q70.jpg", 
+        "imgUrls": [
+            "//m.360buyimg.com/mobilecms/s750x750_jfs/t1/103649/24/120/111808/5da7ee86E4ee5ae8f/d9d607ea6b1d97a1.jpg!q80.dpg.webp", 
+            "//m.360buyimg.com/mobilecms/s1265x1265_jfs/t1/75554/28/1590/108243/5cfe06e3E2ce882e6/b3e823d0fbf0d20e.jpg!q70.dpg.webp", 
+            "//m.360buyimg.com/mobilecms/s1265x1265_jfs/t1/16556/27/11246/114374/5c8c70a7E8eb2269b/c5cc3413037d850a.jpg!q70.dpg.webp"
+        ]
+    }, 
+    
+    {
+        "groupL": "电脑办公", 
+        "groupM": "电脑整机", 
+        "type": "服务器/工作站", 
+        "id": "服务器/工作站1", 
+        "name": "戴尔（DELL） Precision3541/3530移动图形工作站轻薄笔记本电脑平面绘图设计本 I7-9750/8G/512G+2T/W10H P620-4G专业制图显卡/100%s色域/雷电3", 
+        "price": 10799, 
+        "tab": [
+            "京东物流"
+        ], 
+        "imgUrl": "//img11.360buyimg.com/n2/s240x240_jfs/t1/96654/21/7/144393/5da57bb0E66b1d5e7/fb57437950f7503f.jpg!q70.jpg", 
+        "imgUrls": [
+            "//m.360buyimg.com/mobilecms/s750x750_jfs/t1/96654/21/7/144393/5da57bb0E66b1d5e7/fb57437950f7503f.jpg!q80.dpg.webp", 
+            "//m.360buyimg.com/mobilecms/s1265x1265_jfs/t1/45378/3/5980/124120/5d3957e9E748a31e7/cd398bd13220220e.jpg!q70.dpg.webp", 
+            "//m.360buyimg.com/mobilecms/s1265x1265_jfs/t1/51964/24/5915/54730/5d3957e8E87e6a245/5d0b1e9549bd7128.jpg!q70.dpg.webp"
+        ]
+    }, 
+    
+    {
+        "groupL": "电脑办公", 
+        "groupM": "外设产品", 
+        "type": "鼠标", 
+        "id": "鼠标1", 
+        "name": "前行者牧马人3代电竞游戏绝地求生lolcf吃鸡机械2代台式电脑笔记本家用有线宏鼠标办公光电静音非无声 3代牧马人黑鼠标【静音升级版】", 
+        "price": 39.00, 
+        "tab": [
+            "京东物流"
+        ], 
+        "imgUrl": "//img10.360buyimg.com/n2/s240x240_jfs/t25498/266/296141314/154580/f4422dab/5b6acf31N9a0a1b6f.jpg!q70.jpg", 
+        "imgUrls": [
+            "//m.360buyimg.com/mobilecms/s750x750_jfs/t25498/266/296141314/154580/f4422dab/5b6acf31N9a0a1b6f.jpg!q80.dpg.webp", 
+            "//m.360buyimg.com/mobilecms/s1265x1265_jfs/t1/78713/35/8661/134552/5d67886dEd95d7d56/a0746e6aadf2a1d9.jpg!q70.dpg.webp", 
+            "//m.360buyimg.com/mobilecms/s1265x1265_jfs/t1/49879/16/9186/109309/5d67a480E678ccd93/9471f9519e5a3d59.jpg!q70.dpg.webp"
+        ]
+    }, 
+    
+    {
+        "groupL": "电脑办公", 
+        "groupM": "外设产品", 
+        "type": "u盘", 
+        "id": "u盘1", 
+        "name": "台电（Teclast）64GB USB3.1 U盘 NEX系列 银色 金属防水 便携圆环高速车载U盘", 
+        "price": [44.90, 99.90],
+         "tab": [
+            "自营"
+        ], 
+        "imgUrl": "//img10.360buyimg.com/n2/s240x240_jfs/t1/80657/8/1677/92231/5d0099d0E0a8eecbc/b5515fa4621a9664.jpg!q70.jpg", 
+        "imgUrls": [
+            "//m.360buyimg.com/mobilecms/s750x750_jfs/t1/80657/8/1677/92231/5d0099d0E0a8eecbc/b5515fa4621a9664.jpg!q80.dpg.webp", 
+            "//m.360buyimg.com/mobilecms/s1265x1265_jfs/t20350/105/677979600/74349/1278b522/5b14e6fdN76bbdb86.jpg!q70.dpg.webp", 
+            "//m.360buyimg.com/mobilecms/s1265x1265_jfs/t1/40731/12/53/218930/5cc03450Ec179278d/31715c5eef339368.jpg!q70.dpg.webp"
+        ]
+    }, 
+    
+    {
+        "groupL": "电脑办公", 
+        "groupM": "外设产品", 
+        "type": "键盘", 
+        "id": "键盘1", 
+        "name": "【26键无冲 带呼吸灯鼠标静音 】牧马人机械手感键盘鼠标装", 
+        "price": 59.00,
+         "tab": [
+            "京仓直达"
+        ], 
+        "imgUrl": "//img10.360buyimg.com/n2/s240x240_jfs/t1/82961/19/8492/170554/5d63aa22Ebf3b257a/badfa08d7ab07ce7.jpg!q70.jpg", 
+        "imgUrls": [
+            "//m.360buyimg.com/mobilecms/s750x750_jfs/t1/82961/19/8492/170554/5d63aa22Ebf3b257a/badfa08d7ab07ce7.jpg!q80.dpg.webp", 
+            "//m.360buyimg.com/mobilecms/s1265x1265_jfs/t1/22056/33/15379/312843/5cafe76eEb3ff54f8/e83e00534ce3ce2a.jpg!q70.dpg.webp", 
+            "//m.360buyimg.com/mobilecms/s1265x1265_jfs/t1/25981/16/15191/304462/5cafe76eE2f4ff534/924728ebae7b5f41.jpg!q70.dpg.webp"
+        ]
+    }, 
+    
+    {
+        "groupL": "电脑办公", 
+        "groupM": "外设产品", 
+        "type": "鼠标垫", 
+        "id": "鼠标垫1", 
+        "name": "宜适酷（EXCO）星晴舒适商务鼠标垫护腕  超大号 加厚大尺寸办公游戏腕垫 STY1805-02", 
+        "price": 29.90,
+         "tab": [
+            "自营"
+        ], 
+        "imgUrl": "//img10.360buyimg.com/n2/s240x240_jfs/t22243/313/1856616540/324361/6e17fec1/5b3ae236N8db9844d.jpg!q70.jpg", 
+        "imgUrls": [
+            "//m.360buyimg.com/mobilecms/s750x750_jfs/t22243/313/1856616540/324361/6e17fec1/5b3ae236N8db9844d.jpg!q80.dpg.webp", 
+            "//m.360buyimg.com/mobilecms/s1265x1265_jfs/t24487/88/632420454/312803/2ebc1901/5b3ae238Nab6f4015.jpg!q70.dpg.webp", 
+            "//m.360buyimg.com/mobilecms/s1265x1265_jfs/t1/16611/21/1122/360290/5c0f798eEf59e5799/3906e69be1f05b26.jpg!q70.dpg.webp"
+        ]
+    }, 
+    
+    {
+        "groupL": "电脑办公", 
+        "groupM": "外设产品", 
+        "type": "电脑移动硬盘", 
+        "id": "电脑移动硬盘1", 
+        "name": "纽曼（Newsmy）500GB USB3.0 移动硬盘 星云 2.5英寸 星空黑 数据备份存储 稳定耐用", 
+        "price": 199.00,
+         "tab": [
+            "自营"
+        ], 
+        "imgUrl": "//img10.360buyimg.com/n2/s240x240_jfs/t1/7884/14/1974/31907/5bd07390E4b5268e1/9f3925a955d121d9.jpg!q70.jpg", 
+        "imgUrls": [
+            "//m.360buyimg.com/mobilecms/s750x750_jfs/t1/7884/14/1974/31907/5bd07390E4b5268e1/9f3925a955d121d9.jpg!q80.dpg.webp", 
+            "//m.360buyimg.com/mobilecms/s1265x1265_jfs/t1159/302/221313698/36669/1cdfaba9/550a73a0N144e0e11.jpg!q70.dpg.webp", 
+            "//m.360buyimg.com/mobilecms/s1265x1265_jfs/t799/55/193705761/37351/62ae5e61/550a73a1N8c8c425a.jpg!q70.dpg.webp"
+        ]
+    }, 
+    
+    {
+        "groupL": "电脑办公", 
+        "groupM": "外设产品", 
+        "type": "手写板", 
+        "id": "手写板1", 
+        "name": "汉王（Hanvon）唐人笔中国风plus 免驱大屏手写板 电脑写字板、老人手写板、电脑手写板", 
+        "price": [79.00, 99.00],
+         "tab": [
+            "自营"
+        ], 
+        "imgUrl": "//img10.360buyimg.com/n2/s240x240_jfs/t29395/52/1323627270/249941/3d691b71/5cdd1892N1d27cbf4.jpg!q70.jpg", 
+        "imgUrls": [
+            "//m.360buyimg.com/mobilecms/s750x750_jfs/t29395/52/1323627270/249941/3d691b71/5cdd1892N1d27cbf4.jpg!q80.dpg.webp", 
+            "//m.360buyimg.com/mobilecms/s1265x1265_jfs/t1/39188/30/6618/244230/5cd25070E582273bd/a410b93e720814ab.jpg!q70.dpg.webp", 
+            "//m.360buyimg.com/mobilecms/s1265x1265_jfs/t1/33022/18/11376/215898/5cd25073E19abdef9/036d41bfe68280d0.jpg!q70.dpg.webp"
+        ]
+    }, 
+    
+    
+    {
+        "groupL": "电脑办公", 
+        "groupM": "外设产品", 
+        "type": "硬盘盒", 
+        "id": "硬盘盒1", 
+        "name": "绿联 Type-C移动硬盘盒2.5英寸USB3.0 SATA串口笔记本台式外置壳固态机械ssd硬盘 USB款", 
+        "price": 35.90,
+         "tab": [
+            "自营配送"
+        ], 
+        "imgUrl": "//img10.360buyimg.com/n2/s240x240_jfs/t1/46213/35/13073/112358/5da13947E66a0e79c/097fd176da7dd418.jpg!q70.jpg", 
+        "imgUrls": [
+            "//m.360buyimg.com/mobilecms/s750x750_jfs/t1/46213/35/13073/112358/5da13947E66a0e79c/097fd176da7dd418.jpg!q80.dpg.webp", 
+            "//m.360buyimg.com/mobilecms/s1265x1265_jfs/t1/59567/28/2151/93811/5d06f27dE267b1b15/77d882db0ad08d4e.jpg!q70.dpg.webp", 
+            "//m.360buyimg.com/mobilecms/s1265x1265_jfs/t1/37658/18/1212/124419/5cb42309Ea0dd7627/1d98728bc4973f52.jpg!q70.dpg.webp"
+        ]
+    }, 
+    
+    {
+        "groupL": "电脑办公", 
+        "groupM": "外设产品", 
+        "type": "线缆", 
+        "id": "线缆1", 
+        "name": "安帝（AD)高速超五类网线 网络宽带连接线 带水晶头成品跳线 橙色 1米 AD-5001F", 
+        "price": 11.90,
+         "tab": [
+            "自营配送"
+        ], 
+        "imgUrl": "//img10.360buyimg.com/n2/s240x240_jfs/t1/14299/4/12910/267643/5c9b5701E6e9d87d2/0846d61490a1d127.jpg!q70.jpg", 
+        "imgUrls": [
+            "//m.360buyimg.com/mobilecms/s750x750_jfs/t1/14299/4/12910/267643/5c9b5701E6e9d87d2/0846d61490a1d127.jpg!q80.dpg.webp", 
+            "//m.360buyimg.com/mobilecms/s1265x1265_jfs/t1/14482/37/13017/118330/5c9b5c67E5a4d45c2/1e6cdd962d718b3e.jpg!q70.dpg.webp", 
+            "//m.360buyimg.com/mobilecms/s1265x1265_jfs/t1/30565/3/7993/232073/5c9b5c6bEdbb3c339/cced71f553ec01bc.jpg!q70.dpg.webp"
+        ]
+    }, 
+    
+    {
+        "groupL": "电脑办公", 
+        "groupM": "外设产品", 
+        "type": "手机优盘", 
+        "id": "手机优盘1", 
+        "name": "芯晶彩 手机U盘 64G128G256GB Type-C（安卓电脑两用 高速 礼品刻字定制LOGO） 标配版（Type-C接口手机电脑两用） 32G", 
+        "price": 43.90,
+         "tab": [
+        ], 
+        "imgUrl": "//img10.360buyimg.com/n2/s240x240_jfs/t1/24874/4/12073/38596/5c945d39E925dc3f3/af1dba1ac4dc2f91.jpg!q70.jpg", 
+        "imgUrls": [
+            "//m.360buyimg.com/mobilecms/s750x750_jfs/t1/24874/4/12073/38596/5c945d39E925dc3f3/af1dba1ac4dc2f91.jpg!q80.dpg.webp", 
+            "//m.360buyimg.com/mobilecms/s1265x1265_jfs/t1/31858/26/7148/36090/5c945d38Ed823316e/9f1d8563116109d3.jpg!q70.dpg.webp", 
+            "//m.360buyimg.com/mobilecms/s1265x1265_jfs/t1/28738/9/11824/29533/5c945d38Ee35a71cf/108edcc09ba4ea54.jpg!q70.dpg.webp"
+        ]
+    }, 
+    
+    
+    {
+        "groupL": "电脑办公", 
+        "groupM": "外设产品", 
+        "type": "电脑清洁", 
+        "id": "电脑清洁1", 
+        "name": "德甲士（WATASHI） 笔记本机械键盘清洁泥清理清洗电脑的工具除尘胶软胶套装 清洁胶泥", 
+        "price": 48.00,
+         "tab": [
+        ], 
+        "imgUrl": "//img11.360buyimg.com/mobilecms/s455x455_jfs/t12289/138/66694827/328312/5b673ba/5a02e24cNa8f09cbe.jpg!q70.dpg.webp", 
+        "imgUrls": [
+            "//m.360buyimg.com/mobilecms/s750x750_jfs/t12289/138/66694827/328312/5b673ba/5a02e24cNa8f09cbe.jpg!q80.dpg.webpp", 
+            "//m.360buyimg.com/mobilecms/s1265x1265_jfs/t6178/237/1497142833/133010/df3d8514/595212ffNc61ad9e6.jpg!q70.dpg.webp", 
+            "//m.360buyimg.com/mobilecms/s1265x1265_jfs/t5674/301/3951150980/187287/86bcd440/59439d4bN17dcf00c.jpg!q70.dpg.webp"
+        ]
+    }, 
+    
+    
+    {
+        "groupL": "电脑办公", 
+        "groupM": "外设产品", 
+        "type": "插座", 
+        "id": "插座1", 
+        "name": "飞利浦（PHILIPS）新国标安全插座 插线板/插排/排插/接线板/拖线板 儿童保护门 4孔位分控 1.8米", 
+        "price": 29.00,
+         "tab": [
+             "自营"
+        ], 
+        "imgUrl": "//img11.360buyimg.com/n2/s240x240_jfs/t1/76964/40/10778/175824/5d819b13E7b5d6322/962c75d1ebc4cd78.jpg!q70.jpg", 
+        "imgUrls": [
+            "//m.360buyimg.com/mobilecms/s750x750_jfs/t1/76964/40/10778/175824/5d819b13E7b5d6322/962c75d1ebc4cd78.jpg!q80.dpg.webp", 
+            "//m.360buyimg.com/mobilecms/s1265x1265_jfs/t1/46405/3/7571/347360/5d5532a4Ea8ef2c36/031fd6c43b47b474.jpg!q70.dpg.webp", 
+            "//m.360buyimg.com/mobilecms/s1265x1265_jfs/t1/74861/9/7313/242003/5d5532aaE87bd4179/cc219b3eaea13b86.jpg!q70.dpg.webp"
+        ]
+    }, 
+    
+    {
+        "groupL": "电脑办公", 
+        "groupM": "外设产品", 
+        "type": "键鼠套装", 
+        "id": "键鼠套装1", 
+        "name": "飞利浦 PHILIPS SPT6201BS 键鼠套装 有线键鼠套装 办公键鼠套装 鼠标静音 防溅洒 双USB插头 黑色 自营", 
+        "price": 69.00,
+         "tab": [
+             "自营"
+        ], 
+        "imgUrl": "//img10.360buyimg.com/n2/s240x240_jfs/t1/28040/15/7454/93831/5c6cbb77E1168b484/1d2bb8e8c4fd0c11.jpg!q70.jpg", 
+        "imgUrls": [
+            "//m.360buyimg.com/mobilecms/s750x750_jfs/t1/28040/15/7454/93831/5c6cbb77E1168b484/1d2bb8e8c4fd0c11.jpg!q80.dpg.webp", 
+            "//m.360buyimg.com/mobilecms/s750x750_jfs/t1/28040/15/7454/93831/5c6cbb77E1168b484/1d2bb8e8c4fd0c11.jpg!q80.dpg.webp", 
+            "//m.360buyimg.com/mobilecms/s1265x1265_jfs/t1/18032/31/4871/92549/5c6cbb77E22b77f87/1aec2d58094fcdd0.jpg!q70.dpg.webp"
+        ]
     }
 ]
