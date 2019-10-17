@@ -51,7 +51,7 @@ import Recommend from "../components/public/Recommend.vue"; // 为你推荐
 import FlashSale from "../components/lz/FlashSale.vue";  // 京东秒杀
 import indexbanner from "../components/wsm/indexbanner";  // 首页滑块1
 import advertui from "../components/wsm/advertui";  // 首页滑块2
-import JdFastNews from "../components/lz/JdFastNews.vue"
+import JdFastNews from "../components/lz/JdFastNews.vue"; // 京东快报
 const components = {
   Tabbar,
   HomeHeader,

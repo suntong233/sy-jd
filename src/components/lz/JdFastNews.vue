@@ -1,10 +1,9 @@
 <template>
-  <div class="jdfastnews">
+  <div onclick="window.open('https://h5.m.jd.com/active/faxian/list/article-list.html?ids=222455906-223580935-222218939-222373832','_self')" class="jdfastnews">
     <div class="jdfastnews_container">
       <div class="jdfastnews_container_img">
         <img src="/lz/images/jdfastnews.jpg" />
       </div>
-
         <el-carousel  class="animate" height="100%" direction="vertical" :autoplay="true">
             <el-carousel-item v-for="item in listData" :key="item.title">
                 <div class="medium"><span class="hot">{{item.title}}</span> {{ item.content }}</div>
@@ -23,10 +22,10 @@ export default {
   data() {
       return{
             listData: [
-                    {title:"热门", content:"华为又放猛料鸿蒙系统即将···"},
-                    {title:"HOT", content:"预测iphone11销量暴跌价格···"},
-                    {title:"推荐", content:"新款耳机最新登场airpod即···"},
-                    {title:"最新", content:"最新蓝牙耳机上市saliosds···"}
+                {title:"热门", content:"华为又放猛料鸿蒙系统即将···"},
+                {title:"HOT", content:"预测iphone11销量暴跌价格···"},
+                {title:"推荐", content:"新款耳机最新登场airpod即···"},
+                {title:"最新", content:"最新蓝牙耳机上市saliosds···"}
             ]
       }
   }

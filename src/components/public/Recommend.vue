@@ -31,99 +31,11 @@ export default {
     name: "recommend",
     data () {
         return {
-            renderData: [
-                {
-                    groupL: "电脑办公",
-                    groupM: "外设产品",
-                    type: "鼠标",
-                    id: "鼠标1",
-                    name: "戴尔（DELL）MS116 有线鼠标 商务办公鼠标（黑色）",
-                    price: 19.90,
-                    tab: ["自营"],
-                    imgUrl: "//img14.360buyimg.com/mobilecms/s270x270_jfs/t1/46776/31/5329/84614/5d316bf3E58adab00/b59c177f92f66cf1.jpg!q70.dpg.webp",
-                    imgUrls: [
-                        "//m.360buyimg.com/mobilecms/s750x750_jfs/t1/46776/31/5329/84614/5d316bf3E58adab00/b59c177f92f66cf1.jpg!q80.dpg.webp",
-                        "//m.360buyimg.com/mobilecms/s720x720_jfs/t1/36146/15/14442/78039/5d22d5ecE57f0bd92/631b3a08b617e0c7.jpg!q70.dpg.webp",
-                        "//m.360buyimg.com/mobilecms/s720x720_jfs/t1/59315/18/4402/52982/5d22d5edE049b0713/9fc701680b4841e5.jpg!q70.dpg.webp"
-                    ]
-                },
-                {
-                    groupL: "美妆护肤",
-                    groupM: "当季主推",
-                    type: "美白",
-                    id: "美白1",
-                    name: "相宜本草黑茶男士 男士乳液120g（面霜 护肤化妆品）",
-                    price: 39.00,
-                    tab: ["京东物流"],
-                    imgUrl: "//img10.360buyimg.com/n2/s350x350_jfs/t28765/230/1349953395/85846/3a2e21e0/5cde1602N09059704.jpg!q70.jpg",
-                    imgUrls: [
-                        "//m.360buyimg.com/mobilecms/s750x750_jfs/t28765/230/1349953395/85846/3a2e21e0/5cde1602N09059704.jpg!q80.dpg.webp",
-                        "//m.360buyimg.com/mobilecms/s750x750_jfs/t1/11644/2/14827/31781/5ca32922E1cec7332/ad8d64a4f85a679d.jpg!q70.dpg.webp",
-                        "//m.360buyimg.com/mobilecms/s750x750_jfs/t1/11644/2/14827/31781/5ca32922E1cec7332/ad8d64a4f85a679d.jpg!q70.dpg.webp"
-                    ]
-                },
-                {
-                    groupL: "男装",
-                    groupM: "热卖选购",
-                    type: "夹克",
-                    id: "夹克1",
-                    name: "俞兆林（YUZHAOLIN）男士连帽夹克时尚休闲外套1333黑色XL",
-                    price: [106.20, 118.00],
-                    tab: ["京东精选"],
-                    imgUrl: "//img13.360buyimg.com/mobilecms/s270x270_jfs/t1/9073/10/14930/375368/5c6be4ebEa51e431e/034ceab7ae7fdc4b.jpg!q70.dpg.webp",
-                    imgUrls: [
-                        "//m.360buyimg.com/mobilecms/s750x750_jfs/t1/11644/2/14827/31781/5ca32922E1cec7332/ad8d64a4f85a679d.jpg!q70.dpg.webp",
-                        "//m.360buyimg.com/mobilecms/s750x750_jfs/t1/11644/2/14827/31781/5ca32922E1cec7332/ad8d64a4f85a679d.jpg!q70.dpg.webp",
-                        "//m.360buyimg.com/mobilecms/s750x750_jfs/t1/11644/2/14827/31781/5ca32922E1cec7332/ad8d64a4f85a679d.jpg!q70.dpg.webp"
-                    ]
-                },
-                {
-                    groupL: "电脑办公",
-                    groupM: "文具耗费材",
-                    type: "纸类",
-                    id: "纸类2",
-                    name: "自营远平条码三防热敏不干胶条码标签打印纸电子秤纸横板60mm*40mm* 500张30卷",
-                    price: 271,
-                    tab: ["京东物流"],
-                    imgUrl: "//img14.360buyimg.com/mobilecms/s281x281_jfs/t1/33900/9/4781/96404/5cb83cc5Eb58cda25/91da93e7e8e38097.jpg!q70.dpg.webp",
-                    imgUrls: [
-                        "//m.360buyimg.com/mobilecms/s750x750_jfs/t1/11644/2/14827/31781/5ca32922E1cec7332/ad8d64a4f85a679d.jpg!q70.dpg.webp",
-                        "//m.360buyimg.com/mobilecms/s750x750_jfs/t1/11644/2/14827/31781/5ca32922E1cec7332/ad8d64a4f85a679d.jpg!q70.dpg.webp",
-                        "//m.360buyimg.com/mobilecms/s750x750_jfs/t1/11644/2/14827/31781/5ca32922E1cec7332/ad8d64a4f85a679d.jpg!q70.dpg.webp"
-                    ]
-                },
-                {
-                    groupL: "电脑办公",
-                    groupM: "文具耗费材",
-                    type: "纸类",
-                    id: "纸类3",
-                    name: "自营远平条码三防热敏不干胶条码标签打印纸电子秤纸横板60mm*40mm* 500张30卷",
-                    price: 271,
-                    tab: ["京东物流"],
-                    imgUrl: "//img14.360buyimg.com/mobilecms/s281x281_jfs/t1/33900/9/4781/96404/5cb83cc5Eb58cda25/91da93e7e8e38097.jpg!q70.dpg.webp",
-                    imgUrls: [
-                        "//m.360buyimg.com/mobilecms/s750x750_jfs/t1/11644/2/14827/31781/5ca32922E1cec7332/ad8d64a4f85a679d.jpg!q70.dpg.webp",
-                        "//m.360buyimg.com/mobilecms/s750x750_jfs/t1/11644/2/14827/31781/5ca32922E1cec7332/ad8d64a4f85a679d.jpg!q70.dpg.webp",
-                        "//m.360buyimg.com/mobilecms/s750x750_jfs/t1/11644/2/14827/31781/5ca32922E1cec7332/ad8d64a4f85a679d.jpg!q70.dpg.webp"
-                    ]
-                },
-                {
-                    groupL: "电脑办公",
-                    groupM: "文具耗费材",
-                    type: "纸类",
-                    id: "纸类4",
-                    name: "自营远平条码三防热敏不干胶条码标签打印纸电子秤纸横板60mm*40mm* 500张30卷",
-                    price: 271,
-                    tab: ["京东物流"],
-                    imgUrl: "//img14.360buyimg.com/mobilecms/s281x281_jfs/t1/33900/9/4781/96404/5cb83cc5Eb58cda25/91da93e7e8e38097.jpg!q70.dpg.webp",
-                    imgUrls: [
-                        "//m.360buyimg.com/mobilecms/s750x750_jfs/t1/11644/2/14827/31781/5ca32922E1cec7332/ad8d64a4f85a679d.jpg!q70.dpg.webp",
-                        "//m.360buyimg.com/mobilecms/s750x750_jfs/t1/11644/2/14827/31781/5ca32922E1cec7332/ad8d64a4f85a679d.jpg!q70.dpg.webp",
-                        "//m.360buyimg.com/mobilecms/s750x750_jfs/t1/11644/2/14827/31781/5ca32922E1cec7332/ad8d64a4f85a679d.jpg!q70.dpg.webp"
-                    ]
-                }
-            ]
+            renderData: []
         }
+    },
+    created () {
+        this.renderData = this.$store.state.goodsData
     },
     methods: {
         selectImg(tabs){
