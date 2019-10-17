@@ -80,7 +80,7 @@ export default {
 }
 
 .jdfastnews_container_img {
-  width: 100px;
+  width: 25%;
   height: 100%;
   display: flex;
   justify-content: center;
@@ -88,12 +88,12 @@ export default {
 }
 
 .jdfastnews_container_img img {
-  width: 90px;
-  height: 16px;
+  width: 90%;
+  height: 53%;
 }
 
 .jdfastnews_container .animate {
-  width: 255px;
+  flex: 1;
   height: 100%;
   display: flex;
   align-items: center;
@@ -106,11 +106,11 @@ export default {
   font-size: 14px;
   color: #f23030;
   font-weight: 300;
-  margin-right: 10px;
+  margin-right: 2.5%;
 }
 
 .jdfastnews_more {
-  width: 40px;
+  width: 10%;
   height: 100%;
   display: flex;
   align-items: center;
@@ -121,8 +121,7 @@ export default {
   color: rgb(24, 24, 24);
   font-size: 12px;
   width: 100%;
-  padding-left: 5px;
-  padding-left: 5px;
+  padding-left: 10%;
   border-left: 1px solid rgb(236, 236, 236);
 }
 
