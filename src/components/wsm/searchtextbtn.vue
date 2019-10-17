@@ -5,8 +5,9 @@
     <div class="textborder">
       <div class="el-icon-search"></div>
       <input
+        v-model="searchMsg"
         type="text"
-        placeholder="笔记本电脑"
+        :placeholder="$store.state.searchHead"
         style="outline:none;font-size: 12px;border:0;background:none;position: relative;left:20px;width:80%;height:20px"
       />
     </div>
@@ -21,11 +22,31 @@
 <script>
 export default {
   name: "topsearch",
+  data () {
+    return {
+      searchMsg: "",
+      renderData: [],
+      allTabs: []
+    }
+  },
+  created () {
+      this.$store.state.searchPageData.forEach(item=>{
+        this.allTabs.push(item)
+      })
+      console.log(this.allTabs)
+  },
   methods: {
+    searchItem(tab){
+      this.renderData.length = 0
+      this.$store.commit("goSearchPage", tab)
+      this.$router.push("/searchres")
+    },
     tiaozhuan() {
-      window.open(
-        "https://so.m.jd.com/ware/search.action?keyword=%E7%AC%94%E8%AE%B0%E6%9C%AC%E7%A1%AC%E7%9B%98&searchFrom=home&sf=11&as=1"
-      );
+      if(this.searchMsg.trim() === ""){
+        return
+      }
+      this.$store.commit("goSearchPage", this.searchMsg)
+      this.$router.push("/searchres")
     }
   }
 };
@@ -44,6 +65,7 @@ export default {
   top: 0;
   width: 100%;
   height: 44px;
+  background-color: #fff;
   display: flex;
   justify-content: space-evenly;
   align-items: center;

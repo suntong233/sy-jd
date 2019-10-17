@@ -17,7 +17,7 @@ export default {
   name: "homeHeader",
   data() {
     return {
-      placeholder: "storge的数据决定"
+      placeholder: this.$store.state.searchHead
     };
   },
   methods: {

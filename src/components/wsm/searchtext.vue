@@ -7,7 +7,7 @@
       <input
         @click="$router.push('/search')"
         type="text"
-        placeholder="笔记本电脑"
+        :placeholder="$store.state.searchHead"
         class="textborder-input"
         style="font-size: 12px;border:0;background:none;position: relative;left:20px;width:80%;height:20px"
       />
@@ -54,6 +54,7 @@ export default {
   width: 100%;
   height: 44px;
   display: flex;
+  background-color: #fff;
   justify-content: space-evenly;
   align-items: center;
   z-index: 20000;

@@ -10,6 +10,7 @@ export default new Vuex.Store({
     goodsData: [1], // 所有数据
     // 商品数据>
     // <搜索中==
+    searchHead: "狗狗活体",
     searchPageData: [], // 搜索页面的所有标签
     // 搜索中>
     // <搜索成功界面==
@@ -37,8 +38,12 @@ export default new Vuex.Store({
     },
     // 跳转到搜索结果路由
     goSearchPage(state, type) {
-      state.searchRes = [type];
-      console.log("跳转到了" + type + "搜索结果列表");
+      if (state.searchPageData.includes(type)) {
+        state.searchRes = [type];
+        console.log("跳转到了" + type + "搜索结果列表");
+      } else {
+        state.searchRes = ["输入错误"];
+      }
     },
     // 跳转到商品详情
     goGoodsPage(state, item) {

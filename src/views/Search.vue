@@ -1,11 +1,7 @@
 <template>
   <div class="home">
     <searchtextBtn></searchtextBtn>
-    搜索页面：所有tab 
-    <br>
-    <div style="width:100%;overflow: hidden;">
-      {{ this.$store.state.searchPageData }}
-    </div>
+    <div @click="searchTab(item)" v-for="item in allTabs" :key="item">{{item}}</div>
   </div>
 </template>
 
@@ -18,6 +14,22 @@ const components = {
 // 搜素
 export default {
   name: "search",
+  data () {
+    return {
+      allTabs: []  
+    }
+  },
+  methods: {
+    searchTab(tab){
+      this.$store.commit("goSearchPage", tab)
+      this.$router.push("/searchres")
+    }
+  },
+  created () {
+      this.$store.state.searchPageData.forEach(item=>{
+        this.allTabs.push(item)
+      })
+  },
   components
 };
 </script>
