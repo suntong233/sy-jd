@@ -18,14 +18,17 @@
                 <div class="recommednBox-item"></div>
                 <div v-for="item in renderData" :key="item.id" class="recommednBox-item">
                     <div class="recommednBox-itemImg">
-                        <img :src="item.imgUrl">
+                        <img v-lazy="item.imgUrl">
                     </div>
                     <div class="recommednBox-itemname">
+                        <div style="height:50%;float:left;margin:0 3px">
+                            <img style="height:100%" v-if="item.tab.length !== 0" :src="selectImg(item.tab)">
+                        </div>
                         <span>{{ item.name }}</span>
                     </div>
                     <div class="recommednBox-itemprice">
-                        <div>￥ {{ item.price }}</div>
-                        <div>看相似</div>
+                        <div style="font-size:16px;color: #f23030;">￥{{ item.price }}</div>
+                        <div style="font-size:14px;color: #686868;border:1px solid #ccc;padding:2px 4px;margin-right:5px">看相似</div>
                     </div>
                 </div>
             </div>
@@ -34,6 +37,7 @@
 </template>
 
 <script>
+// 组件：为你推荐item
 export default {
     name: "recommend",
     data () {
@@ -46,7 +50,7 @@ export default {
                     id: "纸类1",
                     name: "自营远平条码三防热敏不干胶条码标签打印纸电子秤纸横板60mm*40mm* 500张30卷",
                     price: 271,
-                    tab: ["品牌闪购", "京东物流","京东精选","京东超市","自营"],
+                    tab: ["京东物流","京东精选","自营"],
                     imgUrl: "//img14.360buyimg.com/mobilecms/s281x281_jfs/t1/33900/9/4781/96404/5cb83cc5Eb58cda25/91da93e7e8e38097.jpg!q70.dpg.webp",
                     imgUrls: [
                         "//m.360buyimg.com/mobilecms/s750x750_jfs/t1/11644/2/14827/31781/5ca32922E1cec7332/ad8d64a4f85a679d.jpg!q70.dpg.webp",
@@ -55,6 +59,17 @@ export default {
                     ]
                 }
             ]
+        }
+    },
+    methods: {
+        selectImg(tabs){
+            if(tabs[1] === "自营"){
+                return "//img11.360buyimg.com/jdphoto/s48x28_jfs/t18820/32/891260489/1085/d4b6cf2c/5aadf9dbN7043e607.png"
+            } else if (tabs[1] === "京东物流") {
+                return "//img11.360buyimg.com/jdphoto/s98x28_jfs/t16411/341/2502946085/2662/c4af0771/5aadf9daN1916b3f2.png"
+            } else {
+                return "//img11.360buyimg.com/jdphoto/s100x28_jfs/t15376/77/2643750731/2688/443ac7d3/5aadf9daNc1b92ee6.png"
+            }
         }
     }
 }
@@ -87,7 +102,7 @@ export default {
     }
     .recommednBox-itemImg{
         width: 100%;
-        height: 180px;
+        height: 160px;
         background-color: #fff;
         overflow: hidden;
         position: relative;
@@ -100,6 +115,12 @@ export default {
         transform: translate(-50%,-50%);
     }
     .recommednBox-itemname{
+        font-size: 13px;
+        color: #232326;
+        padding: 3px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        margin-top:3px;
         width: 100%;
         height: 40px;
         overflow: hidden;
@@ -108,5 +129,9 @@ export default {
         width: 100%;
         height: 40px;
         overflow: hidden;
+        display: flex;
+        justify-content: space-between;
+        padding: 3px;
+        align-items: center;
     }
 </style>

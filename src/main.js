@@ -13,6 +13,12 @@ import {
 import axios from "axios";
 import Swiper from "swiper";
 import "swiper/css/swiper.min.css";
+import VueLazyload from "vue-lazyload";
+
+Vue.use(VueLazyload, {
+  error: "images/error.jpg", // 错误图片时的图片样子
+  loading: "images/loading.gif" // 加载中的图片样子
+});
 
 window.Swiper = Swiper;
 Vue.use(Button);
