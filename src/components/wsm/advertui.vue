@@ -222,8 +222,7 @@ export default {
 <style>
 .advertui {
   width: 100%;
-  height: 90%;
-  position: absolute;
+  height: 180px;
   padding: 0 8px;
   display: flex;
 }
