@@ -16,13 +16,12 @@
   html,body{
     margin: 0 auto;
     width: 100%;
-    max-width: 400px;
+    /* max-width: 400px; */
     position: relative;
     min-width: 300px;
   }
   #app{
     width: 100%;
-    
     min-width: 300px;
   }
 </style>

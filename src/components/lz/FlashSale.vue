@@ -5,7 +5,7 @@
         <img src="/lz/images/ms.png" />
       </div>
 
-      <div class="flashsale_up_time">16点场</div>
+      <div class="flashsale_up_time" style="width:60px;">16点场</div>
 
       <div class="flashsale_up_countdown">
           <div class="flashsale_up_countdown_item">
@@ -179,6 +179,7 @@ export default {
 }
 
 .flashsale_up {
+  position: relative;
   width: 100%;
   height: 37px;
   display: flex;
@@ -198,8 +199,9 @@ export default {
 .flashsale_up_time {
   font-size: 12px;
   color: #232326;
+  padding: 0 5px;
   font-weight: 700;
-  display: inline-block;
+  display: block;
   margin-right: 6px;
 }
 
@@ -220,8 +222,8 @@ export default {
     height: 16px;
     border: 1px solid rgb(239, 239, 239);
     display: flex;
-    justify-content: center;
-    align-items: center
+    /* justify-content: center; */
+    align-items: center;
 }
 
 .flashsale_up_countdown_item_span {
@@ -233,9 +235,10 @@ export default {
     color:#232326 ;
 }
 .flashsale_up_more_ms {
+  position: absolute;
+  right: 10px;
   color: #f23030;
   font-size: 10px;
-  margin-left: 102px;
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -250,7 +253,7 @@ export default {
 
 .flashsale_down_container {
   padding-left: 10px;
-  width: 890px;
+  width: 100%;
   height: 100%;
   display: flex;
   background-color: #fff;
