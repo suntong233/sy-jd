@@ -190,7 +190,7 @@ export default {
 
 .flashsale_up_ms {
   height: 37px;
-  width: 90px;
+  width: 22.5%;
   padding: 0 5px;
   background-color: #fff;
 }
@@ -200,7 +200,7 @@ export default {
   color: #232326;
   font-weight: 700;
   display: inline-block;
-  margin-right: 6px;
+  margin-right: 1.5%;
 }
 
 .flashsale_up_countdown {
@@ -208,7 +208,7 @@ export default {
 }
 
 .flashsale_up_countdown {
-  width: 66px;
+  width: 16.5%;
   height: 16px;
   display: flex;
   justify-content: center;
@@ -216,7 +216,7 @@ export default {
 }
 
 .flashsale_up_countdown_item {
-    width: 18px;
+    width: 27.2%;
     height: 16px;
     border: 1px solid rgb(239, 239, 239);
     display: flex;
@@ -225,7 +225,7 @@ export default {
 }
 
 .flashsale_up_countdown_item_span {
-    width: 6px;
+    width: 9%;
     line-height: 16px;
     height: 16px;
     font-size: 12px;
@@ -235,22 +235,23 @@ export default {
 .flashsale_up_more_ms {
   color: #f23030;
   font-size: 10px;
-  margin-left: 102px;
+  margin-left: 25.5%;
   display: flex;
   align-items: center;
   justify-content: space-around;
-  width: 65px;
+  width: 16.25%;
 }
 
 .flashsale_down {
   height: 126px;
   overflow-x: scroll;
   border-radius: 0 0 8px 8px;
+  position: relative;
 }
 
 .flashsale_down_container {
   padding-left: 10px;
-  width: 890px;
+  width: 222%;
   height: 100%;
   display: flex;
   background-color: #fff;
@@ -261,10 +262,9 @@ export default {
 }
 
 .flashsale_down_container .item {
-  width: 84.3px;
+  width: 10%;
   height: 100%;
   background-color: #fff;
-  cursor: pointer;
 }
 
 .flashsale_down_container .item .item_up {
@@ -289,7 +289,7 @@ export default {
 }
 
 .flashsale_down_container .item .item_up img {
-  width: 73px;
+  width: 82.2%;
   height: 100%;
 }
 
@@ -327,7 +327,7 @@ export default {
   margin: 0 0 0 20px;
   padding: 5px 0;
   text-align: center;
-  width: 22px;
+  width: 2.4%;
   text-align: center;
   color: rgb(100, 95, 95);
   font-size: 12px;
