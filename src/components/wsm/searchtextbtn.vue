@@ -33,7 +33,6 @@ export default {
       this.$store.state.searchPageData.forEach(item=>{
         this.allTabs.push(item)
       })
-      console.log(this.allTabs)
   },
   methods: {
     searchItem(tab){
