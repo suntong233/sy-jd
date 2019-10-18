@@ -1,43 +1,39 @@
 <template>
-  <div class="container">
-    <div class="searchtext">
-      <div @click="$router.go(-1)" class="el-icon-arrow-left"></div>
-      <div class="textborder">
-        <div class="el-icon-search"></div>
-        <input
-          v-model="searchMsg"
-          type="text"
-          :placeholder="$store.state.searchHead"
-          style="outline:none;font-size: 12px;border:0;background:none;position: relative;left:20px;width:80%;height:20px"
-        />
-      </div>
-      <div class="searchbutton" @click="tiaozhuan()">搜索</div>
-    </div>
-    <div class="recently-search" v-if="isSearch">
-      <div class="recentsearch">
-        <span class="span1">最近搜索</span>
-        <div class="el-icon-delete" @click="del"></div>
-      </div>
-      <div class="hotsearch-ui">
-        <div v-for="item in searchList" :key="item" class="history" @click="searchTab(item)">
-          <span>{{item}}</span>
+  <div>
+    <div class="container">
+      <div class="searchtext">
+        <div @click="$router.go(-1)" class="el-icon-arrow-left"></div>
+        <div class="textborder">
+          <div class="el-icon-search"></div>
+          <input
+            v-model="searchMsg"
+            type="text"
+            :placeholder="$store.state.searchHead"
+            style="outline:none;font-size: 12px;border:0;background:none;position: relative;left:20px;width:80%;height:20px"
+            @input="inputEvent"
+          />
+          <div
+            @click="clearvalue()"
+            style="display:flex;height:42px;align-items:center;position:absolute;right:10px;"
+            v-if="show2"
+          >
+            <img src="/lz/images/close.png" />
+          </div>
         </div>
+        <div class="searchbutton" @click="tiaozhuan()">搜索</div>
       </div>
+      <div></div>
     </div>
-    <div class="hotsearch">
-      <span class="span1">热门搜索</span>
-      <span class="span2" @click="tab">{{title}}</span>
-    </div>
-    <div class="hide" v-if="seen">
-      <div class="hotsearch-ui" >
-        <div v-for="item in allTabs.slice(0,13)" :key="item" class="history" @click="searchTab(item)" >
+    <div class="result_list" v-if="show1">
+      <div
+        @click="searchItem(item)"
+        class="result_list_container"
+        v-for="item in showList"
+        :key="item"
+      >
         <span>{{item}}</span>
-        </div>
       </div>
     </div>
-     <div class="hidden" v-if="!seen">
-        <div>已隐藏搜索发现</div>
-      </div>
   </div>
 </template>
 
@@ -49,22 +45,41 @@ export default {
       searchMsg: "",
       renderData: [],
       allTabs: [],
-      seen: true,
-      isSearch: false,
-      title: "隐藏",
-      searchList: []
+      showList: [],
+      timer: null,
+      show1: false,
+      show2: false,
+      searchList: [],
+      isSearch: false
     };
   },
-
+  created() {
+    this.$store.state.searchPageData.forEach(item => {
+      this.allTabs.push(item);
+    });
+    let history = localStorage.getItem("history");
+    if (history) {
+      history = JSON.parse(history);
+      this.searchList = history;
+      // if (this.searchList.length == 0) {
+      //   this.isSearch = false;
+      // }
+      this.isSearch = true;
+    } else {
+      this.isSearch = false;
+    }
+  },
   methods: {
-    searchTab(tab){
-      this.$store.commit("goSearchPage", tab)
-      this.$router.push("/searchres")
-    },
     searchItem(tab) {
       this.renderData.length = 0;
       this.$store.commit("goSearchPage", tab);
       this.$router.push("/searchres");
+    },
+    clearvalue() {
+      this.searchMsg = "";
+      console.log(1);
+      this.show2 = false;
+      this.showList = [];
     },
     tiaozhuan() {
       if (this.searchMsg.trim() === "") {
@@ -77,49 +92,49 @@ export default {
         this.searchList.push(this.searchMsg);
         localStorage.setItem("history", JSON.stringify(this.searchList));
         this.searchMsg = "";
-    
       }
     },
-    tab() {
-      if (this.title == "隐藏") {
-        this.title = "显示";
-        this.seen = false;
+    inputEvent() {
+      let that = this;
+      if (that.searchMsg.trim().length > 0) {
+        if (that.timer) {
+          clearTimeout(that.timer);
+        }
+        that.timer = setTimeout(function() {
+          if (that.searchMsg.trim()) {
+            that.show1 = true;
+            that.show2 = true;
+            that.showList = that.allTabs.filter(function(item) {
+              if (item.includes(that.searchMsg)) {
+                return item;
+              }
+            });
+          }
+          if (that.showList.length == 0) {
+            that.showList.length = null;
+          }
+        }, 500);
       } else {
-        this.title = "隐藏";
-        this.seen = true;
+        setTimeout(function() {
+          that.showList = [];
+          that.show1 = false;
+          that.show2 = false;
+        }, 300);
       }
-    },
-    del() {
-      this.searchList = [];
-      this.isSearch = false;
-      localStorage.removeItem("history");
-    }
-  },
-  created() {
-    this.$store.state.searchPageData.forEach(item => {
-      this.allTabs.push(item);
-    });
-   
-
-    let history = localStorage.getItem("history");
-    if (history) {
-      history = JSON.parse(history);
-      this.searchList = history;
-      // if (this.searchList.length == 0) {
-      //   this.isSearch = false;
-      // }
-      this.isSearch = true;
-    } else {
-      this.isSearch = false;
     }
   }
 };
 </script>
 
 <style scoped>
+.search-input {
+  background-color: aqua;
+  height: 100%;
+}
+
 .container {
   width: 100%;
-  height: 1000px;
+  height: 42px;
   /* max-width: 400px; */
   background-color: #fff;
 }
@@ -143,6 +158,7 @@ export default {
   font-size: 20px;
 }
 .textborder {
+  position: relative;
   background-color: #f7f7f7;
   border-radius: 25px;
   width: 68%;
@@ -165,93 +181,27 @@ export default {
   color: white;
   font-size: 14px;
 }
-.hot-search {
-  /* margin-top: 15px; */
-  padding: 15px 15px 11px 0;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  background: #fff;
-  padding-left: 13px;
-}
-.span1 {
-  display: inline-block;
-  font-size: 15px;
-  margin-left: 15px;
-}
-.span2 {
-  font-size: 15px;
-  color: #99a6c4;
-  position: relative;
-  left: 70%;
-}
-.hotsearch-ui {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  align-items: center;
-}
-.hotsearch-ui > div {
-  display: flex;
-  align-items: center;
-  margin-left: 12px;
-  height: 25px;
-  font-size: 12px;
-  color: #686868;
-  text-align: center;
-  padding: 0 13px;
-  background-color: #f0f2f5;
-}
-.hotsearch{
-  margin-top: 44px;
-  margin-left: 10px;
-}
-.hide {
- padding-right: 2px;
-  overflow: hidden;
-  font-size: 12px;
-  text-align: center;
-  background: #fff;
-  padding-left: 13px;
-}
-.recentsearch {
-  margin-top: 44px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  padding-bottom: 11px;
-  overflow: hidden;
-}
-.history {
-  margin-top: 5px;
-  padding-right: 10px;
-  padding-bottom: 10px;
-  flex-shrink: 0;
-}
-.recently-search {
-  background: #fff;
-  width: 100%;
-  /* height: 100%; */
-  overflow: hidden;
-  padding: 15px 15px 11px 13px;
-}
-.hidden {
-  height: 100px;
-  padding-right: 2px;
-  overflow: hidden;
-  font-size: 12px;
-  text-align: center;
-  background: #fff;
-  padding-left: 13px;
-}
 
-.hidden div {
-  height: 30px;
-  margin: 29px auto 40px;
-  line-height: 30px;
-  text-align: center;
-  color: #999;
+.result_list {
+  width: 100%;
+  z-index: 999;
+  padding-left: 10px;
+  position: absolute;
+  background-color: #fff;
+  top: 42px;
+
+  /*  border-bottom: 1px solid red; */
+}
+.result_list_container {
+  border-bottom: 1px solid #f5f5f5;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  color: rgb(35, 35, 35);
+  font-size: 14px;
+  z-index: 999;
+  width: 100%;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 </style>

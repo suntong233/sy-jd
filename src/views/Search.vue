@@ -158,7 +158,6 @@ export default {
   flex-shrink: 0;
 }
 .recently-search {
-  margin-top:44px;
   background: #fff;
   width: 100%;
   /* height: 100%; */
