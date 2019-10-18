@@ -7,7 +7,8 @@
       <div class="jdfdj"></div>
       <input @click="handleChangeColor" class="boxContainerinput" :placeholder="placeholder" />
     </div>
-    <div @click="routerTo('/login')" class="boxContainer-right"></div>
+    <div v-if="$store.state.loginModule.islogin" class="boxContainer-right" @click="routerTo('/mine')"></div>
+    <div v-else @click="routerTo('/login')" class="boxContainer-right2">登录</div>
   </div>
 </template>
 
@@ -82,6 +83,14 @@ export default {
   width: 42px;
   background-position: center;
   background-size: 22px;
+}
+.boxContainer-right2{
+  height: 100%;
+  width: 42px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: aliceblue;
 }
 .boxContainerinput {
   appearance: none;

@@ -28,7 +28,7 @@
         </div>
       </li>
 
-      <li class="showmenu-container-item" @click="swithTo('/login')">
+      <li class="showmenu-container-item" @click="swithTo('/mine')">
         <div class="showmenu-img">
           <img src="/lz/images/myJD.png" />
         </div>
