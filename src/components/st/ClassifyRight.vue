@@ -1,5 +1,5 @@
 <template>
-  <div :class="{ animation: renderid }" class="classifyrightcontainer">
+  <div class="classifyrightcontainer">
     <div v-for="(item,index) in tabsData" :key="item + index">
         <div class="classifyright-title">{{ item }}</div>
         <div class="classifyright-content">
@@ -37,7 +37,6 @@ export default {
     },
     data () {
         return {
-            ischange: true,
             typeIcon: [
                 {
                     type: "狗狗活体",
@@ -60,23 +59,13 @@ export default {
 </script>
 
 <style scoped>
-    .animation {
-        animation: fideBox 5s;
-    }
     .classifyrightcontainer{
         width: 100%;
         height: 100%;
+        opacity: 1;
     }
     .classifyrightcontaineradimn {
         animation: fideBox 5s;
-    }
-    @keyframes fideBox{
-        from{
-            opacity: 0;
-        }
-        to{ 
-            opacity: 1;
-        }
     }
     .classifyright-title{
         width: 100%;

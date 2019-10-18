@@ -3,10 +3,10 @@
     <searchtext></searchtext>
     <div class="classifymian-container">
         <div class="classifymian-containerBox">
-          <div class="classifymian-left">
-            <div @click="renderRight(item.childRen, index)" class="classifymian-left-item" v-for="(item, index) in renderData" :key="item.name">{{ item.name }}</div>
+          <div v-autoToTop v-silder class="classifymian-left">
+            <div :data-index="index" :class="{showItem: showItem == index }" @click="renderRight(item.childRen, index)" class="classifymian-left-item" v-for="(item, index) in renderData" :key="item.name">{{ item.name }}</div>
           </div>
-          <div class="classifymian-right">
+          <div v-silder :class="{showslow : isShowslow}" class="classifymian-right">
             <ClassifyRight :renderid="renderDatarightid" :renderData="renderDataright"></ClassifyRight>
           </div>
         </div>
@@ -27,11 +27,69 @@ const components = {
 // 分类
 export default {
   name: "classify",
+  directives: {
+      autoToTop:{
+        inserted(el){
+          el.addEventListener("click",(e)=>{
+            let temp = e.target.dataset.index*46
+            
+            let timer = setInterval(()=>{
+              if(el.scrollTop >= 332){
+                clearInterval(timer)
+              } 
+              if(el.scrollTop < temp){
+                el.scrollTop++
+                if(el.scrollTop == temp){
+                  clearInterval(timer)
+                }
+              }
+            },1)
+          })
+        }
+      },
+      silder:{
+          bind(el){
+          let differ = 0
+          let differ2 = 0
+          el.addEventListener("touchstart",(e)=>{
+            differ = e.changedTouches[0].clientY
+            differ2 = el.scrollTop
+          },false)
+          el.addEventListener("touchmove",(e)=>{
+            if(e.changedTouches[0].clientY - differ > 0){
+              if(el.scrollTop == 0){
+                el.style.cssText=`
+                  transition: 300ms ease;
+                  transform:translateY(100px);
+                `
+              }
+            }else{
+              if(el.scrollTop == differ2){
+                el.style.cssText=`
+                  transition: 300ms ease;
+                  transform:translateY(-100px);
+                `
+              }
+            }
+            differ = e.changedTouches[0].clientY
+            differ2 = el.scrollTop
+          },false)
+          el.addEventListener("touchend",(e)=>{
+            el.style.cssText=`
+              transition: 300ms ease;
+            `
+          },false)
+        }
+      }
+  },
   data(){
     return {
+      isShowslow: true,
+      showslowIndex: 0,
       renderData: [],
       renderDataright: [],
-      renderDatarightid: 0
+      renderDatarightid: 0,
+      showItem: "init"
     }
   },
   components,
@@ -64,10 +122,26 @@ export default {
       }
     })
     this.renderData = res
-    this.renderRight(res[0].childRen, 0);
+    this.renderRight(res[0].childRen, "init");
   },
   methods: {
     renderRight(item, index) {
+      this.showItem = index;
+      this.isShowslow = false;
+      let that = this
+      if(index == this.showslowIndex){
+        this.isShowslow = false;
+      }else{
+        this.isShowslow = true;
+      }
+      if(index == "init"){
+        this.showItem = 0;
+        this.isShowslow = true;
+      }
+      setTimeout(function(){
+        that.isShowslow = false;
+      },500)
+      this.showslowIndex = index
       this.renderDatarightid = index
       this.renderDataright = item
     }
@@ -78,6 +152,7 @@ export default {
 <style scoped>
   .classify{
     width: 100%;
+    user-select: none;
     height: 100%;
   }
   .classifymian-container{
@@ -111,9 +186,21 @@ export default {
     height: 100%;
     overflow: auto;
     overflow-x: hidden;
-    flex-grow:1; 
+    flex-grow:1;
+  }
+  .showslow {
+    animation: showSlow 500ms;
+  }
+  @keyframes showSlow{
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
   }
   .classifymian-left-item{
+    transition: 0ms ease;
     width: 100%;
     background-color: rgb(248,248,248);
     height: 46px;
@@ -121,5 +208,8 @@ export default {
     line-height: 46px;
     color: #333;
     font-size: 14px;
+  }
+  .showItem{
+    background-color: #fff;
   }
 </style>
