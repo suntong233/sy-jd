@@ -12,8 +12,8 @@
         style="outline:none;font-size: 12px;border:0;background:none;position: relative;left:20px;width:80%;height:20px"
         @input="inputEvent"
       />
-      <div @click="clearvalue()"  style="display:flex;height:42px;align-items:center;position:absolute;right:80px;" v-if="show2">
-        <img   src="/lz/images/close.png">
+      <div @click="clearvalue()"  style="display:flex;height:42px;align-items:center;position:absolute;right:10px;" v-if="show2">
+        <img src="/lz/images/close.png">
       </div>
     </div>
     <div  class="searchbutton" @click="tiaozhuan()">搜索</div>
@@ -66,37 +66,34 @@ export default {
       if(this.searchMsg.trim() === ""){
         return
       }
-      this.$store.commit("goSearchPage", this.searchMsg)
+      this.$store.commit("goSearchPage", this.showList[0])
       this.$router.push("/searchres")
     },
     inputEvent () {
       let that = this;
        if (that.searchMsg.trim().length > 0) {
-                    if (that.timer) {
-                        clearTimeout(that.timer)
-                    }
-                    that.timer = setTimeout(function () {
-                         if (that.searchMsg.trim()) {
-                           that.show1=true
-                           that.show2=true
-                            that.showList = that.allTabs.filter(function (item) {
-                                if (item.includes(that.searchMsg)) {
-                                    return item
-                                }
-                           
-                            })
-                        }
-
-                        if(that.showList.length==0) {
-                          that.showList.length=null
-                        }
-
-                    }, 500)
-
-                }
-                else {
-                    setTimeout(function () { that.showList = []; that.show1=false; that.show2=false}, 300)
-                }
+          if (that.timer) {
+              clearTimeout(that.timer)
+          }
+          that.timer = setTimeout(function () {
+                if (that.searchMsg.trim()) {
+                  that.show1=true
+                  that.show2=true
+                  that.showList = that.allTabs.filter(function (item) {
+                      if (item.includes(that.searchMsg)) {
+                          return item
+                      }
+                  
+                  })
+              }
+              if(that.showList.length==0) {
+                that.showList.length=null
+              }
+          }, 500)
+      }
+      else {
+          setTimeout(function () { that.showList = []; that.show1=false; that.show2=false}, 300)
+      }
     }
   }
 };
@@ -134,6 +131,7 @@ export default {
   font-size: 20px;
 }
 .textborder {
+  position: relative;
   background-color: #f7f7f7;
   border-radius: 25px;
   width: 68%;
@@ -178,7 +176,6 @@ export default {
   width: 100%;
   padding-top:10px; 
   padding-bottom: 10px;
-  
  }
 
 
