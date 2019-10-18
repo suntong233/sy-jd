@@ -1,98 +1,125 @@
 <template>
-<div>
-<div class="container">
-  <div class="searchtext">
-    <div @click="$router.go(-1)" class="el-icon-arrow-left"></div>
-    <div class="textborder">
-      <div class="el-icon-search"></div>
-      <input
-        v-model="searchMsg"
-        type="text"
-        :placeholder="$store.state.searchHead"
-        style="outline:none;font-size: 12px;border:0;background:none;position: relative;left:20px;width:80%;height:20px"
-        @input="inputEvent"
-      />
-      <div @click="clearvalue()"  style="display:flex;height:42px;align-items:center;position:absolute;right:10px;" v-if="show2">
-        <img src="/lz/images/close.png">
+  <div>
+    <div class="container">
+      <div class="searchtext">
+        <div @click="$router.go(-1)" class="el-icon-arrow-left"></div>
+        <div class="textborder">
+          <div class="el-icon-search"></div>
+          <input
+            v-model="searchMsg"
+            type="text"
+            :placeholder="$store.state.searchHead"
+            style="outline:none;font-size: 12px;border:0;background:none;position: relative;left:20px;width:80%;height:20px"
+            @input="inputEvent"
+          />
+          <div
+            @click="clearvalue()"
+            style="display:flex;height:42px;align-items:center;position:absolute;right:10px;"
+            v-if="show2"
+          >
+            <img src="/lz/images/close.png" />
+          </div>
+        </div>
+        <div class="searchbutton" @click="tiaozhuan()">搜索</div>
+      </div>
+      <div></div>
+    </div>
+    <div class="result_list" v-if="show1">
+      <div
+        @click="searchItem(item)"
+        class="result_list_container"
+        v-for="item in showList"
+        :key="item"
+      >
+        <span>{{item}}</span>
       </div>
     </div>
-    <div  class="searchbutton" @click="tiaozhuan()">搜索</div>
   </div>
-  <div>
-   
-  </div>
-</div>
-<div class="result_list" v-if="show1" >
-    <div @click="searchItem(item)" class="result_list_container"  v-for="item in showList" :key="item">
-         <span> {{item}} </span>
-    </div>
-</div>
-
-</div>
 </template>
 
 <script>
 export default {
   name: "topsearch",
-  data () {
+  data() {
     return {
       searchMsg: "",
       renderData: [],
       allTabs: [],
-      showList:[],
-      timer:null,
-      show1:false,
-      show2:false
+      showList: [],
+      timer: null,
+      show1: false,
+      show2: false,
+      searchList: [],
+      isSearch: false
+    };
+  },
+  created() {
+    this.$store.state.searchPageData.forEach(item => {
+      this.allTabs.push(item);
+    });
+    let history = localStorage.getItem("history");
+    if (history) {
+      history = JSON.parse(history);
+      this.searchList = history;
+      // if (this.searchList.length == 0) {
+      //   this.isSearch = false;
+      // }
+      this.isSearch = true;
+    } else {
+      this.isSearch = false;
     }
   },
-  created () {
-      this.$store.state.searchPageData.forEach(item=>{
-        this.allTabs.push(item)
-      })
-  },
   methods: {
-    searchItem(tab){
-      this.renderData.length = 0
-      this.$store.commit("goSearchPage", tab)
-      this.$router.push("/searchres")
+    searchItem(tab) {
+      this.renderData.length = 0;
+      this.$store.commit("goSearchPage", tab);
+      this.$router.push("/searchres");
     },
-    clearvalue(){
-      this.searchMsg="";
+    clearvalue() {
+      this.searchMsg = "";
       console.log(1);
-      this.show2= false;
-      this.showList=[];
+      this.show2 = false;
+      this.showList = [];
     },
     tiaozhuan() {
-      if(this.searchMsg.trim() === ""){
-        return
+      if (this.searchMsg.trim() === "") {
+        return;
       }
-      this.$store.commit("goSearchPage", this.showList[0])
-      this.$router.push("/searchres")
+      this.$store.commit("goSearchPage", this.searchMsg);
+      this.$router.push("/searchres");
+      this.isSearch = true;
+      if (this.searchMsg !== "" && JSON.stringify(this.allTabs).indexOf(this.searchMsg) !== -1) {
+        this.searchList.push(this.searchMsg);
+        localStorage.setItem("history", JSON.stringify(this.searchList));
+        this.searchMsg = "";
+      }
     },
-    inputEvent () {
+    inputEvent() {
       let that = this;
-       if (that.searchMsg.trim().length > 0) {
-          if (that.timer) {
-              clearTimeout(that.timer)
+      if (that.searchMsg.trim().length > 0) {
+        if (that.timer) {
+          clearTimeout(that.timer);
+        }
+        that.timer = setTimeout(function() {
+          if (that.searchMsg.trim()) {
+            that.show1 = true;
+            that.show2 = true;
+            that.showList = that.allTabs.filter(function(item) {
+              if (item.includes(that.searchMsg)) {
+                return item;
+              }
+            });
           }
-          that.timer = setTimeout(function () {
-                if (that.searchMsg.trim()) {
-                  that.show1=true
-                  that.show2=true
-                  that.showList = that.allTabs.filter(function (item) {
-                      if (item.includes(that.searchMsg)) {
-                          return item
-                      }
-                  
-                  })
-              }
-              if(that.showList.length==0) {
-                that.showList.length=null
-              }
-          }, 500)
-      }
-      else {
-          setTimeout(function () { that.showList = []; that.show1=false; that.show2=false}, 300)
+          if (that.showList.length == 0) {
+            that.showList.length = null;
+          }
+        }, 500);
+      } else {
+        setTimeout(function() {
+          that.showList = [];
+          that.show1 = false;
+          that.show2 = false;
+        }, 300);
       }
     }
   }
@@ -102,14 +129,14 @@ export default {
 <style scoped>
 .search-input {
   background-color: aqua;
-  height: 100%;;
+  height: 100%;
 }
 
-.container{
-    width: 100%;
-    height: 42px;
-    /* max-width: 400px; */
-    background-color: #fff;
+.container {
+  width: 100%;
+  height: 42px;
+  /* max-width: 400px; */
+  background-color: #fff;
 }
 .searchtext {
   position: fixed;
@@ -122,7 +149,7 @@ export default {
   justify-content: space-evenly;
   align-items: center;
   z-index: 20000;
-    /* max-width: 400px; */
+  /* max-width: 400px; */
   border-bottom: #e5e5e5 1px solid;
   border-left: #e5e5e5 1px solid;
   border-right: #e5e5e5 1px solid;
@@ -151,19 +178,19 @@ export default {
   display: flex;
   align-items: center;
   justify-content: center;
-   color: white;
+  color: white;
   font-size: 14px;
 }
 
 .result_list {
   width: 100%;
   z-index: 999;
-  padding-left:10px;
+  padding-left: 10px;
   position: absolute;
   background-color: #fff;
   top: 42px;
-  
- /*  border-bottom: 1px solid red; */
+
+  /*  border-bottom: 1px solid red; */
 }
 .result_list_container {
   border-bottom: 1px solid #f5f5f5;
@@ -174,9 +201,7 @@ export default {
   font-size: 14px;
   z-index: 999;
   width: 100%;
-  padding-top:10px; 
+  padding-top: 10px;
   padding-bottom: 10px;
- }
-
-
+}
 </style>

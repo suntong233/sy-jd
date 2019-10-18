@@ -40,6 +40,16 @@ export default new Vuex.Store({
     // 跳转到搜索结果路由
     goSearchPage(state, type) {
       if (state.searchPageData.includes(type)) {
+        if (state.localStorage.length > 0) {
+          if (state.localStorage.indexOf(type) < 0) {
+            state.localStorage.push(type);
+          } else {
+            return;
+          }
+        } else {
+          state.localStorage.push(type);
+        }
+        localStorage.setItem("history", JSON.stringify(state.localStorage));
         state.searchRes = [type];
         console.log("跳转到了" + type + "搜索结果列表");
       } else {
