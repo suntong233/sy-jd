@@ -6,6 +6,7 @@
         <div class="textborder">
           <div class="el-icon-search"></div>
           <input
+            @keyup.enter="tiaozhuan"
             v-model="searchMsg"
             type="text"
             :placeholder="$store.state.searchHead"
@@ -20,7 +21,7 @@
             <img src="/lz/images/close.png" />
           </div>
         </div>
-        <div class="searchbutton" @click="tiaozhuan()">搜索</div>
+        <div class="searchbutton" @click="tiaozhuan">搜索</div>
       </div>
       <div></div>
     </div>
@@ -57,17 +58,6 @@ export default {
     this.$store.state.searchPageData.forEach(item => {
       this.allTabs.push(item);
     });
-    let history = localStorage.getItem("history");
-    if (history) {
-      history = JSON.parse(history);
-      this.searchList = history;
-      // if (this.searchList.length == 0) {
-      //   this.isSearch = false;
-      // }
-      this.isSearch = true;
-    } else {
-      this.isSearch = false;
-    }
   },
   methods: {
     searchItem(tab) {
@@ -77,7 +67,6 @@ export default {
     },
     clearvalue() {
       this.searchMsg = "";
-      console.log(1);
       this.show2 = false;
       this.showList = [];
     },
@@ -85,14 +74,8 @@ export default {
       if (this.searchMsg.trim() === "") {
         return;
       }
-      this.$store.commit("goSearchPage", this.searchMsg);
+      this.$store.commit("goSearchPage", this.showList[0]);
       this.$router.push("/searchres");
-      this.isSearch = true;
-      if (this.searchMsg !== "" && JSON.stringify(this.allTabs).indexOf(this.searchMsg) !== -1) {
-        this.searchList.push(this.searchMsg);
-        localStorage.setItem("history", JSON.stringify(this.searchList));
-        this.searchMsg = "";
-      }
     },
     inputEvent() {
       let that = this;

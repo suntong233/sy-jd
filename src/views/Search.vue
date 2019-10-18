@@ -56,6 +56,7 @@ export default {
     del() {
       this.searchList = [];
       this.isSearch = false;
+      this.$store.state.searchLocalData.length = 0;
       localStorage.removeItem("history");
     },
     tab() {
@@ -90,9 +91,6 @@ export default {
 </script>
 
 <style scoped>
-.home{
-
-}
 .hot-search {
   /* margin-top: 15px; */
   padding: 15px 15px 11px 0;
@@ -112,7 +110,7 @@ export default {
   font-size: 15px;
   color: #99a6c4;
   position: relative;
-  left: 70%;
+  left: 63%;
 }
 .hotsearch-ui {
   display: flex;
@@ -132,11 +130,11 @@ export default {
   background-color: #f0f2f5;
 }
 .hotsearch{
-
+  margin-right: 10px;
   margin-left: 10px;
 }
 .hide {
- padding-right: 2px;
+ padding-right: 30px;
   overflow: hidden;
   font-size: 12px;
   text-align: center;
@@ -160,9 +158,8 @@ export default {
 .recently-search {
   background: #fff;
   width: 100%;
-  /* height: 100%; */
   overflow: hidden;
-  padding: 15px 15px 11px 13px;
+  padding: 15px 30px 11px 10px;
 }
 .hidden {
   height: 100px;

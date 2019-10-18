@@ -31,17 +31,24 @@ export default {
       autoToTop:{
         inserted(el){
           el.addEventListener("click",(e)=>{
+            let copy = el.scrollTop
             let temp = e.target.dataset.index*46
-            
+            if( copy == temp){
+              return
+            }
             let timer = setInterval(()=>{
-              if(el.scrollTop >= 332){
-                clearInterval(timer)
-              } 
+              let differ3 = copy
               if(el.scrollTop < temp){
                 el.scrollTop++
-                if(el.scrollTop == temp){
+                copy = el.scrollTop
+                if(copy == temp){
                   clearInterval(timer)
                 }
+                if(copy == differ3){
+                  clearInterval(timer)
+                }
+              }else{
+                clearInterval(timer)
               }
             },1)
           })

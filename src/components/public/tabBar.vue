@@ -3,6 +3,12 @@
     <div @click="routerChange(item)" class="tabBar-item" v-for="item in renderList" :key="item.id">
       <img :src="item.path == $route.path ? item.showUrl : item.url"/>
     </div>
+    <div v-if="$store.state.loginModule.islogin" @click="routerChange(renderList2[0])" class="tabBar-item">
+      <img :src="renderList2[0].path == $route.path ? renderList2[0].showUrl : renderList2[0].url"/>
+    </div>
+    <div v-else @click="routerChange(renderList2[1])" class="tabBar-item">
+      <img :src="renderList2[1].url"/>
+    </div>
   </div>
 </template>
 
@@ -12,6 +18,22 @@ export default {
   data() {
     return {
       showList: 0,
+      renderList2: [
+        {
+          id: 5,
+          showUrl: "https://img11.360buyimg.com/jdphoto/s130x100_jfs/t1/47480/36/12929/3209/5d9c4b13E97caa63a/4dc0ec8a7e47c2b7.png",
+          url:
+            "https://img11.360buyimg.com/jdphoto/s130x100_jfs/t1/56206/13/12652/2957/5d9c4b13E503bcd76/1c8543653685e80e.png",
+          path: "/mine",
+          isChange: true
+        },
+        {
+          id: 6,
+          url:
+            "https://img11.360buyimg.com/jdphoto/s130x100_jfs/t1/68400/36/12368/3153/5d9c4b13E0e0d80a8/876c40f17d91ce44.png",
+          path: "/login",
+        },
+      ],
       renderList: [
         {
           id: 1,
@@ -41,14 +63,6 @@ export default {
           url:
             "https://img11.360buyimg.com/jdphoto/s130x100_jfs/t1/64954/4/12406/3529/5d9c4b12Ee7a82735/f2fe0a88bf344736.png",
           path: "/shoppingcar"
-        },
-        {
-          id: 5,
-          showUrl: "https://img11.360buyimg.com/jdphoto/s130x100_jfs/t1/47480/36/12929/3209/5d9c4b13E97caa63a/4dc0ec8a7e47c2b7.png",
-          url:
-            "https://img11.360buyimg.com/jdphoto/s130x100_jfs/t1/56206/13/12652/2957/5d9c4b13E503bcd76/1c8543653685e80e.png",
-          path: "/login",
-          isChange: true
         }
       ]
     };

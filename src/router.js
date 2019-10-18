@@ -69,6 +69,12 @@ export default new Router({
       path: "/shoppingcar",
       name: "shoppingcar",
       component: () => import("@/views/ShoppingCar.vue")
+    },
+    {
+      // 我的
+      path: "/mine",
+      name: "mine",
+      component: () => import("@/views/Mine.vue")
     }
   ]
 });
