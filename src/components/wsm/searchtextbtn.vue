@@ -162,12 +162,13 @@ export default {
   width: 100%;
   z-index: 999;
   padding-left:10px;
+  position: absolute;
+  background-color: #fff;
+  top: 42px;
   
  /*  border-bottom: 1px solid red; */
 }
 .result_list_container {
-  width: 100%;
-  height: 100%;
   border-bottom: 1px solid #f5f5f5;
   display: flex;
   align-items: center;
@@ -175,8 +176,10 @@ export default {
   color: rgb(35, 35, 35);
   font-size: 14px;
   z-index: 999;
+  width: 100%;
   padding-top:10px; 
   padding-bottom: 10px;
+  
  }
 
 
