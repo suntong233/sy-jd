@@ -12,6 +12,7 @@ export default new Vuex.Store({
     // <搜索中==
     searchHead: "狗狗活体",
     searchPageData: [], // 搜索页面的所有标签
+    localStorage: [],
     // 搜索中>
     // <搜索成功界面==
     searchRes: [], // 搜索结果
