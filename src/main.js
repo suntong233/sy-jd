@@ -6,7 +6,9 @@ import {
   Button,
   Input,
   Backtop,
+  dialog,
   Icon,
+  Checkbox,
   Carousel,
   carouselItem
 } from "element-ui";
@@ -23,7 +25,9 @@ Vue.use(VueLazyload, {
 window.Swiper = Swiper;
 Vue.use(Button);
 Vue.use(Input);
+Vue.use(dialog);
 Vue.use(Backtop);
+Vue.use(Checkbox);
 Vue.use(Icon);
 Vue.use(Carousel);
 Vue.use(carouselItem);

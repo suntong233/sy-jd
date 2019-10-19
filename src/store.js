@@ -39,6 +39,67 @@ export default new Vuex.Store({
     // 登录模块>
   },
   mutations: {
+    // 购物车方法
+    // 添加商品
+    scAdd(state, item) {
+      let ishasItem = state.shoppingCarModule.shoppingCarList.find(item2 => {
+        if (item2.id === item.id) {
+          item2.amount++;
+          return true;
+        }
+        return false;
+      });
+      if (!ishasItem) {
+        state.shoppingCarModule.shoppingCarList.push({
+          id: item.id,
+          amount: 1,
+          info: item
+        });
+      }
+      console.log(state.shoppingCarModule.shoppingCarList);
+      // 本地存储的操作
+      if (localStorage.shoppingCarData) {
+        localStorage.shoppingCarData = JSON.stringify(
+          state.shoppingCarModule.shoppingCarList
+        );
+      } else {
+        localStorage.setItem(
+          "shoppingCarData",
+          JSON.stringify(state.shoppingCarModule.shoppingCarList)
+        );
+      }
+    },
+    // 删除商品
+    scDel(state, info) {
+      state.shoppingCarModule.shoppingCarList.find(item => {
+        if (item.id === info.id) {
+          // 执行删除操作
+          if (info.type == "all") {
+            state.shoppingCarModule.shoppingCarList = state.shoppingCarModule.shoppingCarList.filter(
+              item2 => {
+                return item2.id !== item.id;
+              }
+            );
+          } else {
+            if (item.amount <= 1) {
+              state.shoppingCarModule.shoppingCarList = state.shoppingCarModule.shoppingCarList.filter(
+                item2 => {
+                  return item2.id !== item.id;
+                }
+              );
+            } else {
+              item.amount--;
+            }
+          }
+          localStorage.shoppingCarData = JSON.stringify(
+            state.shoppingCarModule.shoppingCarList
+          );
+          return true;
+        }
+        return false;
+      });
+      console.log(state.shoppingCarModule.shoppingCarList);
+    },
     // 登录方法
     loginFun(state, user) {
       state.userLogin = state.loginModule.userData.find(item => {
@@ -63,6 +124,11 @@ export default new Vuex.Store({
       }
       if (localStorage.history) {
         state.searchLocalData = JSON.parse(localStorage.history);
+      }
+      if (localStorage.shoppingCarData) {
+        state.shoppingCarModule.shoppingCarList = JSON.parse(
+          localStorage.shoppingCarData
+        );
       }
     },
     // 跳转到搜索结果路由

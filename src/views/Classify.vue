@@ -160,7 +160,7 @@ export default {
   .classify{
     width: 100%;
     user-select: none;
-    height: 100%;
+    /* height: 100%; */
   }
   .classifymian-container{
     display: block;

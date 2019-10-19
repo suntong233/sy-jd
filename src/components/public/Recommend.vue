@@ -55,7 +55,17 @@ export default {
         // 跳转到商品详情页面 调用vuex的商品模块的 goGoodsPage 并传入item
         toGoodsInfoRouter(item) {
             this.$store.commit("goGoodsPage",item);
-            this.$router.push("/goods");
+            // this.$router.push("/goods");
+            this.scAdd(item)
+            // this.scDel({id: item.id, type: "one"})
+        },
+        // 添加到购物车
+        scAdd(item){
+            this.$store.commit("scAdd",item);
+        },
+        // 删除购物车某个数据
+        scDel(deleInfo){
+            this.$store.commit("scDel",deleInfo);
         }
     }
 }

@@ -75,6 +75,12 @@ export default new Router({
       path: "/mine",
       name: "mine",
       component: () => import("@/views/Mine.vue")
+    },
+    {
+      // 临时
+      path: "/temp",
+      name: "temp",
+      component: () => import("@/views/TempReplace.vue")
     }
   ]
 });
