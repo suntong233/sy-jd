@@ -10,10 +10,10 @@
     <div class="topBanner">
       <div class="swiper-container indexlz">
         <div class="swiper-wrapper">
-          <div class="swiper-slide" v-for="item in imgArr" :key="item">
-            <img v-lazy="item"/>
+          <div class="swiper-slide" v-for="(item, index) in imgArr" :key="item + index">
+            <img v-lazy="item" />
           </div>
-         <!--  <div class="swiper-slide">
+          <!--  <div class="swiper-slide">
             <img
               src="//m.360buyimg.com/mobilecms/s843x843_jfs/t1/55653/29/6964/114052/5d491ed7Ec454bd4c/5767440fa1fbc377.jpg!q70.dpg.webp"
             />
@@ -22,7 +22,7 @@
             <img
               src="//m.360buyimg.com/mobilecms/s843x843_jfs/t1/52854/37/7018/100673/5d491ed7E19a2d468/94b075ec648fb3f0.jpg!q70.dpg.webp"
             />
-          </div> -->
+          </div>-->
         </div>
         <div class="swiper-pagination"></div>
       </div>
@@ -39,9 +39,13 @@
     <div class="goods_price_context">
       <div class="goods_price">
         <div class="goods_price_left" style="font-size:18px;">
-          ￥<strong>{{msg}}</strong>
-         <span v-if="isShow" style="margin-left:5px;font-size:6px;color:grey;text-decoration: line-through">￥{{premsg}}</span>
-         </div>
+          ￥
+          <strong>{{msg}}</strong>
+          <span
+            v-if="isShow"
+            style="margin-left:5px;font-size:6px;color:grey;text-decoration: line-through"
+          >￥{{premsg}}</span>
+        </div>
 
         <div class="goods_price_right">
           <span class="goods_price_right_left">
@@ -62,7 +66,8 @@
         <p>
           <img
             src="//img30.360buyimg.com/jdphoto/jfs/t1/75776/31/13305/900/5da86d4bEcc4c90de/e1d7f9fd9583fa14.png"
-          />{{goods_desc}}
+          />
+          {{goods_desc}}
         </p>
         <p>
           官方保证*极速发货*现在下单马上发货！七天无理由退换*赠送运费险*放心购*欢迎抢购
@@ -308,11 +313,19 @@
           </div>
         </div>
         <div class="business_son2_right">
-            <span style="color: #999;"> 评价 <span style="color: #18c461;">8.68 | 低</span></span>
-            <span style="color: #999;"> 物流 <span style="color: #e4393c;">9.66 | 高</span></span>
-            <span style="color: #999;"> 售后 <span style="color: #e4393c;">9.20 | 高</span></span>
-           
-            </div>
+          <span style="color: #999;">
+            评价
+            <span style="color: #18c461;">8.68 | 低</span>
+          </span>
+          <span style="color: #999;">
+            物流
+            <span style="color: #e4393c;">9.66 | 高</span>
+          </span>
+          <span style="color: #999;">
+            售后
+            <span style="color: #e4393c;">9.20 | 高</span>
+          </span>
+        </div>
       </div>
       <div class="business_son3">
         <div>
@@ -329,24 +342,310 @@
         </div>
       </div>
     </div>
+
+    <div style="width:100%;height:10px;background-color: rgb(232, 232, 237);"></div>
+    <!--猜你喜欢-->
+    <div class="guess">
+      <div class="guess_container1">猜你喜欢</div>
+      <div class="guess_container2">
+        <div class="swiper-container indexlz1">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="swiper-slide_container">
+                <div class="item11" v-for="item in list1" :key="item.id">
+                  <img
+                    style="height:60%;width:100%;"
+                    :src="item.img"
+                  />
+                  <div style="font-size:12px;padding:0px 8px;height:30%;overflow:hidden;">{{item.desc}}</div>
+                  <div style="color:#e93b3d;height:20%">￥{{item.price}}</div>
+                </div>
+    
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="swiper-slide_container">
+                <div class="item11" v-for="item in list2" :key="item.id">
+                  <img
+                    style="height:60%;width:100%;"
+                    :src="item.img"
+                  />
+                  <div style="font-size:12px;padding:0px 8px;height:30%;overflow:hidden;">{{item.desc}}</div>
+                  <div style="color:#e93b3d;height:20%">￥{{item.price}}</div>
+                </div>
+    
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="swiper-slide_container">
+                <div class="item11" v-for="item in list3" :key="item.id">
+                  <img
+                    style="height:60%;width:100%;"
+                    :src="item.img"
+                  />
+                  <div style="font-size:12px;padding:0px 8px;height:30%;overflow:hidden;">{{item.desc}}</div>
+                  <div style="color:#e93b3d;height:20%">￥{{item.price}}</div>
+                </div>
+    
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="swiper-slide_container">
+                <div class="item11" v-for="item in list4" :key="item.id">
+                  <img
+                    style="height:60%;width:100%;"
+                    :src="item.img"
+                  />
+                  <div style="font-size:12px;padding:0px 8px;height:30%;overflow:hidden;">{{item.desc}}</div>
+                  <div style="color:#e93b3d;height:20%">￥{{item.price}}</div>
+                </div>
+    
+              </div>
+            </div>
+           
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </div>
+
+     <div style="width:100%;height:10px;background-color: rgb(232, 232, 237);"></div>
+
+     <!--商品介绍--->
+     <div class="goods_info_aftersale">
+          <div class="item100 "  @click="goods_switch(1)" :class="{active_avtive:goods_msg==1}"  >商品介绍</div>
+          <div class="item100" @click="goods_switch(2)" :class="{active_avtive:goods_msg==2}">规格参数</div>
+          <div class="item100" @click="goods_switch(3)" :class="{active_avtive:goods_msg==3}">售后保障</div>
+          
+     </div>
+     <div class="item100_text">
+                  <div class="item100_text_container" v-if="goods_msg==1">
+                        <img src="//img12.360buyimg.com/cms/jfs/t3001/129/415513229/103370/13587a2e/57a03977Ndad3ec42.jpg!q70.dpg.webp">
+                        <img src="//img30.360buyimg.com/popWaterMark/jfs/t2653/356/1852053668/43596/43365336/574eb3beN6cbadc65.jpg!q70.dpg.webp">
+                        <img src="//img20.360buyimg.com/vc/jfs/t2179/348/2579312304/91418/6293e4fc/56e678c3N892c291e.jpg!q70.dpg.webp">
+                        <img src="//img20.360buyimg.com/vc/jfs/t2233/364/2409913108/44332/c9eaa7d1/56d8045bN483542dd.jpg!q70.dpg.webp">
+                        <img src="//img20.360buyimg.com/vc/jfs/t2395/130/1709927270/58104/3adbce0f/56d8045bNd71d8668.jpg!q70.dpg.webp">
+                        <img src="//img20.360buyimg.com/vc/jfs/t1960/128/1733395108/83331/f601cfc0/56d8045cNb52245d3.jpg!q70.dpg.webp">
+                        <img src="//img20.360buyimg.com/vc/jfs/t2314/190/2485062502/58727/157000a5/56d8045dN178a7942.jpg!q70.dpg.webp">
+                        <img src="//img20.360buyimg.com/vc/jfs/t2458/74/2508901745/90416/58537629/56d6b526Nf05697cf.jpg!q70.dpg.webp">
+                        <img src="//img20.360buyimg.com/vc/jfs/t1849/253/2392194707/98899/d0d6bd7a/56d6b527N36b2d304.jpg!q70.dpg.webp">
+                        <img src="//img20.360buyimg.com/vc/jfs/t2479/192/1731142743/97409/e10fecb9/56d6b527Nbdf1e46b.jpg!q70.dpg.webp">
+                        <img src="//img20.360buyimg.com/vc/jfs/t2404/286/2519562181/97614/803b9308/56d6b527Ne7d2859a.jpg!q70.dpg.webp">
+                        <img src="//img20.360buyimg.com/vc/jfs/t1981/365/2380316505/85864/e55d05eb/56d6b528N2458f3c7.jpg!q70.dpg.webp">
+                  </div>
+                   <div class="item100_text_container" v-if="goods_msg==2">
+                       <img src="//img30.360buyimg.com/popWaterMark/jfs/t2758/174/2082188495/139277/f44cadc9/57567a17N9ecf76ee.jpg!q70.dpg.webp">
+                       <img src="//img20.360buyimg.com/vc/jfs/t2314/190/2485062502/58727/157000a5/56d8045dN178a7942.jpg!q70.dpg.webp">
+                        <img src="//img20.360buyimg.com/vc/jfs/t2458/74/2508901745/90416/58537629/56d6b526Nf05697cf.jpg!q70.dpg.webp">
+                  </div>
+                   <div class="item100_text_container" v-if="goods_msg==3">
+                        
+                        <img src="//img20.360buyimg.com/vc/jfs/t2314/190/2485062502/58727/157000a5/56d8045dN178a7942.jpg!q70.dpg.webp">
+                        <img src="//img20.360buyimg.com/vc/jfs/t2458/74/2508901745/90416/58537629/56d6b526Nf05697cf.jpg!q70.dpg.webp">
+                        <img src="//img30.360buyimg.com/popWaterMark/jfs/t2293/34/450526874/44263/965eb848/560baafbNebe8dc89.jpg!q70.dpg.webp">
+
+                  </div>
+      </div>
     <!--  -->
+    <BackTop></BackTop>
   </div>
 </template>
 
 <script>
 // 商品详情
+import BackTop from "../components/st/BackTop/NormalBack.vue"; // 回到顶部
 export default {
   name: "goodsdetail",
   data() {
     return {
+      goods_msg:1,
       msg: "",
-      imgArr:[],
-      goods_desc:"",
-      premsg:"",
-      isShow:false
+      imgArr: [],
+      goods_desc: "",
+      premsg: "",
+      isShow: false,
+      list1: [
+        {
+          id: 1,
+          img:
+            "//img14.360buyimg.com/mobilecms/s270x270_jfs/t1/19882/29/7748/169774/5c6f9044Eab800fb1/c5f719d74aafcbe1.jpg!q70.dpg.webp",
+          price: "13500",
+          desc:"浪琴(Longines)瑞士手表 军旗系列机械男表L4.899.4.96.6"
+        },
+        {
+          id: 2,
+          img:
+            "//img14.360buyimg.com/mobilecms/s270x270_jfs/t1/79215/38/13227/251705/5da975daE886fc174/66184c194457ec3c.jpg!q70.dpg.webp",
+          price: "11299",
+          desc:"浪琴(Longines)瑞士手表 军旗系列机械情侣表男表L4.774.4.57.6"
+        },
+        {
+          id: 3,
+          img:
+            "//img14.360buyimg.com/mobilecms/s270x270_jfs/t21679/151/557500757/83277/6cadaa54/5b112653Nfcb4544c.jpg!q70.dpg.webp",
+          price: "7199",
+          desc:"浪琴(Longines)瑞士手表 瑰丽系列机械情侣表男表L4.821.4"
+        },
+        {
+          id: 4,
+          img:
+            "//img14.360buyimg.com/mobilecms/s270x270_jfs/t1/58914/20/13655/252147/5da9756fE9d3d87ff/d1fe4a00ee2ef0b5.jpg!q70.dpg.webp",
+          price: "9800",
+          desc:"浪琴(Longines)瑞士手表 优雅系列机械男表L4.921.4.52.6"
+        },
+        {
+          id: 5,
+          img:
+            "//img14.360buyimg.com/mobilecms/s270x270_g15/M04/01/1F/rBEhWVLTgSYIAAAAAAFVMpV4Hx4AAH16wKzIs8AAVVK666.jpg",
+          price: "13099",
+          desc:"浪琴(Longines)瑞士手表 名匠系列机械情侣表男表L2.628.4.51.6"        
+        },
+        {
+          id: 6,
+          img:
+            "//img14.360buyimg.com/mobilecms/s270x270_jfs/t22531/285/142383569/176984/7b74481a/5b2686bcNb7b68ea7.jpg!q70.dpg.webp",
+          price: "10000",
+          desc:"浪琴(Longines)瑞士手表 瑰丽系列机械男表L4.921.4.78.6"
+        }
+      ],
+      list2: [
+        {
+          id: 1,
+          img:
+            "//img14.360buyimg.com/mobilecms/s270x270_jfs/t1/3166/13/2058/76035/5b95cd3eE853400fc/e1df0fe821f29f63.jpg!q70.dpg.webp",
+          price: "9600",
+          desc:"浪琴(Longines)瑞士手表 康卡斯系列机械男表L3.641.4.96.6（L3.741.4.96.6）"
+        },
+        {
+          id: 2,
+          img:
+            "//img14.360buyimg.com/mobilecms/s270x270_jfs/t1/49992/1/13778/264326/5da97c5bEb311cbe8/4191108e914f3716.jpg!q70.dpg.webp",
+          price: "19009",
+          desc:"浪琴(Longines)瑞士手表 名匠系列机械男表L2.518.5.57.7"
+        },
+        {
+          id: 3,
+          img:
+            "//img14.360buyimg.com/mobilecms/s270x270_jfs/t1/94941/25/215/280324/5da97ba9Edbebf538/769ec887161757d9.jpg!q70.dpg.webp",
+          price: "21299",
+          desc:"浪琴(Longines)瑞士手表 名匠系列机械男表L2.673.4.78.3"
+        },
+        {
+          id: 4,
+          img:
+            "//img14.360buyimg.com/mobilecms/s270x270_jfs/t1/55603/5/11068/140620/5d8035b2E89d7585d/0de0875be10ce52c.jpg!q70.dpg.webp",
+          price: "12599",
+          desc:"浪琴 LONGINES 瑞士手表 博雅系列机械女表 L4.310.4.92.6"
+        },
+        {
+          id: 5,
+          img:
+            "//img14.360buyimg.com/mobilecms/s270x270_jfs/t1/40417/27/8593/112802/5cff5adcE07c749d9/db7f7004d009bfc7.jpg!q70.dpg.webp",
+          price: "8268",
+          desc:"浪琴 LONGINES  瑰丽系列机械男表 L4.821.4.11.6"        
+        },
+        {
+          id: 6,
+          img:
+            "//img14.360buyimg.com/mobilecms/s270x270_jfs/t1018/349/6234877/78521/b1902e55/54daf0a6N3a16a49e.jpg!q70.dpg.webp",
+          price: "14099",
+          desc:"浪琴(Longines)瑞士手表 索伊米亚系列机械情侣表男表L2.763.4.52.6"
+        }
+      ],
+      list3: [
+        {
+          id: 1,
+          img:
+            "//img14.360buyimg.com/mobilecms/s270x270_jfs/t1/46490/8/13930/259720/5da97d55E9009f0a8/c263ae6cde048cff.jpg!q70.dpg.webp",
+          price: "11799",
+          desc:"浪琴(Longines)瑞士手表 经典复古系列机械男表L1.611.4.75.2"
+        },
+        {
+          id: 2,
+          img:
+            "//img14.360buyimg.com/mobilecms/s270x270_jfs/t1/62077/14/1659/222733/5cff5759E0a21b4e3/7255bed86de515c0.jpg!q70.dpg.webp",
+          price: "15299",
+          desc:"浪琴(Longines)瑞士手表 名匠系列机械男表L2.708.4.78.6"
+        },
+        {
+          id: 3,
+          img:
+            "//img14.360buyimg.com/mobilecms/s270x270_jfs/t22117/81/563758729/68277/5e3395e3/5b114d81N1d5daf62.jpg!q70.dpg.webp",
+          price: "9699",
+          desc:"浪琴(Longines)瑞士手表 瑰丽系列机械男表L4.805.4.11.6"
+        },
+        {
+          id: 4,
+          img:
+            "//img14.360buyimg.com/mobilecms/s270x270_jfs/t1/64473/35/13263/244913/5da97826E495669a3/96d711661c0c3abc.jpg!q70.dpg.webp",
+          price: "15299",
+          desc:"浪琴 LONGINES 瑞士手表  开创者系列机械女表 L2.321.4.96.6"
+        },
+        {
+          id: 5,
+          img:
+            "//img14.360buyimg.com/mobilecms/s270x270_jfs/t1/56292/9/9818/121426/5d71f3eaE2d003866/8f51f30fb47d0ed9.jpg!q70.dpg.webp",
+          price: "7199",
+          desc:"浪琴(Longines)瑞士手表 嘉岚系列时尚情侣表女表L4.209.4.11.6"        
+        },
+        {
+          id: 6,
+          img:
+            "//img14.360buyimg.com/mobilecms/s270x270_jfs/t1/4325/34/2112/90431/5b95cf43E83af8875/dde1b454f6ce09ea.jpg!q70.dpg.webp",
+          price: "7699",
+          desc:"浪琴(Longines)瑞士手表 瑰丽系列机械男表L4.821.4.11.2"
+        }
+      ],
+      list4: [
+        {
+          id: 1,
+          img:
+            "//img14.360buyimg.com/mobilecms/s270x270_jfs/t20185/110/594380486/80024/4c7e2063/5b1149ffN70a13fb8.jpg!q70.dpg.webp",
+          price: "6299",
+          desc:"浪琴(Longines)瑞士手表 律雅系列石英男表L4.759.4.12.6"
+        },
+        {
+          id: 2,
+          img:
+            "//img14.360buyimg.com/mobilecms/s270x270_jfs/t1/100096/35/248/289866/5da972b8E5f1bfd6a/cca711ddc6e6ee4e.jpg!q70.dpg.webp",
+          price: "7099",
+          desc:"浪琴(Longines)手表 瑰丽系列石英男表 L4.720.2.32.7"
+        },
+        {
+          id: 3,
+          img:
+            "//img14.360buyimg.com/mobilecms/s270x270_jfs/t1/71608/12/1694/71532/5d006540E930f1f01/2d9abb84a131394c.jpg!q70.dpg.webp",
+          price: "7299",
+          desc:"浪琴(Longines)瑞士手表 康卡斯系列石英男表L3.730.4.56.6"
+        },
+        {
+          id: 4,
+          img:
+            "//img14.360buyimg.com/mobilecms/s270x270_jfs/t1/58914/20/13655/252147/5da9756fE9d3d87ff/d1fe4a00ee2ef0b5.jpg!q70.dpg.webp",
+          price: "9800",
+          desc:"浪琴(Longines)瑞士手表 优雅系列机械男表L4.921.4.52.6"
+        },
+        {
+          id: 5,
+          img:
+            "//img14.360buyimg.com/mobilecms/s270x270_g15/M04/01/1F/rBEhWVLTgSYIAAAAAAFVMpV4Hx4AAH16wKzIs8AAVVK666.jpg",
+          price: "13090",
+          desc:"浪琴(Longines)瑞士手表 名匠系列机械情侣表男表L2.628.4.51.6"        
+        },
+        {
+          id: 6,
+          img:
+            "//img14.360buyimg.com/mobilecms/s270x270_jfs/t22531/285/142383569/176984/7b74481a/5b2686bcNb7b68ea7.jpg!q70.dpg.webp",
+          price: "10000",
+          desc:"浪琴(Longines)瑞士手表 瑰丽系列机械男表L4.921.4.78.6"
+        }
+      ],
     };
   },
- /*  computed: {
+  components: {
+    BackTop
+  },
+  /*  computed: {
     priceleft() {
       return Math.floor(this.msg);
     },
@@ -368,22 +667,36 @@ export default {
       autoplay: false,
       loop: true
     });
+    var mySwiper1 = new Swiper(".indexlz1", {
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+        clickableClass : 'my-pagination-clickable',
+      },
+      autoplay: false,
+      loop: true
+    });
   },
   created() {
     console.log(this.$store.state.goodDetails);
-    this.imgArr =  this.$store.state.goodDetails.imgUrls
+    this.imgArr = this.$store.state.goodDetails.imgUrls;
 
-    if(typeof(this.$store.state.goodDetails.price) == "number") {
-        this.msg = this.$store.state.goodDetails.price
+    if (typeof this.$store.state.goodDetails.price == "number") {
+      this.msg = this.$store.state.goodDetails.price;
     } else {
-      this.msg = this.$store.state.goodDetails.price[0]
-      this.premsg = this.$store.state.goodDetails.price[1]
-      this.isShow = true
+      this.msg = this.$store.state.goodDetails.price[0];
+      this.premsg = this.$store.state.goodDetails.price[1];
+      this.isShow = true;
     }
-    console.log(this.msg)
-    
-    this.goods_desc = this.$store.state.goodDetails.name
-    console.log(this.goods_desc)
+    console.log(this.msg);
+
+    this.goods_desc = this.$store.state.goodDetails.name;
+    console.log(this.goods_desc);
+  },
+  methods:{
+    goods_switch(msg) {
+        this.goods_msg = msg;
+    }
   }
 };
 </script>
@@ -393,7 +706,6 @@ export default {
   width: 100%;
   height: 100%;
   background-color: rgb(232, 232, 237);
-  
 }
 
 .topBanner {
@@ -1004,7 +1316,7 @@ export default {
 }
 
 .business_son2 div:nth-child(1) div:nth-child(1) {
-   border-right: 1px solid #f5f5f5
+  border-right: 1px solid #f5f5f5;
 }
 
 .business_son2_right {
@@ -1012,6 +1324,85 @@ export default {
   font-size: 12px;
   display: flex;
   flex-direction: column;
-  align-items: flex-end
+  align-items: flex-end;
+}
+
+.guess {
+  width: 100%;
+}
+
+.guess_container1 {
+  width: 100%;
+  padding: 8px;
+  font-size: 12px;
+  color: #333333;
+}
+
+.guess_container2 {
+  width: 100%;
+  height: 440px;
+}
+
+.indexlz1 {
+  width: 100%;
+  height: 100%;
+}
+
+.indexlz1 .swiper-wrapper {
+  width: 100%;
+  height: 100%;
+}
+
+.indexlz1 .swiper-wrapper .swiper-slide {
+  width: 100%;
+  height: 400px;
+}
+
+.indexlz1 .swiper-wrapper .swiper-slide .swiper-slide_container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 100%;
+}
+
+.indexlz1 .swiper-wrapper .swiper-slide .swiper-slide_container .item11 {
+  width: 33.3%;
+  height: 50%;
+  border: 1px solid #f5f5f5;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.goods_info_aftersale{
+  width:100%;
+  display: flex;
+  color:#999999
+}
+
+.goods_info_aftersale .item100{
+    width:33.3%;
+    border:1px solid #f5f5f5;
+    display: flex;
+    justify-content: center;
+    padding: 8px 0;
+    font-size:12px;
+    
+}
+
+.item100_text{
+  width:100%;
+}
+.item100_text_container{
+  width:100%;
+}
+
+.item100_text_container img {
+  width:100%
+}
+
+.active_avtive{
+  color:#d91100
 }
 </style>
