@@ -77,6 +77,9 @@ export default {
       showBtn: true  
     }
   },
+  created () {
+    window.scrollTo(0, 0)
+  },
   methods: {
       openUrl(url, type){
         window.open(url, type);

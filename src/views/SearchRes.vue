@@ -61,13 +61,14 @@ export default {
     };
   },
   created() {
+    window.scrollTo(0, 0)
     this.renderData = [];
     for (var i in this.$store.state.goodsData) {
       if (this.$store.state.goodsData[i].type == this.$store.state.searchRes) {
         this.renderData.push(this.$store.state.goodsData[i]);
       }
     }
-    console.log(this.renderData);
+    console.log(this.$store.state.searchRes);
   },
   methods: {
     toGoodsInfoRouter(item) {

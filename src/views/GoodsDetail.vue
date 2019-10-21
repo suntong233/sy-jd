@@ -11,7 +11,7 @@
       <div class="swiper-container indexlz">
         <div class="swiper-wrapper">
           <div class="swiper-slide" v-for="(item, index) in imgArr" :key="item + index">
-            <img v-lazy="item" />
+            <img :src="item? item : '/images/error.jpg'" />
           </div>
           <!--  <div class="swiper-slide">
             <img
@@ -163,9 +163,8 @@
         </div>
         <div class="evaluate_1_right">
           <span class="gong">共</span>
-          <span class="wushijia" style="position:relative">
-            50
-            <span style="position:absolute;bottom:1px;">+</span>
+          <span class="wushijia" style="position:relative;">
+            50+
           </span>
           <span class="tiao">条</span>
           <span class="dayuhao">
@@ -678,6 +677,7 @@ export default {
     });
   },
   created() {
+    window.scrollTo(0, 0)
     console.log(this.$store.state.goodDetails);
     this.imgArr = this.$store.state.goodDetails.imgUrls;
 

@@ -16,6 +16,7 @@ export default new Vuex.Store({
     // 搜索中>
     // <搜索成功界面==
     searchRes: [], // 搜索结果
+    searchResLocal: [], // 本地存储
     // 搜索成功界面>
     // <商品详情==
     goodDetails: [], // 商品详情的数据
@@ -130,6 +131,9 @@ export default new Vuex.Store({
           localStorage.shoppingCarData
         );
       }
+      if (localStorage.searchResl) {
+        state.searchRes = JSON.parse(localStorage.searchResl);
+      }
     },
     // 跳转到搜索结果路由
     goSearchPage(state, type) {
@@ -150,7 +154,11 @@ export default new Vuex.Store({
           );
         }
         // 本地存储
-        console.log("跳转到了" + type + "搜索结果列表");
+        if (localStorage.searchResl) {
+          localStorage.searchResl = JSON.stringify(state.searchRes);
+        } else {
+          localStorage.setItem("searchResl", JSON.stringify(state.searchRes));
+        }
       } else {
         state.searchRes = ["输入错误"];
       }
