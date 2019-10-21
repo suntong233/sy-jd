@@ -1,11 +1,12 @@
 <template>
-  <div class="goodsdetail">
-    <!--  商品详情： <br>
-    <div style="width:100%;overflow: hidden;">
-      {{ this.$store.state.goodDetails }}
-
-    </div>-->
-
+  <div class="goodsdetail" ref="goodsdetail">
+    <!--顶部导航-->
+    <div v-goodsinfo style="position:fixed;top:0:left:0;width:100%;z-index:99">
+      <goodsdetailtop></goodsdetailtop>
+    </div>
+    <div v-goodsinfo1 style="display:none;position:fixed;top:0:left:0;width:100%;z-index:99">
+      <goodsdetailtop1></goodsdetailtop1>
+    </div>
     <!--顶部轮播图-->
     <div class="topBanner">
       <div class="swiper-container indexlz">
@@ -163,9 +164,7 @@
         </div>
         <div class="evaluate_1_right">
           <span class="gong">共</span>
-          <span class="wushijia" style="position:relative;">
-            50+
-          </span>
+          <span class="wushijia" style="position:relative;">50+</span>
           <span class="tiao">条</span>
           <span class="dayuhao">
             <img src="/lz/images/dyh.png" />
@@ -258,7 +257,7 @@
     <div style="width:100%;height:10px;background-color: rgb(232, 232, 237);"></div>
 
     <!--问答-->
-    <div class="question_answer">
+    <div class="question_answer" style="background-color:#ffff">
       <div class="question_answer1">
         <div>问答专区</div>
         <div>
@@ -288,7 +287,7 @@
 
     <div style="width:100%;height:10px;background-color: rgb(232, 232, 237);"></div>
     <!--店铺-->
-    <div class="business">
+    <div class="business" style="background-color:#ffff">
       <div class="business_son1">
         <img
           style="width:90px;height:30px"
@@ -344,7 +343,7 @@
 
     <div style="width:100%;height:10px;background-color: rgb(232, 232, 237);"></div>
     <!--猜你喜欢-->
-    <div class="guess">
+    <div class="guess" style="background-color:#ffff">
       <div class="guess_container1">猜你喜欢</div>
       <div class="guess_container2">
         <div class="swiper-container indexlz1">
@@ -352,112 +351,222 @@
             <div class="swiper-slide">
               <div class="swiper-slide_container">
                 <div class="item11" v-for="item in list1" :key="item.id">
-                  <img
-                    style="height:60%;width:100%;"
-                    :src="item.img"
-                  />
-                  <div style="font-size:12px;padding:0px 8px;height:30%;overflow:hidden;">{{item.desc}}</div>
+                  <img style="height:60%;width:100%;" :src="item.img" />
+                  <div
+                    style="font-size:12px;padding:0 10px 0 13px;height:30%;overflow:hidden;"
+                  >{{item.desc}}</div>
                   <div style="color:#e93b3d;height:20%">￥{{item.price}}</div>
                 </div>
-    
               </div>
             </div>
             <div class="swiper-slide">
               <div class="swiper-slide_container">
                 <div class="item11" v-for="item in list2" :key="item.id">
-                  <img
-                    style="height:60%;width:100%;"
-                    :src="item.img"
-                  />
-                  <div style="font-size:12px;padding:0px 8px;height:30%;overflow:hidden;">{{item.desc}}</div>
+                  <img style="height:60%;width:100%;" :src="item.img" />
+                  <div
+                    style="font-size:12px;padding:0 10px 0 13px;height:30%;overflow:hidden;"
+                  >{{item.desc}}</div>
                   <div style="color:#e93b3d;height:20%">￥{{item.price}}</div>
                 </div>
-    
               </div>
             </div>
             <div class="swiper-slide">
               <div class="swiper-slide_container">
                 <div class="item11" v-for="item in list3" :key="item.id">
-                  <img
-                    style="height:60%;width:100%;"
-                    :src="item.img"
-                  />
-                  <div style="font-size:12px;padding:0px 8px;height:30%;overflow:hidden;">{{item.desc}}</div>
+                  <img style="height:60%;width:100%;" :src="item.img" />
+                  <div
+                    style="font-size:12px;padding:0 10px 0 13px;height:30%;overflow:hidden;"
+                  >{{item.desc}}</div>
                   <div style="color:#e93b3d;height:20%">￥{{item.price}}</div>
                 </div>
-    
               </div>
             </div>
             <div class="swiper-slide">
               <div class="swiper-slide_container">
                 <div class="item11" v-for="item in list4" :key="item.id">
-                  <img
-                    style="height:60%;width:100%;"
-                    :src="item.img"
-                  />
-                  <div style="font-size:12px;padding:0px 8px;height:30%;overflow:hidden;">{{item.desc}}</div>
+                  <img style="height:60%;width:100%;" :src="item.img" />
+                  <div
+                    style="font-size:12px;padding:0 10px 0 13px;height:30%;overflow:hidden;"
+                  >{{item.desc}}</div>
                   <div style="color:#e93b3d;height:20%">￥{{item.price}}</div>
                 </div>
-    
               </div>
             </div>
-           
           </div>
           <div class="swiper-pagination"></div>
         </div>
       </div>
     </div>
 
-     <div style="width:100%;height:10px;background-color: rgb(232, 232, 237);"></div>
+    <div style="width:100%;height:10px;background-color: rgb(232, 232, 237);"></div>
 
-     <!--商品介绍--->
-     <div class="goods_info_aftersale">
-          <div class="item100 "  @click="goods_switch(1)" :class="{active_avtive:goods_msg==1}"  >商品介绍</div>
-          <div class="item100" @click="goods_switch(2)" :class="{active_avtive:goods_msg==2}">规格参数</div>
-          <div class="item100" @click="goods_switch(3)" :class="{active_avtive:goods_msg==3}">售后保障</div>
-          
-     </div>
-     <div class="item100_text">
-                  <div class="item100_text_container" v-if="goods_msg==1">
-                        <img src="//img12.360buyimg.com/cms/jfs/t3001/129/415513229/103370/13587a2e/57a03977Ndad3ec42.jpg!q70.dpg.webp">
-                        <img src="//img30.360buyimg.com/popWaterMark/jfs/t2653/356/1852053668/43596/43365336/574eb3beN6cbadc65.jpg!q70.dpg.webp">
-                        <img src="//img20.360buyimg.com/vc/jfs/t2179/348/2579312304/91418/6293e4fc/56e678c3N892c291e.jpg!q70.dpg.webp">
-                        <img src="//img20.360buyimg.com/vc/jfs/t2233/364/2409913108/44332/c9eaa7d1/56d8045bN483542dd.jpg!q70.dpg.webp">
-                        <img src="//img20.360buyimg.com/vc/jfs/t2395/130/1709927270/58104/3adbce0f/56d8045bNd71d8668.jpg!q70.dpg.webp">
-                        <img src="//img20.360buyimg.com/vc/jfs/t1960/128/1733395108/83331/f601cfc0/56d8045cNb52245d3.jpg!q70.dpg.webp">
-                        <img src="//img20.360buyimg.com/vc/jfs/t2314/190/2485062502/58727/157000a5/56d8045dN178a7942.jpg!q70.dpg.webp">
-                        <img src="//img20.360buyimg.com/vc/jfs/t2458/74/2508901745/90416/58537629/56d6b526Nf05697cf.jpg!q70.dpg.webp">
-                        <img src="//img20.360buyimg.com/vc/jfs/t1849/253/2392194707/98899/d0d6bd7a/56d6b527N36b2d304.jpg!q70.dpg.webp">
-                        <img src="//img20.360buyimg.com/vc/jfs/t2479/192/1731142743/97409/e10fecb9/56d6b527Nbdf1e46b.jpg!q70.dpg.webp">
-                        <img src="//img20.360buyimg.com/vc/jfs/t2404/286/2519562181/97614/803b9308/56d6b527Ne7d2859a.jpg!q70.dpg.webp">
-                        <img src="//img20.360buyimg.com/vc/jfs/t1981/365/2380316505/85864/e55d05eb/56d6b528N2458f3c7.jpg!q70.dpg.webp">
-                  </div>
-                   <div class="item100_text_container" v-if="goods_msg==2">
-                       <img src="//img30.360buyimg.com/popWaterMark/jfs/t2758/174/2082188495/139277/f44cadc9/57567a17N9ecf76ee.jpg!q70.dpg.webp">
-                       <img src="//img20.360buyimg.com/vc/jfs/t2314/190/2485062502/58727/157000a5/56d8045dN178a7942.jpg!q70.dpg.webp">
-                        <img src="//img20.360buyimg.com/vc/jfs/t2458/74/2508901745/90416/58537629/56d6b526Nf05697cf.jpg!q70.dpg.webp">
-                  </div>
-                   <div class="item100_text_container" v-if="goods_msg==3">
-                        
-                        <img src="//img20.360buyimg.com/vc/jfs/t2314/190/2485062502/58727/157000a5/56d8045dN178a7942.jpg!q70.dpg.webp">
-                        <img src="//img20.360buyimg.com/vc/jfs/t2458/74/2508901745/90416/58537629/56d6b526Nf05697cf.jpg!q70.dpg.webp">
-                        <img src="//img30.360buyimg.com/popWaterMark/jfs/t2293/34/450526874/44263/965eb848/560baafbNebe8dc89.jpg!q70.dpg.webp">
-
-                  </div>
+    <!--商品介绍--->
+    <div class="goods_info_aftersale" style="background-color:#ffff">
+      <div class="item100" @click="goods_switch(1)" :class="{active_avtive:goods_msg==1}">商品介绍</div>
+      <div class="item100" @click="goods_switch(2)" :class="{active_avtive:goods_msg==2}">规格参数</div>
+      <div class="item100" @click="goods_switch(3)" :class="{active_avtive:goods_msg==3}">售后保障</div>
+    </div>
+    <div class="item100_text">
+      <div class="item100_text_container" v-if="goods_msg==1">
+        <img
+          src="//img12.360buyimg.com/cms/jfs/t3001/129/415513229/103370/13587a2e/57a03977Ndad3ec42.jpg!q70.dpg.webp"
+        />
+        <img
+          src="//img30.360buyimg.com/popWaterMark/jfs/t2653/356/1852053668/43596/43365336/574eb3beN6cbadc65.jpg!q70.dpg.webp"
+        />
+        <img
+          src="//img20.360buyimg.com/vc/jfs/t2179/348/2579312304/91418/6293e4fc/56e678c3N892c291e.jpg!q70.dpg.webp"
+        />
+        <img
+          src="//img20.360buyimg.com/vc/jfs/t2233/364/2409913108/44332/c9eaa7d1/56d8045bN483542dd.jpg!q70.dpg.webp"
+        />
+        <img
+          src="//img20.360buyimg.com/vc/jfs/t2395/130/1709927270/58104/3adbce0f/56d8045bNd71d8668.jpg!q70.dpg.webp"
+        />
+        <img
+          src="//img20.360buyimg.com/vc/jfs/t1960/128/1733395108/83331/f601cfc0/56d8045cNb52245d3.jpg!q70.dpg.webp"
+        />
+        <img
+          src="//img20.360buyimg.com/vc/jfs/t2314/190/2485062502/58727/157000a5/56d8045dN178a7942.jpg!q70.dpg.webp"
+        />
+        <img
+          src="//img20.360buyimg.com/vc/jfs/t2458/74/2508901745/90416/58537629/56d6b526Nf05697cf.jpg!q70.dpg.webp"
+        />
+        <img
+          src="//img20.360buyimg.com/vc/jfs/t1849/253/2392194707/98899/d0d6bd7a/56d6b527N36b2d304.jpg!q70.dpg.webp"
+        />
+        <img
+          src="//img20.360buyimg.com/vc/jfs/t2479/192/1731142743/97409/e10fecb9/56d6b527Nbdf1e46b.jpg!q70.dpg.webp"
+        />
+        <img
+          src="//img20.360buyimg.com/vc/jfs/t2404/286/2519562181/97614/803b9308/56d6b527Ne7d2859a.jpg!q70.dpg.webp"
+        />
+        <img
+          src="//img20.360buyimg.com/vc/jfs/t1981/365/2380316505/85864/e55d05eb/56d6b528N2458f3c7.jpg!q70.dpg.webp"
+        />
       </div>
+      <div class="item100_text_container" v-if="goods_msg==2">
+        <img
+          src="//img30.360buyimg.com/popWaterMark/jfs/t2758/174/2082188495/139277/f44cadc9/57567a17N9ecf76ee.jpg!q70.dpg.webp"
+        />
+        <img
+          src="//img20.360buyimg.com/vc/jfs/t2314/190/2485062502/58727/157000a5/56d8045dN178a7942.jpg!q70.dpg.webp"
+        />
+        <img
+          src="//img20.360buyimg.com/vc/jfs/t2458/74/2508901745/90416/58537629/56d6b526Nf05697cf.jpg!q70.dpg.webp"
+        />
+      </div>
+      <div class="item100_text_container" v-if="goods_msg==3">
+        <img
+          src="//img20.360buyimg.com/vc/jfs/t2314/190/2485062502/58727/157000a5/56d8045dN178a7942.jpg!q70.dpg.webp"
+        />
+        <img
+          src="//img20.360buyimg.com/vc/jfs/t2458/74/2508901745/90416/58537629/56d6b526Nf05697cf.jpg!q70.dpg.webp"
+        />
+        <img
+          src="//img30.360buyimg.com/popWaterMark/jfs/t2293/34/450526874/44263/965eb848/560baafbNebe8dc89.jpg!q70.dpg.webp"
+        />
+      </div>
+    </div>
     <!--  -->
+    <!--底部tab--->
+    <div class="lzbottomtab">
+      <div class="lzbottomtab_container">
+        <div class="lzbottomtab_container_1">
+          <div class="lzitem1000">
+            <span class="el-icon-chat-dot-round"></span>
+            <span class="lzitem1000_span" onclick="window.open('https://plogin.m.jd.com/login/login?appid=300&returnurl=https%3A%2F%2Fwqlogin2.jd.com%2Fpassport%2FLoginRedirect%3Fstate%3D1100153381015%26returnurl%3Dhttps%253A%252F%252Fchat.jd.com%252Fmerchant%252Findex%253Fv%253D6%2526sku%253D1600334440%2526entry%253Dm_item%2526imgUrl%253D%25252F%25252Fm.360buyimg.com%25252Fmobilecms%25252Fs1200x1200_jfs%25252Ft1%25252F71557%25252F2%25252F13230%25252F847060%25252F5da7c28aE01231c5a%25252Fb80cc7fd943128ed.png.webp%2526goodName%253D%2525E3%252580%252590%2525E4%2525B8%25258B%2525E5%25258D%252595%2525E7%2525AB%25258B%2525E5%252587%25258F%2525E3%252580%252591%2525E7%2525A6%25258F%2525E6%25259D%2525A5%2525E6%252581%2525A9%2525E6%2525B3%252595%2525E5%25259B%2525BD%2525E8%2525BF%25259B%2525E5%25258F%2525A3%2525E7%25258B%252597%2525E7%25258B%252597%2525E9%2525A9%2525B1%2525E8%252599%2525AB%2525E8%25258D%2525AF%2525E4%2525BD%252593%2525E5%2525A4%252596%2525E9%2525A9%2525B1%2525E8%252599%2525AB%2525E6%2525BB%2525B4%2525E5%252589%252582%252520%2525E6%2525B3%2525B0%2525E8%2525BF%2525AA%2525E9%252587%252591%2525E6%2525AF%25259B%2525E7%25258C%2525AB%2525E5%252592%2525AA%2525E5%25258E%2525BB%2525E8%252599%2525B1%2525E5%2525AD%252590%2525E9%252599%2525A4%2525E8%2525B7%2525B3%2525E8%25259A%2525A4%2525E4%2525BD%252593%2525E5%2525A4%252596%2525E9%2525A9%2525B1%2525E8%252599%2525AB%25252010kg%2525E4%2525BB%2525A5%2525E4%2525B8%25258B%2525E5%2525B0%25258F%2525E5%25259E%25258B%2525E7%25258A%2525AC%2525E7%252594%2525A8%2525200.67ml%2525E5%25258D%252595%2525E6%252594%2525AF%2525E8%2525A3%252585%2526jdPrice%253D56.00%2526sid%253D86a833f04a69b2b82b5a001f269f4acb&source=wq_passport')">联系客服</span>
+          </div>
+          <div class="lzitem1000">
+            <span class="el-icon-s-shop"></span>
+            <span class="lzitem1000_span" onclick="window.open('https://shop.m.jd.com/?shopId=29893&skuId=1600334440&categoryId=6994_6997_7016')">进店</span>
+          </div>
+          <div class="lzitem1000"  @click="lztoshoppingcar">
+            <span class="el-icon-shopping-cart-2"></span>
+            <span class="lzitem1000_span">购物车</span>
+          </div>
+        </div>
+        <div class="lzbottomtab_container_2" @click="lzadd">加入购物车</div>
+        <div class="lzbottomtab_container_3" @click="lzadd">立即购买</div>
+      </div>
+    </div>
+    <!--返回顶部-->
     <BackTop></BackTop>
+    <!--遮罩层-->
+    <div class="lzzhezhao" @click="lzcancelzz" ref="lzzhezhao1"></div>
+    <!--加入购物车弹窗-->
+    <div class="addshoppongcarjump" ref="addshoppongcarjump1">
+      <div class="addshoppongcarjump_1">
+        <div class="addshoppongcarjump_1_left">
+          <img ref="lzimg" :src="imgArr[0]" />
+        </div>
+        <div class="addshoppongcarjump_1_right">
+          <span class="lza1price">￥{{msg}} <i class="el-icon-close" style="color:#333333;" @click="lzcancelzz"></i></span>
+          <span class="lza1">
+            <span class="lza1-1">已选</span>
+            <span class="lzgoods_desc">{{goods_desc}}</span>
+            <span class="lza1-2">{{number}}个</span>
+          </span>
+        </div>
+      </div>
+
+      <div class="addshoppongcarjump_2">
+            <div class="addshoppongcarjump_2_up">规格</div>
+            <div class="addshoppongcarjump_2_down">
+                 <div class="lzitemspan" >20-40kg大型犬用 2.68ml单支装</div>
+                 <div class="lzitemspan">2个月以上猫咪用 0.5ml单支装</div>
+                 <div class="lzitemspan">10-20kg中型犬用 1.34ml单支装</div>
+                 <div class="lzitemspan">10kg以下小型犬用 0.67ml单支装</div>
+                 <div class="lzitemspan">喷剂100ml 犬猫通用【现货发】</div>
+            </div>
+      </div>
+
+      <div class="addshoppongcarjump_3">
+         <div class="addshoppongcarjump_3_left">数量</div>
+         <div class="addshoppongcarjump_3_right">
+             <div class="addshoppongcarjump_3_right_1" @click="lzincrease"><i class="el-icon-plus"></i></div>
+             <div class="addshoppongcarjump_3_right_2">{{number}}</div>
+             <div class="addshoppongcarjump_3_right_3" @click="lzminus"><i class="el-icon-minus"></i></div>
+         </div>
+      </div>
+
+      <div class="addshoppongcarjump_4">
+        保障服务
+      </div>
+
+      <div class="addshoppongcarjump_5">
+        <div class="addshoppongcarjump_5_left"><i class="el-icon-s-claim"></i>服务保障</div>
+        <div class="addshoppongcarjump_5_right">服务介绍<i class="el-icon-arrow-right"></i></div>
+      </div>
+
+      <div class="addshoppongcarjump_6">
+           <div class="addshoppongcarjump_6_container">
+              <div class="lzitem106"><div class="lzcircle"></div></div>
+              <div class="lzitem106">
+                过期换新<br/>
+                <span style="color:grey">超过保质期无法使用予以换新</span>
+              </div>
+              <div class="lzitem106">￥1.77</div>
+           </div>
+      </div>
+
+      <div class="addshoppongcarjump_7" @click="lastconfirm(init_info)">确认</div>
+    </div>
   </div>
 </template>
 
 <script>
 // 商品详情
 import BackTop from "../components/st/BackTop/NormalBack.vue"; // 回到顶部
+import goodsdetailtop from "../components/lz/goodsdetailtop.vue"; //顶部组件
+import goodsdetailtop1 from "../components/lz/goodsdetailtop1.vue";
 export default {
   name: "goodsdetail",
   data() {
     return {
-      goods_msg:1,
+      init_info:{},
+      number:1,
+      goods_msg: 1,
       msg: "",
       imgArr: [],
       goods_desc: "",
@@ -469,42 +578,42 @@ export default {
           img:
             "//img14.360buyimg.com/mobilecms/s270x270_jfs/t1/19882/29/7748/169774/5c6f9044Eab800fb1/c5f719d74aafcbe1.jpg!q70.dpg.webp",
           price: "13500",
-          desc:"浪琴(Longines)瑞士手表 军旗系列机械男表L4.899.4.96.6"
+          desc: "浪琴(Longines)瑞士手表 军旗系列机械男表L4.899.4.96.6"
         },
         {
           id: 2,
           img:
             "//img14.360buyimg.com/mobilecms/s270x270_jfs/t1/79215/38/13227/251705/5da975daE886fc174/66184c194457ec3c.jpg!q70.dpg.webp",
           price: "11299",
-          desc:"浪琴(Longines)瑞士手表 军旗系列机械情侣表男表L4.774.4.57.6"
+          desc: "浪琴(Longines)瑞士手表 军旗系列机械情侣表男表L4.774.4.57.6"
         },
         {
           id: 3,
           img:
             "//img14.360buyimg.com/mobilecms/s270x270_jfs/t21679/151/557500757/83277/6cadaa54/5b112653Nfcb4544c.jpg!q70.dpg.webp",
           price: "7199",
-          desc:"浪琴(Longines)瑞士手表 瑰丽系列机械情侣表男表L4.821.4"
+          desc: "浪琴(Longines)瑞士手表 瑰丽系列机械情侣表男表L4.821.4"
         },
         {
           id: 4,
           img:
             "//img14.360buyimg.com/mobilecms/s270x270_jfs/t1/58914/20/13655/252147/5da9756fE9d3d87ff/d1fe4a00ee2ef0b5.jpg!q70.dpg.webp",
           price: "9800",
-          desc:"浪琴(Longines)瑞士手表 优雅系列机械男表L4.921.4.52.6"
+          desc: "浪琴(Longines)瑞士手表 优雅系列机械男表L4.921.4.52.6"
         },
         {
           id: 5,
           img:
             "//img14.360buyimg.com/mobilecms/s270x270_g15/M04/01/1F/rBEhWVLTgSYIAAAAAAFVMpV4Hx4AAH16wKzIs8AAVVK666.jpg",
           price: "13099",
-          desc:"浪琴(Longines)瑞士手表 名匠系列机械情侣表男表L2.628.4.51.6"        
+          desc: "浪琴(Longines)瑞士手表 名匠系列机械情侣表男表L2.628.4.51.6"
         },
         {
           id: 6,
           img:
             "//img14.360buyimg.com/mobilecms/s270x270_jfs/t22531/285/142383569/176984/7b74481a/5b2686bcNb7b68ea7.jpg!q70.dpg.webp",
           price: "10000",
-          desc:"浪琴(Longines)瑞士手表 瑰丽系列机械男表L4.921.4.78.6"
+          desc: "浪琴(Longines)瑞士手表 瑰丽系列机械男表L4.921.4.78.6"
         }
       ],
       list2: [
@@ -513,42 +622,42 @@ export default {
           img:
             "//img14.360buyimg.com/mobilecms/s270x270_jfs/t1/3166/13/2058/76035/5b95cd3eE853400fc/e1df0fe821f29f63.jpg!q70.dpg.webp",
           price: "9600",
-          desc:"浪琴(Longines)瑞士手表 康卡斯系列机械男表L3.641.4.96.6（L3.741.4.96.6）"
+          desc: "浪琴(Longines)瑞士手表 康卡斯系列机械男表L3"
         },
         {
           id: 2,
           img:
             "//img14.360buyimg.com/mobilecms/s270x270_jfs/t1/49992/1/13778/264326/5da97c5bEb311cbe8/4191108e914f3716.jpg!q70.dpg.webp",
           price: "19009",
-          desc:"浪琴(Longines)瑞士手表 名匠系列机械男表L2.518.5.57.7"
+          desc: "浪琴(Longines)瑞士手表 名匠系列机械男表L2.518.5.57.7"
         },
         {
           id: 3,
           img:
             "//img14.360buyimg.com/mobilecms/s270x270_jfs/t1/94941/25/215/280324/5da97ba9Edbebf538/769ec887161757d9.jpg!q70.dpg.webp",
           price: "21299",
-          desc:"浪琴(Longines)瑞士手表 名匠系列机械男表L2.673.4.78.3"
+          desc: "浪琴(Longines)瑞士手表 名匠系列机械男表L2.673.4.78.3"
         },
         {
           id: 4,
           img:
             "//img14.360buyimg.com/mobilecms/s270x270_jfs/t1/55603/5/11068/140620/5d8035b2E89d7585d/0de0875be10ce52c.jpg!q70.dpg.webp",
           price: "12599",
-          desc:"浪琴 LONGINES 瑞士手表 博雅系列机械女表 L4.310.4.92.6"
+          desc: "浪琴 LONGINES 瑞士手表 博雅系列机械女表 L4.310.4.92.6"
         },
         {
           id: 5,
           img:
             "//img14.360buyimg.com/mobilecms/s270x270_jfs/t1/40417/27/8593/112802/5cff5adcE07c749d9/db7f7004d009bfc7.jpg!q70.dpg.webp",
           price: "8268",
-          desc:"浪琴 LONGINES  瑰丽系列机械男表 L4.821.4.11.6"        
+          desc: "浪琴 LONGINES  瑰丽系列机械男表 L4.821.4.11.6"
         },
         {
           id: 6,
           img:
             "//img14.360buyimg.com/mobilecms/s270x270_jfs/t1018/349/6234877/78521/b1902e55/54daf0a6N3a16a49e.jpg!q70.dpg.webp",
           price: "14099",
-          desc:"浪琴(Longines)瑞士手表 索伊米亚系列机械情侣表男表L2.763.4.52.6"
+          desc: "浪琴(Longines)瑞士手表 索伊米亚系列机械情侣表男表L2.763.4.52.6"
         }
       ],
       list3: [
@@ -557,42 +666,42 @@ export default {
           img:
             "//img14.360buyimg.com/mobilecms/s270x270_jfs/t1/46490/8/13930/259720/5da97d55E9009f0a8/c263ae6cde048cff.jpg!q70.dpg.webp",
           price: "11799",
-          desc:"浪琴(Longines)瑞士手表 经典复古系列机械男表L1.611.4.75.2"
+          desc: "浪琴(Longines)瑞士手表 经典复古系列机械男表L1.611.4.75.2"
         },
         {
           id: 2,
           img:
             "//img14.360buyimg.com/mobilecms/s270x270_jfs/t1/62077/14/1659/222733/5cff5759E0a21b4e3/7255bed86de515c0.jpg!q70.dpg.webp",
           price: "15299",
-          desc:"浪琴(Longines)瑞士手表 名匠系列机械男表L2.708.4.78.6"
+          desc: "浪琴(Longines)瑞士手表 名匠系列机械男表L2.708.4.78.6"
         },
         {
           id: 3,
           img:
             "//img14.360buyimg.com/mobilecms/s270x270_jfs/t22117/81/563758729/68277/5e3395e3/5b114d81N1d5daf62.jpg!q70.dpg.webp",
           price: "9699",
-          desc:"浪琴(Longines)瑞士手表 瑰丽系列机械男表L4.805.4.11.6"
+          desc: "浪琴(Longines)瑞士手表 瑰丽系列机械男表L4.805.4.11.6"
         },
         {
           id: 4,
           img:
             "//img14.360buyimg.com/mobilecms/s270x270_jfs/t1/64473/35/13263/244913/5da97826E495669a3/96d711661c0c3abc.jpg!q70.dpg.webp",
           price: "15299",
-          desc:"浪琴 LONGINES 瑞士手表  开创者系列机械女表 L2.321.4.96.6"
+          desc: "浪琴 LONGINES 瑞士手表  开创者系列机械女表 L2.321.4.96.6"
         },
         {
           id: 5,
           img:
             "//img14.360buyimg.com/mobilecms/s270x270_jfs/t1/56292/9/9818/121426/5d71f3eaE2d003866/8f51f30fb47d0ed9.jpg!q70.dpg.webp",
           price: "7199",
-          desc:"浪琴(Longines)瑞士手表 嘉岚系列时尚情侣表女表L4.209.4.11.6"        
+          desc: "浪琴(Longines)瑞士手表 嘉岚系列时尚情侣表女表L4.209.4.11.6"
         },
         {
           id: 6,
           img:
             "//img14.360buyimg.com/mobilecms/s270x270_jfs/t1/4325/34/2112/90431/5b95cf43E83af8875/dde1b454f6ce09ea.jpg!q70.dpg.webp",
           price: "7699",
-          desc:"浪琴(Longines)瑞士手表 瑰丽系列机械男表L4.821.4.11.2"
+          desc: "浪琴(Longines)瑞士手表 瑰丽系列机械男表L4.821.4.11.2"
         }
       ],
       list4: [
@@ -601,48 +710,50 @@ export default {
           img:
             "//img14.360buyimg.com/mobilecms/s270x270_jfs/t20185/110/594380486/80024/4c7e2063/5b1149ffN70a13fb8.jpg!q70.dpg.webp",
           price: "6299",
-          desc:"浪琴(Longines)瑞士手表 律雅系列石英男表L4.759.4.12.6"
+          desc: "浪琴(Longines)瑞士手表 律雅系列石英男表L4.759.4.12.6"
         },
         {
           id: 2,
           img:
             "//img14.360buyimg.com/mobilecms/s270x270_jfs/t1/100096/35/248/289866/5da972b8E5f1bfd6a/cca711ddc6e6ee4e.jpg!q70.dpg.webp",
           price: "7099",
-          desc:"浪琴(Longines)手表 瑰丽系列石英男表 L4.720.2.32.7"
+          desc: "浪琴(Longines)手表 瑰丽系列石英男表 L4.720.2.32.7"
         },
         {
           id: 3,
           img:
             "//img14.360buyimg.com/mobilecms/s270x270_jfs/t1/71608/12/1694/71532/5d006540E930f1f01/2d9abb84a131394c.jpg!q70.dpg.webp",
           price: "7299",
-          desc:"浪琴(Longines)瑞士手表 康卡斯系列石英男表L3.730.4.56.6"
+          desc: "浪琴(Longines)瑞士手表 康卡斯系列石英男表L3.730.4.56.6"
         },
         {
           id: 4,
           img:
             "//img14.360buyimg.com/mobilecms/s270x270_jfs/t1/58914/20/13655/252147/5da9756fE9d3d87ff/d1fe4a00ee2ef0b5.jpg!q70.dpg.webp",
           price: "9800",
-          desc:"浪琴(Longines)瑞士手表 优雅系列机械男表L4.921.4.52.6"
+          desc: "浪琴(Longines)瑞士手表 优雅系列机械男表L4.921.4.52.6"
         },
         {
           id: 5,
           img:
             "//img14.360buyimg.com/mobilecms/s270x270_g15/M04/01/1F/rBEhWVLTgSYIAAAAAAFVMpV4Hx4AAH16wKzIs8AAVVK666.jpg",
           price: "13090",
-          desc:"浪琴(Longines)瑞士手表 名匠系列机械情侣表男表L2.628.4.51.6"        
+          desc: "浪琴(Longines)瑞士手表 名匠系列机械情侣表男表L2.628.4.51.6"
         },
         {
           id: 6,
           img:
             "//img14.360buyimg.com/mobilecms/s270x270_jfs/t22531/285/142383569/176984/7b74481a/5b2686bcNb7b68ea7.jpg!q70.dpg.webp",
           price: "10000",
-          desc:"浪琴(Longines)瑞士手表 瑰丽系列机械男表L4.921.4.78.6"
+          desc: "浪琴(Longines)瑞士手表 瑰丽系列机械男表L4.921.4.78.6"
         }
-      ],
+      ]
     };
   },
   components: {
-    BackTop
+    BackTop,
+    goodsdetailtop,
+    goodsdetailtop1
   },
   /*  computed: {
     priceleft() {
@@ -658,10 +769,46 @@ export default {
       }
     }
   }, */
+  directives: {
+    goodsinfo: {
+      inserted: function(el) {
+        console.log(el);
+
+        window.addEventListener("scroll", () => {
+          funn(document.documentElement.scrollTop);
+        });
+        funn(document.documentElement.scrollTop);
+        function funn(n) {
+          if (n !== 0) {
+            el.style.display = "none";
+          } else {
+            el.style.display = "block";
+          }
+        }
+      }
+    },
+    goodsinfo1: {
+      inserted: function(el) {
+        console.log(el);
+        window.addEventListener("scroll", () => {
+          funn(document.documentElement.scrollTop);
+        });
+        funn(document.documentElement.scrollTop);
+        function funn(n) {
+          if (n !== 0) {
+            el.style.display = "block";
+          } else {
+            el.style.display = "none";
+          }
+        }
+      }
+    }
+  },
   mounted() {
     var mySwiper = new Swiper(".indexlz", {
       pagination: {
-        el: ".swiper-pagination"
+        el: ".swiper-pagination",
+        clickable: true
       },
       autoplay: false,
       loop: true
@@ -669,16 +816,16 @@ export default {
     var mySwiper1 = new Swiper(".indexlz1", {
       pagination: {
         el: ".swiper-pagination",
-        clickable: true,
-        clickableClass : 'my-pagination-clickable',
+        clickable: true
       },
       autoplay: false,
       loop: true
     });
   },
   created() {
-    window.scrollTo(0, 0)
+    window.scrollTo(0, 0);
     console.log(this.$store.state.goodDetails);
+    this.init_info = this.$store.state.goodDetails
     this.imgArr = this.$store.state.goodDetails.imgUrls;
 
     if (typeof this.$store.state.goodDetails.price == "number") {
@@ -692,10 +839,38 @@ export default {
 
     this.goods_desc = this.$store.state.goodDetails.name;
     console.log(this.goods_desc);
+
+    
   },
-  methods:{
+  methods: {
     goods_switch(msg) {
-        this.goods_msg = msg;
+      this.goods_msg = msg;
+    },
+    lzadd() {
+      this.$refs.lzzhezhao1.style.display = "block";
+      this.$refs.addshoppongcarjump1.style.transition = "height 0.6s";
+      this.$refs.addshoppongcarjump1.style.height = "70%";
+      this.$refs.lzimg.style.top="-30%"
+    },
+    lzcancelzz() {
+      this.$refs.lzzhezhao1.style.display = "none";
+      this.$refs.addshoppongcarjump1.style.height = "0";
+       this.$refs.lzimg.style.top="0"
+    },
+    lzincrease(){
+      this.number = this.number + 1
+    },
+    lzminus(){
+      if(this.number > 1) {
+        this.number = this.number - 1
+      }
+    },
+    lztoshoppingcar(){
+      this.$router.push('/shoppingcar')
+    },
+    lastconfirm(a) {
+         this.$store.commit('scAdd', a) 
+         this.$router.push('/shoppingcar')
     }
   }
 };
@@ -1375,34 +1550,374 @@ export default {
   align-items: center;
 }
 
-.goods_info_aftersale{
-  width:100%;
+.goods_info_aftersale {
+  width: 100%;
   display: flex;
-  color:#999999
+  color: #999999;
 }
 
-.goods_info_aftersale .item100{
-    width:33.3%;
-    border:1px solid #f5f5f5;
-    display: flex;
-    justify-content: center;
-    padding: 8px 0;
-    font-size:12px;
-    
+.goods_info_aftersale .item100 {
+  width: 33.3%;
+  border: 1px solid #f5f5f5;
+  display: flex;
+  justify-content: center;
+  padding: 8px 0;
+  font-size: 12px;
 }
 
-.item100_text{
-  width:100%;
+.item100_text {
+  width: 100%;
 }
-.item100_text_container{
-  width:100%;
+.item100_text_container {
+  width: 100%;
 }
 
 .item100_text_container img {
-  width:100%
+  width: 100%;
 }
 
-.active_avtive{
-  color:#d91100
+.active_avtive {
+  color: #d91100;
 }
+
+.lzbottomtab {
+  width: 100%;
+  height: 55px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.lzbottomtab_container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+.lzbottomtab_container_1 {
+  width: 40%;
+  height: 100%;
+  background-color: #fff;
+  display: flex;
+  border: 1px solid #f5f5f5;
+  padding-left: 8px;
+}
+.lzbottomtab_container_1 .lzitem1000 {
+  width: 33.333%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px 0;
+  color: #999999;
+}
+
+.lzbottomtab_container_1 .lzitem1000 span:nth-child(1) {
+  font-size: 25px;
+}
+
+.lzbottomtab_container_2 {
+  width: 30%;
+  height: 100%;
+  background-color: #ffa600;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lzbottomtab_container_3 {
+  width: 30%;
+  height: 100%;
+  background-color: #f10000;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.lzitem1000_span {
+  font-size: 12px;
+  margin-top: 2px;
+}
+
+.lzzhezhao {
+  top: 0;
+  left: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #333;
+  z-index: 9999;
+  display: none;
+  opacity: 0.5;
+}
+
+.addshoppongcarjump {
+  width: 100%;
+  height: 0;
+  z-index: 100000;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+
+.addshoppongcarjump_1 {
+  width: 100%;
+  padding: 0 8px;
+  background-color: #fff;
+  position: relative;
+  height: 72px;
+}
+
+.addshoppongcarjump_1_left {
+  width: 23%;
+  height: 72px;
+  position: absolute;
+}
+
+.addshoppongcarjump_1_left img {
+  width: 100%;
+  height: 82px;
+  border-radius: 5px;
+  position: absolute;
+ /*  top: -30%; */
+}
+
+.addshoppongcarjump_1_right {
+  width: 73%;
+  height: 72px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 5px 8px 5px 0;
+
+}
+
+.lzgoods_desc {
+   overflow: hidden;
+   flex: 1;
+   margin:0 0 0 5px;
+   height: 18px;
+}
+
+
+
+/*  <span class="lza1price">￥{{msg}}</span>
+          <span class="lza1" style="font-size:12px;">
+            <span class="lza1-1">已选</span>
+            <span class="lzgoods_desc">{{goods_desc}}</span>
+            <span class="lza1-2">1</span>
+  </span> */
+
+.lza1price {
+  font-size: 18px;
+  color:#e4393c;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center
+}
+
+.lza1{
+  font-size:12px;
+  display: flex;
+}
+
+.lza1-1{
+  color:grey;
+  }
+.lza1-2{
+  font-size: 12px;
+  letter-spacing: 2px;
+  margin-left: 2px;
+}
+
+.addshoppongcarjump_2{
+  padding: 20px 8px;
+  background-color: #fff
+}
+
+.addshoppongcarjump_2_up{
+  font-size: 12px;
+  color: #999999;
+  padding-bottom: 15px;
+}
+
+.addshoppongcarjump_2_down{
+  width: 100%;
+  height: 110px;
+  display: flex;
+  flex-wrap: wrap;
+   align-content: space-between
+}
+
+.lzitemspan {
+  padding: 5px;
+  font-size: 12px;
+  height: 30%;
+  margin-right: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  background-color: rgb(247,247,247);
+  color: #333;
+}
+
+/* <div class="addshoppongcarjump_3">
+         <div class="addshoppongcarjump_3_left">数量</div>
+         <div class="addshoppongcarjump_3_right">dsfdsfds</div>
+      </div> */
+.addshoppongcarjump_3{
+  width: 100%;
+  padding: 0 8px;
+  height: 30px;
+  display: flex;
+  justify-content: space-between;
+  background-color: #fff
+}
+
+.addshoppongcarjump_3_left{
+  height: 100%;
+  font-size:12px;
+  color: #999999;
+ 
+}
+
+.addshoppongcarjump_3_right{
+  display: flex;
+}
+
+.addshoppongcarjump_3_right_1{
+  height: 100%;
+  width: 30px;
+  background-color: rgb(247,247,247);
+  margin-right: 5px;
+  color: #999999;
+  display: flex;
+  justify-content: center;
+  align-items: center
+}
+
+.addshoppongcarjump_3_right_2{
+  height: 100%;
+  width: 50px;
+  background-color: rgb(247,247,247);
+  margin-right: 5px;
+  font-size: 12px;
+   display: flex;
+  justify-content: center;
+  align-items: center
+}
+
+.addshoppongcarjump_3_right_3{
+  height: 100%;
+  width: 30px;
+  background-color: rgb(247,247,247);
+  color: #999999;
+   display: flex;
+  justify-content: center;
+  align-items: center
+}
+
+.addshoppongcarjump_4 {
+  width: 100%;
+  padding: 15px 8px;
+  background-color: #fff;
+  font-size: 12px;
+  color: #999999
+}
+
+.addshoppongcarjump_5{
+  width: 100%;
+  padding: 0 8px;
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center
+}
+
+.addshoppongcarjump_5_left{
+  font-size: 16px;
+}
+
+.addshoppongcarjump_5_left i{
+  margin-right: 5px;
+}
+.addshoppongcarjump_5_right{
+  font-size:12px;
+  color: #999999
+}
+
+.addshoppongcarjump_5_right i {
+  margin-left:3px;
+}
+
+/*  <div class="addshoppongcarjump_6">
+           <div class="addshoppongcarjump_6_container">
+              <div class="lzitem106"></div>
+              <div class="lzitem106"></div>
+              <div class="lzitem106"></div>
+           </div>
+      </div> */
+
+  .addshoppongcarjump_6{
+    width: 100%;
+    padding: 15px 8px 43px 8px ;
+    background-color: #fff;
+  }
+
+  .addshoppongcarjump_6_container{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding: 10px 8px 10px 0;
+    border-radius: 5px;
+    background-color: rgb(247,247,247);
+  }
+
+   .addshoppongcarjump_6_container .lzitem106:nth-child(1){
+      width: 25px;
+      height: 100%;
+      margin-left: 8px;
+   }
+
+    .addshoppongcarjump_6_container .lzitem106:nth-child(2){
+      flex: 1;
+      height: 100%;
+      font-size: 12px;
+      color: #333333;
+      padding: 0px 0 0 5px;
+      margin-left: 2px;
+   }
+
+    .addshoppongcarjump_6_container .lzitem106:nth-child(3){
+      height: 100%;
+      font-size: 10px;
+      flex-shrink: 0;
+      padding-right: 8px;
+      color: #d91100
+   }
+
+  .lzcircle{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 1px solid #9999
+  }
+
+   .addshoppongcarjump_7 {
+     width: 100%;
+     height: 55px;
+     background: linear-gradient(-41deg,#ff4f18,#ff2000 24%,#f10000);
+     color: #fff;
+     font-size: 18px;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+   }
 </style>
