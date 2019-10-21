@@ -10,7 +10,8 @@ import {
   Icon,
   Checkbox,
   Carousel,
-  carouselItem
+  carouselItem,
+  drawer
 } from "element-ui";
 import axios from "axios";
 import Swiper from "swiper";
@@ -31,6 +32,7 @@ Vue.use(Checkbox);
 Vue.use(Icon);
 Vue.use(Carousel);
 Vue.use(carouselItem);
+Vue.use(drawer);
 Vue.prototype.axios = axios;
 
 Vue.config.productionTip = false;
