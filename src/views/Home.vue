@@ -38,6 +38,7 @@
 
     <!-- 回到顶部 -->
     <BackTop></BackTop>
+    <BannerMiddle></BannerMiddle>
     <bottomstyle></bottomstyle>
   </div>
 </template>
@@ -54,12 +55,14 @@ import indexbanner from "../components/wsm/indexbanner";  // 首页滑块1
 import advertui from "../components/wsm/advertui";  // 首页滑块2
 import JdFastNews from "../components/lz/JdFastNews.vue"; // 京东快报
 import bottomstyle from "../components/wsm/bottomstyle.vue"; // 首页底部
+import BannerMiddle from "../components/st/BannerMiddle.vue"; // 首页底部
 
 const components = {
   Tabbar,
   HomeHeader,
   NewPerson,
   DjxyMrg,
+  BannerMiddle,
   BackTop,
   Recommend,
   Tabbar,

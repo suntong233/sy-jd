@@ -111,9 +111,7 @@ export default {
   padding: 5px;
   border-top: 1px solid #e5e5e5;
   border-bottom: 1px solid #f6f6f6;
-}
-.product-list-img {
-  float: left;
+  display: flex;
 }
 .product-list-img > img {
   width: 120px;
@@ -123,7 +121,6 @@ export default {
   padding: 5px;
   width: 245px;
   height: 100%;
-  float: left;
 }
 .product-introduce-font {
   font-size: 14px;

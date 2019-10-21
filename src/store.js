@@ -5,6 +5,7 @@ Vue.use(Vuex);
 Vue.prototype.axios = axios;
 export default new Vuex.Store({
   state: {
+    showBanner: true,
     test: "tes",
     // <商品数据==
     goodsData: [1], // 所有数据
@@ -54,6 +55,7 @@ export default new Vuex.Store({
         state.shoppingCarModule.shoppingCarList.push({
           id: item.id,
           amount: 1,
+          isSelect: true,
           info: item
         });
       }
@@ -103,12 +105,21 @@ export default new Vuex.Store({
     },
     // 登录方法
     loginFun(state, user) {
-      state.userLogin = state.loginModule.userData.find(item => {
-        if (item.username == user.username && item.password == user.password) {
-          state.loginModule.islogin = true;
-          return item;
+      if (!state.loginModule.islogin) {
+        state.userLogin = state.loginModule.userData.find(item => {
+          if (
+            item.username == user.username &&
+            item.password == user.password
+          ) {
+            state.loginModule.islogin = true;
+            return item;
+          }
+        });
+        if (state.userLogin) {
+          localStorage.setItem("userModule", JSON.stringify(state.loginModule));
+          localStorage.setItem("userLogin", JSON.stringify(state.userLogin));
         }
-      });
+      }
     },
     testfun() {
       console.log(1);
@@ -133,6 +144,12 @@ export default new Vuex.Store({
       }
       if (localStorage.searchResl) {
         state.searchRes = JSON.parse(localStorage.searchResl);
+      }
+      if (localStorage.userModule) {
+        state.loginModule = JSON.parse(localStorage.userModule);
+      }
+      if (localStorage.userLogin) {
+        state.userLogin = JSON.parse(localStorage.userLogin);
       }
     },
     // 跳转到搜索结果路由

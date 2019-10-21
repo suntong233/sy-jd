@@ -7,6 +7,7 @@
     <div class="loginPage-main">
       <div class="loginPage-mian-Box">
         <input
+          @keyup.enter="mysubmit"
           @focus="getFocus(1)"
           @blur="loseFocus(1)"
           @input="fun"
@@ -24,6 +25,7 @@
       </div>
       <div class="loginPage-mian-Box">
         <input
+          @keyup.enter="mysubmit"
           @focus="getFocus(2)"
           @blur="loseFocus(2)"
           @input="fun"
@@ -112,21 +114,22 @@ export default {
       if(this.username.trim()==""||this.password.trim()==""){
         alert("登录信息有误")
         return
-      }
-      this.$store.commit("loginFun",{
+      } else {
+        this.$store.commit("loginFun",{
         username: this.username.trim(),
         password: this.password.trim()
-      })
-      this.username = "";
-      this.password = "";
-      let that = this
-      setTimeout(()=>{
-        if( that.$store.state.loginModule.islogin ){
-          that.$router.push("/mine")
-        }else{
-          alert("无效的信息")
-        }
-      },1000)
+        })
+        this.username = "";
+        this.password = "";
+        let that = this
+        setTimeout(()=>{
+          if( that.$store.state.loginModule.islogin ){
+            that.$router.push("/mine")
+          }else{
+            alert("无效的信息")
+          }
+        },200)
+      }
     },
     changeShowtype(){
       if(this.showIcon){

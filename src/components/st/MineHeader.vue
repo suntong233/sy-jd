@@ -1,7 +1,7 @@
 <template>
     <div class="container">
         <div class="searchtext">
-            <div @click="$router.go(-1)" class="el-icon-arrow-left"></div>
+            <div @click="$router.push('/home')" class="el-icon-arrow-left"></div>
             <div class="textborder">
                 <div class="el-icon-search2">{{typetitle}}</div>
             </div>
