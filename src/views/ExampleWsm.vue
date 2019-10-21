@@ -1,17 +1,17 @@
 <template>
   <div>
-    <searchtext></searchtext>
+    <searchbox></searchbox>
     <indexbanner></indexbanner>
     <advertui></advertui>
   </div>
 </template>
 
 <script>
-import searchtext from "../components/wsm/searchtext"
+import searchbox from "../components/wsm/searchbox"
 import indexbanner from "../components/wsm/indexbanner"
 import advertui from "../components/wsm/advertui"
 const components = {
-  searchtext,
+  searchbox,
   indexbanner,
   advertui
 };
