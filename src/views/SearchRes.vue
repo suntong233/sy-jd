@@ -1,5 +1,6 @@
 <template>
   <div class="home">
+    <searchbox></searchbox>
     <div class="activity">
       <div>
         点击筛选
@@ -48,9 +49,10 @@
 
 <script>
 import BackTop from "../components/st/BackTop/NormalBack.vue"; // 回到顶部
-
+import searchbox from "../components/wsm/searchbox"
 const components = {
-  BackTop
+  BackTop,
+  searchbox
 };
 // 搜索结果
 export default {
@@ -87,6 +89,7 @@ export default {
   background-color: #fff;
 }
 .activity {
+  margin-top: 80px;
   width: 100%;
   height: 45px;
   border-top: 1px solid #e5e5e5;
