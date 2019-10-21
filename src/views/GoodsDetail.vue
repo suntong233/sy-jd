@@ -772,7 +772,7 @@ export default {
   directives: {
     goodsinfo: {
       inserted: function(el) {
-        console.log(el);
+      
 
         window.addEventListener("scroll", () => {
           funn(document.documentElement.scrollTop);
@@ -789,7 +789,7 @@ export default {
     },
     goodsinfo1: {
       inserted: function(el) {
-        console.log(el);
+       
         window.addEventListener("scroll", () => {
           funn(document.documentElement.scrollTop);
         });
@@ -824,7 +824,7 @@ export default {
   },
   created() {
     window.scrollTo(0, 0);
-    console.log(this.$store.state.goodDetails);
+  
     this.init_info = this.$store.state.goodDetails
     this.imgArr = this.$store.state.goodDetails.imgUrls;
 
@@ -835,10 +835,10 @@ export default {
       this.premsg = this.$store.state.goodDetails.price[1];
       this.isShow = true;
     }
-    console.log(this.msg);
+  
 
     this.goods_desc = this.$store.state.goodDetails.name;
-    console.log(this.goods_desc);
+  
 
     
   },
@@ -1678,7 +1678,7 @@ export default {
 
 .addshoppongcarjump_1_left img {
   width: 100%;
-  height: 115%;
+  height: 120%;
   border-radius: 5px;
   position: absolute;
  /*  top: -30%; */
