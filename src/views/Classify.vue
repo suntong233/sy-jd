@@ -57,10 +57,11 @@ export default {
       silder:{
           bind(el){
           let differ = 0
-          let differ2 = 0
+          let differ2 = -10
+          let count = 0
           el.addEventListener("touchstart",(e)=>{
             differ = e.changedTouches[0].clientY
-            differ2 = el.scrollTop
+            // differ2 = el.scrollTop
           },false)
           el.addEventListener("touchmove",(e)=>{
             if(e.changedTouches[0].clientY - differ > 0){
@@ -72,16 +73,22 @@ export default {
               }
             }else{
               if(el.scrollTop == differ2){
-                el.style.cssText=`
-                  transition: 300ms ease;
-                  transform:translateY(-100px);
-                `
+                count++
+                if(count >= 10){
+                   el.style.cssText=`
+                    transition: 300ms ease;
+                    transform:translateY(-100px);
+                  `
+                }
+              }else{
+                count = 0
               }
+              differ2 = el.scrollTop
             }
             differ = e.changedTouches[0].clientY
-            differ2 = el.scrollTop
           },false)
           el.addEventListener("touchend",(e)=>{
+            count = 0
             el.style.cssText=`
               transition: 300ms ease;
             `
