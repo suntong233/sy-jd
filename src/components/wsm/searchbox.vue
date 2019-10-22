@@ -1,6 +1,6 @@
 <template>
-  <div class="container" >
-    <div class="container1" v-fun>
+  <div class="container">
+    <div class="container1" ref="test">
       <div class="searchtext">
         <div @click="$router.go(-1)" class="el-icon-arrow-left"></div>
         <div class="textborder">
@@ -50,7 +50,7 @@
           <div class="dropdown-second2-2" @click="lalala1()">确定</div>
         </div>
       </div>
-      <div class="optionlist" id="options">
+      <div class="optionlist">
         <div class="optionlist-text">
           京东物流
           <div class="el-icon-arrow-down"></div>
@@ -119,7 +119,24 @@
 
 <script>
 import showMenu from "../public/showMenu.vue"; // 显示隐藏菜单
-
+function foo(el) {
+  let differ;
+  if (differ) {
+    if (document.documentElement.scrollTop > differ) {
+      el.style.cssText = `
+        transition: 500ms linear;
+        transform: translateY(-86px);
+        position: fixed;
+      `;
+    } else {
+      el.style.cssText = `
+      position: fixed;
+        transition: 500ms linear;
+      `;
+    }
+  }
+  differ = document.documentElement.scrollTop;
+}
 export default {
   name: "topsearch",
   data() {
@@ -131,6 +148,7 @@ export default {
       isB: false,
       isC: false,
       isD: false,
+      differ: [1],
       isE: false,
       drawer: false,
       direction: "rtl",
@@ -157,28 +175,36 @@ export default {
         document.body.style.position = "relative";
         document.body.style.overflow = "auto";
       }
+    },
+    foo(el) {
+      if (typeof this.differ == "number") {
+        if (document.documentElement.scrollTop > this.differ) {
+          el.style.cssText = `
+            transition: 500ms linear;
+            transform: translateY(-86px);
+            position: fixed;
+          `;
+        } else {
+          el.style.cssText = `
+          position: fixed;
+            transition: 500ms linear;
+          `;
+        }
+      }
+      this.differ = document.documentElement.scrollTop;
+    },
+    funnn(){
+      this.foo(this.$refs.test)
     }
   },
   components: {
     showMenu
   },
-  directives: {
-    fun: {
-      inserted: function(el) {
-        window.addEventListener("scroll", () => {
-          funn(document.documentElement.scrollTop);
-        });
-        funn(document.documentElement.scrollTop);
-        function funn(n) {
-          if (n > 89) {
-            options.style.position = "fixed";
-            options.style.top = "0px"
-          } else{
-              options.style.position = "";
-          }
-        }
-      }
-    }
+  mounted() {
+    window.addEventListener("scroll", this.funnn, false);
+  },
+  destroyed() {
+    window.removeEventListener("scroll", this.funnn, false);
   }
 };
 </script>
@@ -241,6 +267,7 @@ export default {
 .option {
   width: 100%;
   height: 40px;
+  background-color: #fff;
   border-bottom: 1px solid #f6f6f6;
   display: flex;
   justify-content: space-around;
@@ -286,7 +313,7 @@ export default {
   display: flex;
   flex-wrap: nowrap;
   overflow-x: scroll;
-  background-color: #FFF;
+  background-color: #fff;
 }
 .optionlist-text {
   flex-shrink: 0;

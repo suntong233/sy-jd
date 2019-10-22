@@ -59,7 +59,6 @@ export default new Vuex.Store({
           info: item
         });
       }
-      console.log(state.shoppingCarModule.shoppingCarList);
       // 本地存储的操作
       if (localStorage.shoppingCarData) {
         localStorage.shoppingCarData = JSON.stringify(
@@ -101,7 +100,6 @@ export default new Vuex.Store({
         }
         return false;
       });
-      console.log(state.shoppingCarModule.shoppingCarList);
     },
     // 登录方法
     loginFun(state, user) {
@@ -155,7 +153,6 @@ export default new Vuex.Store({
     // 跳转到搜索结果路由
     goSearchPage(state, type) {
       if (state.searchPageData.includes(type)) {
-        console.log(type);
         state.searchRes = [type];
         // 本地存储
         if (localStorage.history) {
@@ -188,7 +185,6 @@ export default new Vuex.Store({
       } else {
         localStorage.setItem("goodDetails", JSON.stringify(state.goodDetails));
       }
-      console.log("跳转到了" + item.type + "的商品详情");
     }
   },
   actions: {

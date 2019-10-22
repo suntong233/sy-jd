@@ -70,7 +70,6 @@ export default {
         this.renderData.push(this.$store.state.goodsData[i]);
       }
     }
-    console.log(this.$store.state.searchRes);
   },
   methods: {
     toGoodsInfoRouter(item) {
