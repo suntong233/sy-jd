@@ -496,7 +496,7 @@
     <div class="lzzhezhao" @click="lzcancelzz" ref="lzzhezhao1"></div>
     <!--加入购物车弹窗-->
     <div class="addshoppongcarjump" ref="addshoppongcarjump1">
-      <div class="addshoppongcarjump_1">
+      <div class="addshoppongcarjump_1" style="height:13%">
         <div class="addshoppongcarjump_1_left">
           <img ref="lzimg" :src="imgArr[0]" />
         </div>
@@ -510,18 +510,18 @@
         </div>
       </div>
 
-      <div class="addshoppongcarjump_2">
+      <div class="addshoppongcarjump_2" style="height:32%">
             <div class="addshoppongcarjump_2_up">规格</div>
             <div class="addshoppongcarjump_2_down">
-                 <div class="lzitemspan" >20-40kg大型犬用 2.68ml单支装</div>
+                 <div class="lzitemspan" >20-40kg大型犬用 </div>
                  <div class="lzitemspan">2个月以上猫咪用 0.5ml单支装</div>
-                 <div class="lzitemspan">10-20kg中型犬用 1.34ml单支装</div>
-                 <div class="lzitemspan">10kg以下小型犬用 0.67ml单支装</div>
+                 <div class="lzitemspan">10-20kg中型犬用 </div>
+                 <div class="lzitemspan">10kg以下小型犬用 </div>
                  <div class="lzitemspan">喷剂100ml 犬猫通用【现货发】</div>
             </div>
       </div>
 
-      <div class="addshoppongcarjump_3">
+      <div class="addshoppongcarjump_3" style="height:5%">
          <div class="addshoppongcarjump_3_left">数量</div>
          <div class="addshoppongcarjump_3_right">
              <div class="addshoppongcarjump_3_right_1" @click="lzincrease"><i class="el-icon-plus"></i></div>
@@ -530,16 +530,16 @@
          </div>
       </div>
 
-      <div class="addshoppongcarjump_4">
+      <div class="addshoppongcarjump_4" style="height:10%">
         保障服务
       </div>
 
-      <div class="addshoppongcarjump_5">
+      <div class="addshoppongcarjump_5" style="height:5%">
         <div class="addshoppongcarjump_5_left"><i class="el-icon-s-claim"></i>服务保障</div>
         <div class="addshoppongcarjump_5_right">服务介绍<i class="el-icon-arrow-right"></i></div>
       </div>
 
-      <div class="addshoppongcarjump_6">
+      <div class="addshoppongcarjump_6" style="height:25%">
            <div class="addshoppongcarjump_6_container">
               <div class="lzitem106"><div class="lzcircle"></div></div>
               <div class="lzitem106">
@@ -550,7 +550,7 @@
            </div>
       </div>
 
-      <div class="addshoppongcarjump_7" @click="lastconfirm(init_info)">确认</div>
+      <div class="addshoppongcarjump_7" style="height:10%" @click="lastconfirm(init_info)">确认</div>
     </div>
   </div>
 </template>
@@ -755,20 +755,6 @@ export default {
     goodsdetailtop,
     goodsdetailtop1
   },
-  /*  computed: {
-    priceleft() {
-      return Math.floor(this.msg);
-    },
-    priceright() {
-      for (let i = 0; i < this.msg.length; i++) {
-        if (this.msg[i] == ".") {
-          let indexPoint = i + 1;
-          let a = this.msg.substring(indexPoint);
-          return a;
-        }
-      }
-    }
-  }, */
   directives: {
     goodsinfo: {
       inserted: function(el) {
@@ -832,15 +818,9 @@ export default {
       this.premsg = this.$store.state.goodDetails.price[1];
       this.isShow = true;
     }
-
     this.goods_desc = this.$store.state.goodDetails.name;
-
-    
   },
   methods: {
-    goods_switch(msg) {
-      this.goods_msg = msg;
-    },
     lzadd() {
       this.$refs.lzzhezhao1.style.display = "block";
       this.$refs.addshoppongcarjump1.style.transition = "height 0.6s";
@@ -1667,13 +1647,13 @@ export default {
 
 .addshoppongcarjump_1_left {
   width: 23%;
-  height: 72px;
+  height: 100%;
   position: absolute;
 }
 
 .addshoppongcarjump_1_left img {
   width: 100%;
-  height: 82px;
+  height: 120%;
   border-radius: 5px;
   position: absolute;
  /*  top: -30%; */
@@ -1681,7 +1661,7 @@ export default {
 
 .addshoppongcarjump_1_right {
   width: 73%;
-  height: 72px;
+  height: 100%;
   position: absolute;
   right: 0;
   top: 0;
@@ -1742,12 +1722,20 @@ export default {
   padding-bottom: 15px;
 }
 
+/*  <div class="addshoppongcarjump_2_down">
+                 <div class="lzitemspan" >20-40kg大型犬用 </div>
+                 <div class="lzitemspan">2个月以上猫咪用 0.5ml单支装</div>
+                 <div class="lzitemspan">10-20kg中型犬用 1.34ml单支装</div>
+                 <div class="lzitemspan">10kg以下小型犬用 0.67ml单支装</div>
+                 <div class="lzitemspan">喷剂100ml 犬猫通用【现货发】</div>
+            </div> */
+
 .addshoppongcarjump_2_down{
   width: 100%;
-  height: 110px;
+  height: 80%;
   display: flex;
   flex-wrap: wrap;
-   align-content: space-between
+  align-content: space-between;
 }
 
 .lzitemspan {
