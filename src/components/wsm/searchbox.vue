@@ -31,14 +31,14 @@
           <div class="el-icon-finished"></div>
         </div>
       </div>
-      <div class="dropdown" v-if="show1">
+      <div @click="lalala" class="dropdown" v-if="show1">
         <div class="dropdown1" v-bind:class="{'clickred':isA}" @click="isA=!isA">综合</div>
         <div class="dropdown1" v-bind:class="{'clickred':isB}" @click="isB=!isB">最新上架</div>
-        <div class="dropdown1" v-bind:class="{'clickred':isC}" @click="isC=!isC">价格最低</div>
-        <div class="dropdown1" v-bind:class="{'clickred':isD}" @click="isD=!isD">价格最高</div>
+        <div @touchstart="sortPrice(1)" class="dropdown1" v-bind:class="{'clickred':isC}" @click="isC=!isC">价格最低</div>
+        <div @touchstart="sortPrice(2)" class="dropdown1" v-bind:class="{'clickred':isD}" @click="isD=!isD">价格最高</div>
         <div class="dropdown1" v-bind:class="{'clickred':isE}" @click="isE=!isE">评价最多</div>
       </div>
-      <div class="dropdown-second" v-if="show2">
+      <div @click="lalala1" class="dropdown-second" v-if="show2">
         <div class="dropdown-second1">有货优先</div>
         <div class="dropdown-second1">货到付款</div>
         <div class="dropdown-second1">海囤全球</div>
@@ -114,6 +114,7 @@
         <div class="dropdown-second2-2">确定</div>
       </div>
     </el-drawer>
+    <div @click.stop="closeMox" v-if="mox" class="mox"></div>
   </div>
 </template>
 
@@ -144,6 +145,7 @@ export default {
       show: false,
       show1: false,
       show2: false,
+      mox: false,
       isA: false,
       isB: false,
       isC: false,
@@ -156,13 +158,26 @@ export default {
     };
   },
   methods: {
+    sortPrice(n){
+      this.$emit("sortprice", n)
+    },
+    closeMox(){
+      console.log(1)
+      if(this.show1){
+        this.lalala1()
+      }else{
+        this.lalala()
+      }
+    },
     lalala() {
       (this.show1 = !this.show1), (this.show2 = false);
       if (this.show1 == true) {
         document.body.style.position = "fixed";
         document.body.style.overflow = "hidden";
+        this.mox = true
       } else {
         document.body.style.position = "relative";
+        this.mox = false
         document.body.style.overflow = "auto";
       }
     },
@@ -170,9 +185,11 @@ export default {
       (this.show2 = !this.show2), (this.show1 = false);
       if (this.show2 == true) {
         document.body.style.position = "fixed";
+        this.mox = true
         document.body.style.overflow = "hidden";
       } else {
         document.body.style.position = "relative";
+        this.mox = false
         document.body.style.overflow = "auto";
       }
     },
@@ -215,6 +232,13 @@ export default {
   height: 42px;
   background-color: #fff;
   /* max-width: 400px; */
+}
+.mox{
+  position: absolute;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+  width: 100%;
+  z-index: 1;
 }
 .container1 {
   width: 100%;
@@ -333,6 +357,7 @@ export default {
   height: 100%;
   background-color: rgb(0, 0, 0, 0.2);
   position: absolute;
+  z-index: 5;
 }
 .dropdown1 {
   width: 100%;
@@ -346,6 +371,7 @@ export default {
 }
 .dropdown-second {
   width: 100%;
+  z-index: 5;
   height: 100%;
   background-color: rgb(0, 0, 0, 0.2);
   position: absolute;

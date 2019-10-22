@@ -65,6 +65,7 @@ export default {
           },false)
           el.addEventListener("touchmove",(e)=>{
             if(e.changedTouches[0].clientY - differ > 0){
+              count = 0
               if(el.scrollTop == 0){
                 el.style.cssText=`
                   transition: 300ms ease;
@@ -72,7 +73,7 @@ export default {
                 `
               }
             }else{
-              if(el.scrollTop == differ2){
+              if(el.scrollTop == differ2 && differ2 !== 0){
                 count++
                 if(count >= 10){
                    el.style.cssText=`

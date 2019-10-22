@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <searchbox></searchbox>
+    <searchbox @sortprice="mysort"></searchbox>
     <div class="activity">
       <div>
         点击筛选
@@ -72,6 +72,17 @@ export default {
     }
   },
   methods: {
+    mysort(n){
+      if(n == 1){
+        this.renderData.sort((a,b)=>{
+          return a.price - b.price
+        })
+      }else{
+        this.renderData.sort((a,b)=>{
+          return b.price - a.price
+        })
+      }
+    },
     toGoodsInfoRouter(item) {
       this.$store.commit("goGoodsPage", item);
       this.$router.push("/goods");
@@ -121,12 +132,12 @@ export default {
 }
 .product-introduce {
   padding: 5px;
-  width: 245px;
+  overflow: hidden;
   height: 100%;
 }
 .product-introduce-font {
   font-size: 14px;
-  width: 230px;
+  /* width: 230px; */
   height: 35px;
   overflow: hidden;
   text-overflow: ellipsis;
