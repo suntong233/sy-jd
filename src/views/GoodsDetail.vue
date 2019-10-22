@@ -820,12 +820,14 @@ export default {
   },
   methods: {
     lzadd() {
+      this.$refs.goodsdetail.style.cssText="position:fixed"
       this.$refs.lzzhezhao1.style.display = "block";
       this.$refs.addshoppongcarjump1.style.transition = "height 0.5s";
       this.$refs.addshoppongcarjump1.style.height = "70%";
       this.$refs.lzimg.style.top="-30%"
     },
     lzcancelzz() {
+       this.$refs.goodsdetail.style.cssText="position:absolute"
       this.$refs.lzzhezhao1.style.display = "none";
       this.$refs.addshoppongcarjump1.style.height = "0";
       this.$refs.lzimg.style.top="0"
@@ -1762,13 +1764,12 @@ export default {
 .lzzhezhao {
   top: 0;
   left: 0;
-  position: fixed;
+  position: absolute;
   width: 100%;
   height: 100%;
-  background-color: #333;
+  background-color: rgba(0,0,0,0.4);
   z-index: 1500;
-  display: none;
-  opacity: 0.5;
+  display: none
 }
 
 .addshoppongcarjump {
