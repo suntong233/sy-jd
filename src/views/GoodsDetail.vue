@@ -1,10 +1,10 @@
 <template>
   <div class="goodsdetail" ref="goodsdetail">
     <!--顶部导航-->
-    <div v-goodsinfo style="position:fixed;top:0:left:0;width:100%;z-index:99">
+    <div v-goodsinfo class="lzgoodsinfo11">
       <goodsdetailtop></goodsdetailtop>
     </div>
-    <div v-goodsinfo1 style="display:none;position:fixed;top:0:left:0;width:100%;z-index:99">
+    <div v-goodsinfo1 class="lzgoodsinfo12">
       <goodsdetailtop1></goodsdetailtop1>
     </div>
     <!--顶部轮播图-->
@@ -39,12 +39,11 @@
     <!--价格-->
     <div class="goods_price_context">
       <div class="goods_price">
-        <div class="goods_price_left" style="font-size:18px;">
-          ￥
-          <strong>{{msg}}</strong>
+        <div class="goods_price_left">
+          ￥<strong>{{msg}}</strong>
           <span
             v-if="isShow"
-            style="margin-left:5px;font-size:6px;color:grey;text-decoration: line-through"
+            class="preprice"
           >￥{{premsg}}</span>
         </div>
 
@@ -118,9 +117,9 @@
           <div>
             <span>北京朝阳区三环到四环之间</span>
 
-            <span style="padding:3px 0">
-              <span style="color:#e4393c">现货</span>
-              <span style="color:rgb(170, 168, 168);margin-left:5px;">由商家从 广西贵港市 发货</span>
+            <span class="lzgds">
+              <span class="lzxianhuo">现货</span>
+              <span class="lzaddredd">由商家从 广西贵港市 发货</span>
             </span>
 
             <span>在线支付免运费</span>
@@ -153,7 +152,7 @@
       </div>
     </div>
 
-    <div style="width:100%;height:10px;background-color: rgb(232, 232, 237);"></div>
+    <div class="lzblock"></div>
     <!--好评-->
     <div class="evaluate">
       <div class="evaluate_1">
@@ -164,7 +163,7 @@
         </div>
         <div class="evaluate_1_right">
           <span class="gong">共</span>
-          <span class="wushijia" style="position:relative;">50+</span>
+          <span class="wushijia">50+</span>
           <span class="tiao">条</span>
           <span class="dayuhao">
             <img src="/lz/images/dyh.png" />
@@ -181,13 +180,12 @@
           <div class="history_info">
             <div class="history_info_left">
               <span>
-                <img
-                  style="width:28px;geight:28px"
+                <img class="history_info_left-img"
                   src="//img11.360buyimg.com/jdphoto/s40x40_jfs/t1/25255/18/10701/1678/5c89f892E78c04688/684d63c0d68e39b1.png"
                 />
               </span>
-              <span style="font-size:12px;margin-left:10px;">jd1234</span>
-              <span style="margin-left:5px;margin-top:-2px;">
+              <span class="lz1234">jd1234</span>
+              <span class="lzstar">
                 <i class="el-icon-star-on"></i>
                 <i class="el-icon-star-on"></i>
                 <i class="el-icon-star-on"></i>
@@ -218,12 +216,12 @@
             <div class="history_info_left">
               <span>
                 <img
-                  style="border-radius:50%;width:28px;height:28px"
+                  class="history_info_left-img1"
                   src="//storage.360buyimg.com/i.imageUpload/7a7a6835343333303931343331343530313831303639333032_sma.jpg"
                 />
               </span>
-              <span style="font-size:12px;margin-left:10px;">jd1234</span>
-              <span style="margin-left:5px;margin-top:-2px;">
+              <span class="lz1234">jd8888</span>
+              <span class="lzstar">
                 <i class="el-icon-star-on"></i>
                 <i class="el-icon-star-on"></i>
                 <i class="el-icon-star-on"></i>
@@ -254,10 +252,10 @@
       </div>
     </div>
 
-    <div style="width:100%;height:10px;background-color: rgb(232, 232, 237);"></div>
+    <div class="lzblock"></div>
 
     <!--问答-->
-    <div class="question_answer" style="background-color:#ffff">
+    <div class="question_answer" >
       <div class="question_answer1">
         <div>问答专区</div>
         <div>
@@ -267,35 +265,34 @@
       </div>
 
       <div class="question_answer2">
-        <div style="flex:1">
+        <div class="question_answer2_1" >
           <span
-            style="color:#fff;border-radius:5px;padding:0 2px 0 2px;background-color:rgb(255,150,0);margin-right:2%"
+          class="question_answer2_2"
           >Q</span>您好，刚才我要的衣柜，尺寸搞错
         </div>
-        <div style="color:rgb(153, 153, 153)">暂无回答</div>
+        <div class="question_answer2_3" >暂无回答</div>
       </div>
 
       <div class="question_answer2">
-        <div style="flex:1">
+        <div class="question_answer2_1">
           <span
-            style="color:#fff;border-radius:5px;padding:0 2px 0 2px;background-color:rgb(255,150,0);margin-right:2%"
+           class="question_answer2_2"
           >Q</span>你好，这个衣柜有1.3m 吗？
         </div>
-        <div style="color:rgb(153, 153, 153)">暂无回答</div>
+        <div class="question_answer2_3">暂无回答</div>
       </div>
     </div>
 
-    <div style="width:100%;height:10px;background-color: rgb(232, 232, 237);"></div>
+    <div class="lzblock"></div>
     <!--店铺-->
-    <div class="business" style="background-color:#ffff">
+    <div class="business" >
       <div class="business_son1">
-        <img
-          style="width:90px;height:30px"
+        <img  class="business_son1_img1"
           src="//img12.360buyimg.com/cms/jfs/t1/30564/15/13266/23443/5cb9980eE3bb739fc/aa2cd2e12af2421b.jpg!q70.dpg.webp"
         />
-        <span style="margin-right:5px">华哩哩旗舰店</span>
+        <span class="business_son1desc" >华哩哩旗舰店</span>
         <img
-          style="width:60px;height:15px"
+          class="business_son1_img2"
           src="//img11.360buyimg.com/jdphoto/s112x28_jfs/t1/34687/34/7550/4081/5cd14247E09fbbaf1/8ba9682b55f4a61d.png"
         />
       </div>
@@ -303,25 +300,25 @@
         <div>
           <div>
             <span>11489</span>
-            <span style="color:grey">粉丝人数</span>
+            <span class="lzlzfsrn" >粉丝人数</span>
           </div>
           <div>
             <span>33</span>
-            <span style="color:grey">全部商品</span>
+            <span class="lzlzqbsp" >全部商品</span>
           </div>
         </div>
         <div class="business_son2_right">
-          <span style="color: #999;">
+          <span  class="lzlzpj"  >
             评价
-            <span style="color: #18c461;">8.68 | 低</span>
+            <span class="lzlz868di">8.68 | 低</span>
           </span>
-          <span style="color: #999;">
+          <span  class="lzlzwl">
             物流
-            <span style="color: #e4393c;">9.66 | 高</span>
+            <span class="lzlz966gao">9.66 | 高</span>
           </span>
-          <span style="color: #999;">
+          <span class="lzlzsh">
             售后
-            <span style="color: #e4393c;">9.20 | 高</span>
+            <span class="lzlz920gao">9.20 | 高</span>
           </span>
         </div>
       </div>
@@ -341,9 +338,9 @@
       </div>
     </div>
 
-    <div style="width:100%;height:10px;background-color: rgb(232, 232, 237);"></div>
+    <div class="lzblock"></div>
     <!--猜你喜欢-->
-    <div class="guess" style="background-color:#ffff">
+    <div class="guess">
       <div class="guess_container1">猜你喜欢</div>
       <div class="guess_container2">
         <div class="swiper-container indexlz1">
@@ -351,44 +348,44 @@
             <div class="swiper-slide">
               <div class="swiper-slide_container">
                 <div class="item11" v-for="item in list1" :key="item.id">
-                  <img style="height:60%;width:100%;" :src="item.img" />
+                   <div class="guess_silde_1"> <img   :src="item.img" /></div>
                   <div
-                    style="font-size:12px;padding:0 10px 0 13px;height:30%;overflow:hidden;"
+                    class="guess_silde_2"
                   >{{item.desc}}</div>
-                  <div style="color:#e93b3d;height:20%">￥{{item.price}}</div>
+                  <div class="guess_silde_3">￥{{item.price}}</div>
                 </div>
               </div>
             </div>
             <div class="swiper-slide">
               <div class="swiper-slide_container">
                 <div class="item11" v-for="item in list2" :key="item.id">
-                  <img style="height:60%;width:100%;" :src="item.img" />
+                 <div class="guess_silde_1"> <img   :src="item.img" /></div>
                   <div
-                    style="font-size:12px;padding:0 10px 0 13px;height:30%;overflow:hidden;"
+                    class="guess_silde_2"
                   >{{item.desc}}</div>
-                  <div style="color:#e93b3d;height:20%">￥{{item.price}}</div>
+                  <div class="guess_silde_3">￥{{item.price}}</div>
                 </div>
               </div>
             </div>
             <div class="swiper-slide">
               <div class="swiper-slide_container">
                 <div class="item11" v-for="item in list3" :key="item.id">
-                  <img style="height:60%;width:100%;" :src="item.img" />
+                   <div class="guess_silde_1"> <img   :src="item.img" /></div>
                   <div
-                    style="font-size:12px;padding:0 10px 0 13px;height:30%;overflow:hidden;"
+                    class="guess_silde_2"
                   >{{item.desc}}</div>
-                  <div style="color:#e93b3d;height:20%">￥{{item.price}}</div>
+                  <div class="guess_silde_3">￥{{item.price}}</div>
                 </div>
               </div>
             </div>
             <div class="swiper-slide">
               <div class="swiper-slide_container">
                 <div class="item11" v-for="item in list4" :key="item.id">
-                  <img style="height:60%;width:100%;" :src="item.img" />
+                   <div class="guess_silde_1"> <img   :src="item.img" /></div>
                   <div
-                    style="font-size:12px;padding:0 10px 0 13px;height:30%;overflow:hidden;"
+                    class="guess_silde_2"
                   >{{item.desc}}</div>
-                  <div style="color:#e93b3d;height:20%">￥{{item.price}}</div>
+                  <div class="guess_silde_3">￥{{item.price}}</div>
                 </div>
               </div>
             </div>
@@ -398,13 +395,13 @@
       </div>
     </div>
 
-    <div style="width:100%;height:10px;background-color: rgb(232, 232, 237);"></div>
+    <div class="lzblock"></div>
 
     <!--商品介绍--->
-    <div class="goods_info_aftersale" style="background-color:#ffff">
-      <div class="item100" @click="goods_switch(1)" :class="{active_avtive:goods_msg==1}">商品介绍</div>
-      <div class="item100" @click="goods_switch(2)" :class="{active_avtive:goods_msg==2}">规格参数</div>
-      <div class="item100" @click="goods_switch(3)" :class="{active_avtive:goods_msg==3}">售后保障</div>
+    <div class="goods_info_aftersale" >
+      <div class="item100"  :class="{active_avtive:goods_msg==1}">商品介绍</div>
+      <div class="item100"  :class="{active_avtive:goods_msg==2}">规格参数</div>
+      <div class="item100"  :class="{active_avtive:goods_msg==3}">售后保障</div>
     </div>
     <div class="item100_text">
       <div class="item100_text_container" v-if="goods_msg==1">
@@ -493,15 +490,15 @@
     <!--返回顶部-->
     <BackTop></BackTop>
     <!--遮罩层-->
-    <div class="lzzhezhao" @click="lzcancelzz" ref="lzzhezhao1"></div>
+    <div  class="lzzhezhao" @click="lzcancelzz" ref="lzzhezhao1"></div>
     <!--加入购物车弹窗-->
     <div class="addshoppongcarjump" ref="addshoppongcarjump1">
-      <div class="addshoppongcarjump_1" style="height:13%">
+      <div class="addshoppongcarjump_1">
         <div class="addshoppongcarjump_1_left">
           <img ref="lzimg" :src="imgArr[0]" />
         </div>
         <div class="addshoppongcarjump_1_right">
-          <span class="lza1price">￥{{msg}} <i class="el-icon-close" style="color:#333333;" @click="lzcancelzz"></i></span>
+          <span class="lza1price">￥{{msg}} <i class="el-icon-close" @click="lzcancelzz"></i></span>
           <span class="lza1">
             <span class="lza1-1">已选</span>
             <span class="lzgoods_desc">{{goods_desc}}</span>
@@ -510,7 +507,7 @@
         </div>
       </div>
 
-      <div class="addshoppongcarjump_2" style="height:32%">
+      <div class="addshoppongcarjump_2">
             <div class="addshoppongcarjump_2_up">规格</div>
             <div class="addshoppongcarjump_2_down">
                  <div class="lzitemspan" >20-40kg大型犬用 </div>
@@ -521,7 +518,7 @@
             </div>
       </div>
 
-      <div class="addshoppongcarjump_3" style="height:5%">
+      <div class="addshoppongcarjump_3">
          <div class="addshoppongcarjump_3_left">数量</div>
          <div class="addshoppongcarjump_3_right">
              <div class="addshoppongcarjump_3_right_1" @click="lzincrease"><i class="el-icon-plus"></i></div>
@@ -530,27 +527,27 @@
          </div>
       </div>
 
-      <div class="addshoppongcarjump_4" style="height:10%">
+      <div class="addshoppongcarjump_4">
         保障服务
       </div>
 
-      <div class="addshoppongcarjump_5" style="height:5%">
+      <div class="addshoppongcarjump_5">
         <div class="addshoppongcarjump_5_left"><i class="el-icon-s-claim"></i>服务保障</div>
         <div class="addshoppongcarjump_5_right">服务介绍<i class="el-icon-arrow-right"></i></div>
       </div>
 
-      <div class="addshoppongcarjump_6" style="height:25%">
+      <div class="addshoppongcarjump_6">
            <div class="addshoppongcarjump_6_container">
               <div class="lzitem106"><div class="lzcircle"></div></div>
               <div class="lzitem106">
                 过期换新<br/>
-                <span style="color:grey">超过保质期无法使用予以换新</span>
+                <span class="overtime">超过保质期无法使用予以换新</span>
               </div>
               <div class="lzitem106">￥1.77</div>
            </div>
       </div>
 
-      <div class="addshoppongcarjump_7" style="height:10%" @click="lastconfirm(init_info)">确认</div>
+      <div class="addshoppongcarjump_7"  @click="lastconfirm(init_info)">确认</div>
     </div>
   </div>
 </template>
@@ -558,8 +555,8 @@
 <script>
 // 商品详情
 import BackTop from "../components/st/BackTop/NormalBack.vue"; // 回到顶部
-import goodsdetailtop from "../components/lz/goodsdetailtop.vue"; //顶部组件
-import goodsdetailtop1 from "../components/lz/goodsdetailtop1.vue";
+import goodsdetailtop from "../components/lz/goodsdetailtop.vue"; //顶部组件1
+import goodsdetailtop1 from "../components/lz/goodsdetailtop1.vue";//顶部组件2
 export default {
   name: "goodsdetail",
   data() {
@@ -758,8 +755,7 @@ export default {
   directives: {
     goodsinfo: {
       inserted: function(el) {
-
-        window.addEventListener("scroll", () => {
+          window.addEventListener("scroll", () => {
           funn(document.documentElement.scrollTop);
         });
         funn(document.documentElement.scrollTop);
@@ -819,18 +815,22 @@ export default {
       this.isShow = true;
     }
     this.goods_desc = this.$store.state.goodDetails.name;
+
+  
   },
   methods: {
     lzadd() {
+      this.$refs.goodsdetail.style.cssText="position:fixed"
       this.$refs.lzzhezhao1.style.display = "block";
-      this.$refs.addshoppongcarjump1.style.transition = "height 0.6s";
+      this.$refs.addshoppongcarjump1.style.transition = "height 0.5s";
       this.$refs.addshoppongcarjump1.style.height = "70%";
       this.$refs.lzimg.style.top="-30%"
     },
     lzcancelzz() {
+       this.$refs.goodsdetail.style.cssText="position:absolute"
       this.$refs.lzzhezhao1.style.display = "none";
       this.$refs.addshoppongcarjump1.style.height = "0";
-       this.$refs.lzimg.style.top="0"
+      this.$refs.lzimg.style.top="0"
     },
     lzincrease(){
       this.number = this.number + 1
@@ -846,7 +846,8 @@ export default {
     lastconfirm(a) {
          this.$store.commit('scAdd', a) 
          this.$router.push('/shoppingcar')
-    }
+    },
+    
   }
 };
 </script>
@@ -854,7 +855,29 @@ export default {
 <style scoped>
 .goodsdetail {
   width: 100%;
-  height: 100%;
+  background-color: rgb(232, 232, 237);
+}
+
+.lzgoodsinfo11{
+ position:fixed;
+ top:0;
+ left:0;
+ width:100%;
+ z-index:100
+}
+
+.lzgoodsinfo12{
+ display:none;
+ position:fixed;
+ top:0;
+ left:0;
+ width:100%;
+ z-index:100
+}
+
+.lzblock{
+  width:100%;
+  height:10px;
   background-color: rgb(232, 232, 237);
 }
 
@@ -869,7 +892,6 @@ export default {
 
 .swiper-container {
   --swiper-theme-color: #e93b3d;
-  /* --swiper-pagination-color: #00ff33; */ /* 两种都可以 */
 }
 
 .swiper-wrapper {
@@ -930,11 +952,13 @@ export default {
   font-weight: 700;
   display: inline-block;
   padding-bottom: 10px;
+  font-size:22px;
 }
 
 .goods_price_left span strong {
   font-size: 22px;
 }
+
 
 .goods_price_right_left {
   width: 60%;
@@ -943,6 +967,13 @@ export default {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.preprice{
+  margin-left:5px;
+  font-size:6px;
+  color:grey;
+  text-decoration: line-through
 }
 
 .goods_price_right_right {
@@ -1207,6 +1238,18 @@ export default {
   margin-top: -10px;
 }
 
+.lzgds{
+  padding:3px 0
+}
+
+.lzxianhuo{
+  color:#e4393c
+}
+
+.lzaddredd{
+  color:rgb(170, 168, 168);
+  margin-left:5px;
+}
 .arrival_container_3 {
   display: flex;
   justify-content: space-between;
@@ -1252,7 +1295,7 @@ export default {
   border-bottom: 1px solid #f5f5f5;
 }
 .evaluate_1 div:nth-child(1) {
-  width: 30%;
+  width: 40%;
 }
 
 .pingjia {
@@ -1339,6 +1382,27 @@ export default {
   align-items: center;
 }
 
+
+.history_info_left-img{
+  width:28px;
+  height:28px
+}
+
+.history_info_left-img1{
+  width:28px;
+  height:28px;
+  border-radius: 50%;
+}
+ 
+.lz1234{
+  font-size:12px;
+  margin-left:10px;
+}
+
+.lzstar{
+  margin-left:5px;
+  margin-top:-2px;
+}
 .el-icon-star-on {
   color: #e93b3d;
 }
@@ -1388,6 +1452,7 @@ export default {
 
 .question_answer {
   width: 100%;
+  background-color:#fff;
 }
 
 .question_answer1 {
@@ -1413,9 +1478,27 @@ export default {
   color: rgb(75, 61, 61);
 }
 
+
+.question_answer2_1{
+  flex: 1
+}
+
+.question_answer2_2{
+  color:#fff;
+  border-radius:5px;
+  padding:0 2px 0 2px;
+  background-color:rgb(255,150,0);
+  margin-right:2%
+}
+
+.question_answer2_3{
+  color:rgb(153, 153, 153)
+}
+
 .business {
   padding: 8px;
   width: 100%;
+  background-color: #fff
 }
 
 .business_son1 {
@@ -1424,8 +1507,19 @@ export default {
   font-size: 12px;
 }
 
-.business_son1 img:nth-child(1) {
+
+
+.business_son1_img1{
+  width:90px;height:30px;
   margin-right: 8px;
+}
+
+.business_son1desc{
+  margin-right:5px
+}
+
+.business_son1_img2{
+  width:60px;height:15px
 }
 
 .business_son3 {
@@ -1449,6 +1543,38 @@ export default {
   display: flex;
   justify-content: space-between;
   padding: 10px 0;
+}
+
+.lzlzfsrn{
+  color:grey
+}
+
+.lzlzqbsp{
+  color:grey
+}
+
+.lzlzpj{
+  color: #999;
+}
+
+.lzlz868di{
+  color: #18c461;
+}
+
+.lzlzwl{
+  color: #999
+}
+
+.lzlz966gao{
+  color: #e4393c;
+}
+
+.lzlzsh{
+  color: #999
+}
+
+.lzlz920gao{
+  color: #e4393c;
 }
 
 .business_son2 div:nth-child(1) {
@@ -1479,6 +1605,7 @@ export default {
 
 .guess {
   width: 100%;
+  background-color:#ffff
 }
 
 .guess_container1 {
@@ -1525,10 +1652,25 @@ export default {
   align-items: center;
 }
 
+
+.guess_silde_1{
+  height:60%;
+  width:100%;
+}
+
+.guess_silde_2{
+  font-size:12px;padding:0 10px 0 13px;height:30%;overflow:hidden;
+}
+
+.guess_silde_3{
+  color:#e93b3d;height:20%
+}
+
 .goods_info_aftersale {
   width: 100%;
   display: flex;
   color: #999999;
+  background-color: #fff
 }
 
 .goods_info_aftersale .item100 {
@@ -1545,6 +1687,7 @@ export default {
 }
 .item100_text_container {
   width: 100%;
+  height: 100%;
 }
 
 .item100_text_container img {
@@ -1570,15 +1713,17 @@ export default {
   display: flex;
 }
 .lzbottomtab_container_1 {
-  width: 40%;
+  width: 44%;
   height: 100%;
   background-color: #fff;
   display: flex;
   border: 1px solid #f5f5f5;
-  padding-left: 8px;
+  justify-content: center;
+  align-items: center
 }
+
 .lzbottomtab_container_1 .lzitem1000 {
-  width: 33.333%;
+   width: 33%;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -1593,7 +1738,7 @@ export default {
 }
 
 .lzbottomtab_container_2 {
-  width: 30%;
+  width: 28%;
   height: 100%;
   background-color: #ffa600;
   color: #fff;
@@ -1622,16 +1767,15 @@ export default {
   position: absolute;
   width: 100%;
   height: 100%;
-  background-color: #333;
-  z-index: 9999;
-  display: none;
-  opacity: 0.5;
+  background-color: rgba(0,0,0,0.4);
+  z-index: 1500;
+  display: none
 }
 
 .addshoppongcarjump {
   width: 100%;
   height: 0;
-  z-index: 100000;
+  z-index: 2000;
   position: fixed;
   bottom: 0;
   left: 0;
@@ -1643,6 +1787,7 @@ export default {
   background-color: #fff;
   position: relative;
   height: 72px;
+  height:13%;
 }
 
 .addshoppongcarjump_1_left {
@@ -1656,7 +1801,6 @@ export default {
   height: 120%;
   border-radius: 5px;
   position: absolute;
- /*  top: -30%; */
 }
 
 .addshoppongcarjump_1_right {
@@ -1672,21 +1816,18 @@ export default {
 
 }
 
+
+.el-icon-close{
+  color:#333333
+}
+
+
 .lzgoods_desc {
    overflow: hidden;
    flex: 1;
    margin:0 0 0 5px;
    height: 18px;
 }
-
-
-
-/*  <span class="lza1price">￥{{msg}}</span>
-          <span class="lza1" style="font-size:12px;">
-            <span class="lza1-1">已选</span>
-            <span class="lzgoods_desc">{{goods_desc}}</span>
-            <span class="lza1-2">1</span>
-  </span> */
 
 .lza1price {
   font-size: 18px;
@@ -1713,7 +1854,8 @@ export default {
 
 .addshoppongcarjump_2{
   padding: 20px 8px;
-  background-color: #fff
+  background-color: #fff;
+  height:32%
 }
 
 .addshoppongcarjump_2_up{
@@ -1721,14 +1863,6 @@ export default {
   color: #999999;
   padding-bottom: 15px;
 }
-
-/*  <div class="addshoppongcarjump_2_down">
-                 <div class="lzitemspan" >20-40kg大型犬用 </div>
-                 <div class="lzitemspan">2个月以上猫咪用 0.5ml单支装</div>
-                 <div class="lzitemspan">10-20kg中型犬用 1.34ml单支装</div>
-                 <div class="lzitemspan">10kg以下小型犬用 0.67ml单支装</div>
-                 <div class="lzitemspan">喷剂100ml 犬猫通用【现货发】</div>
-            </div> */
 
 .addshoppongcarjump_2_down{
   width: 100%;
@@ -1751,17 +1885,14 @@ export default {
   color: #333;
 }
 
-/* <div class="addshoppongcarjump_3">
-         <div class="addshoppongcarjump_3_left">数量</div>
-         <div class="addshoppongcarjump_3_right">dsfdsfds</div>
-      </div> */
 .addshoppongcarjump_3{
   width: 100%;
   padding: 0 8px;
   height: 30px;
   display: flex;
   justify-content: space-between;
-  background-color: #fff
+  background-color: #fff;
+  height:5%
 }
 
 .addshoppongcarjump_3_left{
@@ -1812,7 +1943,8 @@ export default {
   padding: 15px 8px;
   background-color: #fff;
   font-size: 12px;
-  color: #999999
+  color: #999999;
+  height:10%
 }
 
 .addshoppongcarjump_5{
@@ -1821,7 +1953,8 @@ export default {
   background-color: #fff;
   display: flex;
   justify-content: space-between;
-  align-items: center
+  align-items: center;
+  height:5%
 }
 
 .addshoppongcarjump_5_left{
@@ -1840,18 +1973,11 @@ export default {
   margin-left:3px;
 }
 
-/*  <div class="addshoppongcarjump_6">
-           <div class="addshoppongcarjump_6_container">
-              <div class="lzitem106"></div>
-              <div class="lzitem106"></div>
-              <div class="lzitem106"></div>
-           </div>
-      </div> */
-
   .addshoppongcarjump_6{
     width: 100%;
     padding: 15px 8px 43px 8px ;
     background-color: #fff;
+    height:25%
   }
 
   .addshoppongcarjump_6_container{
@@ -1885,6 +2011,10 @@ export default {
       padding-right: 8px;
       color: #d91100
    }
+   .overtime{
+     color:grey;
+     font-size: 12px;
+   }
 
   .lzcircle{
     width: 20px;
@@ -1902,5 +2032,6 @@ export default {
      display: flex;
      align-items: center;
      justify-content: center;
+     height:10%
    }
 </style>
