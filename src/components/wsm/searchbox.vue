@@ -114,7 +114,7 @@
         <div class="dropdown-second2-2">确定</div>
       </div>
     </el-drawer>
-    <div @click.stop="closeMox" v-if="mox" class="mox"></div>
+    <!-- <div @click.stop="closeMox" v-if="mox" class="mox"></div> -->
   </div>
 </template>
 
