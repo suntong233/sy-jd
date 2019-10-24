@@ -3,10 +3,10 @@
         <div class="goods_detail_top_container1">
                 <div class="leftdiv1" @click="lzback1"><span class="el-icon-arrow-left"></span></div>
                 <div class="goods_detail_top_container1_middle">
-                    <div :class="{lzactive100:lzlzmsg1==1}" onclick="window.scrollTo(0, 0)">商品</div>
-                    <div :class="{lzactive100:lzlzmsg1==2}" onclick="window.scrollTo(0, 865)">评价</div>
-                    <div :class="{lzactive100:lzlzmsg1==3}" onclick="window.scrollTo(0, 2283)">详情</div>
-                    <div :class="{lzactive100:lzlzmsg1==4}" onclick="window.scrollTo(0, 1797)">推荐</div>
+                    <div :class="{lzactive100:lztest==1}" onclick="window.scrollTo(0,0)">商品</div>
+                    <div :class="{lzactive100:lztest==2}" @click='lzevaluate' >评价</div>
+                    <div :class="{lzactive100:lztest==3}" @click="lzdetail">详情</div>
+                    <div :class="{lzactive100:lztest==4}" @click="lzrecommend" >推荐</div>
                 </div>
                 <div class="leftdiv2" @click="lzshow1 = !lzshow1"><span  class="etc1">···</span></div>
         </div>
@@ -18,34 +18,28 @@ import showMenu from "../public/showMenu.vue";   // 显示隐藏菜单
 export default {
     data(){ return{
          lzshow1:false,
-         lzlzmsg1:1
     }
        
     },
+     props: ['lztest','guess','lzgoods', 'evaluate'],
      methods:{
          lzback1(){
              this.$router.go(-1)
+         },
+         lzrecommend(){
+             window.scrollTo(0,this.guess-51)
+         },
+         lzdetail() {
+             window.scrollTo(0,this.lzgoods-51)
+         },
+         lzevaluate() {
+             window.scrollTo(0,this.evaluate-51)
          }
      },
      components: {
          showMenu
      },
-     mounted () {
-           window.addEventListener("scroll", () => {
-              if(window.scrollY < 865){
-                  this.lzlzmsg1 =1
-              }
-              if(window.scrollY >= 865 & window.scrollY < 1515){
-                  this.lzlzmsg1 =2
-              }
-              if(window.scrollY >= 1797 & window.scrollY < 2267){
-                  this.lzlzmsg1 =4
-              }
-              if(window.scrollY >=2283){
-                  this.lzlzmsg1 =3
-              }
-        });
-     }
+     
 }
 </script>
 

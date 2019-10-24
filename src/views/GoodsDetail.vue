@@ -5,7 +5,7 @@
       <goodsdetailtop></goodsdetailtop>
     </div>
     <div v-goodsinfo1 class="lzgoodsinfo12">
-      <goodsdetailtop1></goodsdetailtop1>
+      <goodsdetailtop1  :evaluate="evaluate" :lzgoods=" goods_info_aftersale" :guess="guess" :lztest="lztest" ></goodsdetailtop1>
     </div>
     <!--顶部轮播图-->
     <div class="topBanner">
@@ -154,7 +154,7 @@
 
     <div class="lzblock"></div>
     <!--好评-->
-    <div class="evaluate">
+    <div class="evaluate" ref="evaluate">
       <div class="evaluate_1">
         <div class="evaluate_1_left">
           <span class="pingjia">评价</span>
@@ -340,7 +340,7 @@
 
     <div class="lzblock"></div>
     <!--猜你喜欢-->
-    <div class="guess">
+    <div class="guess" ref="guess">
       <div class="guess_container1">猜你喜欢</div>
       <div class="guess_container2">
         <div class="swiper-container indexlz1">
@@ -398,7 +398,7 @@
     <div class="lzblock"></div>
 
     <!--商品介绍--->
-    <div class="goods_info_aftersale" >
+    <div class="goods_info_aftersale"  ref="goods_info_aftersale">
       <div class="item100"  :class="{active_avtive:goods_msg==1}">商品介绍</div>
       <div class="item100"  :class="{active_avtive:goods_msg==2}">规格参数</div>
       <div class="item100"  :class="{active_avtive:goods_msg==3}">售后保障</div>
@@ -483,14 +483,14 @@
             <span class="lzitem1000_span">购物车</span>
           </div>
         </div>
-        <div class="lzbottomtab_container_2" @click="lzadd">加入购物车</div>
-        <div class="lzbottomtab_container_3" @click="lzadd">立即购买</div>
+        <div class="lzbottomtab_container_2"  @click="lzadd">加入购物车</div>
+        <div class="lzbottomtab_container_3"  @click="lzadd">立即购买</div>
       </div>
     </div>
     <!--返回顶部-->
     <BackTop></BackTop>
     <!--遮罩层-->
-    <div  class="lzzhezhao" @click="lzcancelzz" ref="lzzhezhao1"></div>
+    <div  class="lzzhezhao"   @click="lzcancelzz" ref="lzzhezhao1"></div>
     <!--加入购物车弹窗-->
     <div class="addshoppongcarjump" ref="addshoppongcarjump1">
       <div class="addshoppongcarjump_1">
@@ -744,7 +744,12 @@ export default {
           price: "10000",
           desc: "浪琴(Longines)瑞士手表 瑰丽系列机械男表L4.921.4.78.6"
         }
-      ]
+      ],
+      lztest:1,
+      guess:'',
+      goods_info_aftersale:'',
+      evaluate:'',
+      lzabc:''
     };
   },
   components: {
@@ -785,6 +790,41 @@ export default {
     }
   },
   mounted() {
+    this.guess = this.$refs.guess.offsetTop ;
+    let guessHeight = this.$refs.guess.getBoundingClientRect().height
+    
+    this.goods_info_aftersale = this.$refs.goods_info_aftersale.offsetTop;
+  /*  this.goodsinfoHeight = this.$refs.goods_info_aftersale.getBoundingClientRect().height */
+
+    this.evaluate=this.$refs.evaluate.offsetTop;
+    let evaluateHeight = this.$refs.evaluate.offsetHeight 
+     window.addEventListener("scroll", () => {
+           let lzscrolltop = document.documentElement.scrollTop
+           /*  if(lzscrolltop - this.guess + 52 >0 && lzscrolltop - this.guess +52 <  guessHeight){
+                this.lztest = 4
+            }
+
+            if(lzscrolltop - this.goods_info_aftersale + 52 > 0 ) {
+               this.lztest = 3
+             }
+            
+            if(lzscrolltop - this.evaluate + 52 >0 && lzscrolltop - this.evaluate +52 <  evaluateHeight){
+                this.lztest = 2
+            }  else{
+              this.lztest = 1
+            } */
+
+           if(lzscrolltop - this.guess + 52 >0 && lzscrolltop - this.guess +52 <  guessHeight){
+             this.lztest = 4
+           } else if(lzscrolltop - this.goods_info_aftersale + 52 > 0){
+             this.lztest = 3
+           } else if(lzscrolltop - this.evaluate + 52 >0 && lzscrolltop - this.evaluate +52 <  evaluateHeight) {
+             this.lztest = 2
+           }else{
+             this.lztest = 1
+           }
+            
+        });
     var mySwiper = new Swiper(".indexlz", {
       pagination: {
         el: ".swiper-pagination",
@@ -820,14 +860,14 @@ export default {
   },
   methods: {
     lzadd() {
-      this.$refs.goodsdetail.style.cssText="position:fixed"
+      document.documentElement.style.overflow = "hidden";
       this.$refs.lzzhezhao1.style.display = "block";
       this.$refs.addshoppongcarjump1.style.transition = "height 0.5s";
       this.$refs.addshoppongcarjump1.style.height = "70%";
       this.$refs.lzimg.style.top="-30%"
     },
     lzcancelzz() {
-       this.$refs.goodsdetail.style.cssText="position:absolute"
+      document.documentElement.style.overflow = "scroll";
       this.$refs.lzzhezhao1.style.display = "none";
       this.$refs.addshoppongcarjump1.style.height = "0";
       this.$refs.lzimg.style.top="0"
@@ -847,6 +887,8 @@ export default {
          this.$store.commit('scAdd', a) 
          this.$router.push('/shoppingcar')
     },
+
+ 
     
   }
 };
@@ -856,6 +898,12 @@ export default {
 .goodsdetail {
   width: 100%;
   background-color: rgb(232, 232, 237);
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box
 }
 
 .lzgoodsinfo11{
@@ -1284,6 +1332,7 @@ export default {
 .evaluate {
   width: 100%;
   background: #fff;
+  height: 651px;
 }
 
 .evaluate_1 {
