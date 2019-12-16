@@ -1,9 +1,5 @@
 # sy-jd
 
-# static page
-
-* https://www.fuhushi.com/web722/suntong/syjd
-
 ## Project setup
 ```
 npm install
